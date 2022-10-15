@@ -12,9 +12,9 @@
 ## Team Member 
 
 <img align="left" src="teampics/Richard's.JPG" width="150" alt="Richard Christandi Heriawan" title="Angular" hspace="80"/> 
-
-<br/><br/><br/><br/><br/>
 <p> Richard Christandi Heriawan</p>
+<br/><br/><br/><br/><br/>
+
 
 
 <img align="left" src="./documentation/images/B.png" alt="Made with Bootstrap" title="Bootstrap" hspace="20"/>
