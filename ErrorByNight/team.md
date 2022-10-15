@@ -56,7 +56,7 @@
       <img src="" alt="Alex" width="150">
       <div class="container">
         <h2>Alexander Towfigh</h2>
-        <p class="title">Team Leader</p>
+        <p class="title">Developer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>atowfigh@ucsd.edu</p>
       </div>
@@ -69,7 +69,7 @@
       <img src="" alt="Eric" width="150">
       <div class="container">
         <h2>Eric Chen</h2>
-        <p class="title">Team Leader</p>
+        <p class="title">Designer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>eyc004@ucsd.edu</p>
       </div>
@@ -82,7 +82,7 @@
       <img src="" alt="Eric" width="150">
       <div class="container">
         <h2>Eric Chen</h2>
-        <p class="title">Team Leader</p>
+        <p class="title">Planner</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>erchen@ucsd.edu</p>
       </div>
@@ -95,7 +95,7 @@
       <img src="" alt="Muhan" width="150">
       <div class="container">
         <h2>Muhan He </h2>
-        <p class="title">Team Leader</p>
+        <p class="title">Developer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>mude@ucsd.edu</p>
       </div>
@@ -108,7 +108,7 @@
       <img src="" alt="Usman" width="150">
       <div class="container">
         <h2>Usman Kadir</h2>
-        <p class="title">Team Leader</p>
+        <p class="title">Developer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>ukadir@ucsd.edu</p>
       </div>
@@ -121,7 +121,7 @@
       <img src="" alt="Zach" width="150">
       <div class="container">
         <h2>Zach Yuen </h2>
-        <p class="title">Team Leader</p>
+        <p class="title">Designer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>zyuen@ucsd.edu</p>
       </div>
@@ -134,7 +134,7 @@
       <img src="" alt="Bruce" width="150">
       <div class="container">
         <h2>Bruce Zhou </h2>
-        <p class="title">Team Leader</p>
+        <p class="title">Developer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>r4zhou@ucsd.edu</p>
       </div>
