@@ -1,10 +1,10 @@
 # **Error By Night**
 
-<img src="Error%20By%20Night%20Logo.png" width="200">
+<img src="branding/Error%20By%20Night%20Logo.png" width="400">
 
 ## Team Values
-> Creativity and openness to change
-> Willingness to learn
-> Passion for work
-> Focus on goals and results
-> Strong leadership
+1) Creativity and openness to change
+2) Willingness to learn
+3) Passion for work
+4) Focus on goals and results
+5) Strong leadership
