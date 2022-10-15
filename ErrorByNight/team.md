@@ -14,6 +14,19 @@
 <img align="left" src="teampics/Richard's.JPG" width="150" alt="Richard Christandi Heriawan" title="Angular" hspace="20"/> 
 <p> Richard Christandi Heriawan</p>
 
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="teampics/Richard's.JPG" alt="Richard" style="width:150">
+      <div class="container">
+        <h2>Richard Christandi Heriawan</h2>
+        <p class="title">Team Leader &amp; Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>rheriawan@ucsd.edu.com</p>
+      </div>
+    </div>
+  </div>
+
 <img align="left" src="./documentation/images/B.png" alt="Made with Bootstrap" title="Bootstrap" hspace="20"/>
 
 <br/><br/><br/><br/><br/>
