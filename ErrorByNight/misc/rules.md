@@ -9,17 +9,19 @@ Team name: Error By Night
 
 Team member info: 
 
-NAME:	EMAIL: 	PHONE:	OTHER: 
-Richard C Heriawan	rheriawan@ucsd.edu	+1(669) 467-3067	IG:@richardchristandih
-Alexander Levine	alevine@ucsd.edu	+1(650) 804-0042	none
-Ben Zhang	haz039@ucsd.edu	+1(925) 336-4668	IG:@ben.zz.zzz
-Alexander Towfigh	atowfigh@ucsd.edu	+1(916) 544-8526	none
-Eric Chen 	eyc004@ucsd.edu	+1(949) 239-5572	none
-Eric Chen 	erchen@ucsd.edu	+1(858) 333-0142	IG: @ericchen969
-Muhan He	mude@ucsd.edu	+1(858) 842-0193	WeChat: Mhh76821
-Usman Kadir 	ukadir@ucsd.edu	+1(925)-768-9036	none
-Zach Yuen 	zyuen@ucsd.edu	+1(650) 307-8631	none
-Bruce Zhou	r4zhou@ucsd.edu	+1(858)539-6888	none
+
+| NAME               | EMAIL               | PHONE             | OTHER                   |
+|--------------------|---------------------|-------------------|-------------------------|
+| Richard C Heriawan |  rheriawan@ucsd.edu | +1(669) 467-3067  | IG:@richardchristandih  |
+| Alexander Levine   |  alevine@ucsd.edu   | +1(650) 804-0042  | none                    |
+| Ben Zhang          |  haz039@ucsd.edu    | +1(650) 804-0042  | IG:@ben.zz.zzz          |
+| Alexander Towfigh  |  atowfigh@ucsd.edu  | +1(916) 544-8526  | none                    |
+| Eric Chen 	     |  eyc004@ucsd.edu	   | +1(949) 239-5572  | none                    | 
+| Eric Chen          |	erchen@ucsd.edu	   | +1(858) 333-0142  | IG: @ericchen969        |
+| Muhan He           |	mude@ucsd.edu	   | +1(858) 842-0193  | WeChat: Mhh76821        |
+| Usman Kadir        |	ukadir@ucsd.edu    | +1(925)-768-9036  | none                    |
+| Zach Yuen          | 	zyuen@ucsd.edu     | +1(650) 307-8631  | none                    |
+| Bruce Zhou	     |  r4zhou@ucsd.edu    | +1(858)539-6888   | none                    |
 
 2)	Primary Means of Communication and Expectations
 1.	All members will be expected to check their emails, slack, etc. from anyone in the group on a daily basis and respond as soon as possible. 
