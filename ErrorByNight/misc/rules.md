@@ -1,5 +1,5 @@
-#Team Working Agreement
-Fall 2022
+# **Team Working Agreement**
+# *Fall 2022*
 
 1)	Group Identification
 
