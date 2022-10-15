@@ -11,4 +11,6 @@
 
 ## Team Member 
 
-![alt-text-1](<img src="teampics/Richard's.JPG") ![alt-text-2](<img src="teampics/Richard's.JPG")
+label 1 | label 2
+---     | ---
+![](teampics/Richard's.JPG) | ![](teampics/Richard's.JPG)
