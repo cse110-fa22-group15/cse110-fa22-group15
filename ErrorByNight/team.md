@@ -11,9 +11,6 @@
 
 ## Team Member 
 
-<img align="left" src="teampics/Richard's.JPG" width="150" alt="Richard Christandi Heriawan" title="Angular" hspace="20"/> 
-<p> Richard Christandi Heriawan</p>
-
 <div class="row">
   <div class="column">
     <div class="card">
