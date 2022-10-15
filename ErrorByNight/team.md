@@ -8,3 +8,7 @@
 3) Passion for work
 4) Focus on goals and results
 5) Strong leadership
+
+## Team Member 
+
+![alt-text-1](teampics/Richard's.JPG "title-1") ![alt-text-2](teampics/Richard's.JPG "title-2")
