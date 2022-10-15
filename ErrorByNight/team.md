@@ -11,4 +11,4 @@
 
 ## Team Member 
 
-![alt-text-1](teampics/Richard's.JPG "title-1") ![alt-text-2](teampics/Richard's.JPG "title-2")
+![alt-text-1](<img src="teampics/Richard's.JPG") ![alt-text-2](<img src="teampics/Richard's.JPG")
