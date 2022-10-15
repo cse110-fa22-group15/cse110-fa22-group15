@@ -13,7 +13,7 @@
 
 <img align="left" src="teampics/Richard's.JPG" width="150" alt="Richard Christandi Heriawan" title="Angular" hspace="80"/> 
 
-
+<br/><br/><br/><br/><br/>
 <p> Richard Christandi Heriawan</p>
 
 
