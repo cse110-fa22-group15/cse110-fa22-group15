@@ -17,7 +17,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="teampics/Richard's.JPG" alt="Richard" style="width:150">
+      <img src="teampics/Richard's.JPG" alt="Richard" width="150">
       <div class="container">
         <h2>Richard Christandi Heriawan</h2>
         <p class="title">Team Leader &amp; Founder</p>
