@@ -47,7 +47,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="" alt="Ben" width="150">
+      <img src="teampics/Ben's%20pic.jpg" alt="Ben" width="150">
       <div class="container">
         <h2>Ben Zhang </h2>
         <p class="title">Developer</p>
@@ -68,7 +68,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="" alt="Alex" width="150">
+      <img src="teampics/Alex's_pic.jpg" alt="Alex" width="150">
       <div class="container">
         <h2>Alexander Towfigh</h2>
         <p class="title">Developer</p>
@@ -141,7 +141,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="" alt="Zach" width="150">
+      <img src="teampics/Zach%20Yuen.jpg" alt="Zach" width="150">
       <div class="container">
         <h2>Zach Yuen </h2>
         <p class="title">Designer</p>
