@@ -123,7 +123,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="teampics/Eric%20Chen's%20pic.jpg" alt="Eric" width="150">
+      <img src="teampics/Eric%20Chen's%20pic2.jpg" alt="Eric" width="150">
       <div class="container">
         <h2>Eric Chen</h2>
         <p class="title">Planner</p>
