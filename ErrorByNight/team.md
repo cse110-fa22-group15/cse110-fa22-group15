@@ -116,6 +116,7 @@
            <li>Like to watch YouTube videos.</li>
            <li>Big K-Pop fan.</li>
         <ul>
+        </div>
         <p>eyc004@ucsd.edu</p>
         <p>Github page: https://github.com/eyc004</p>
       </div>
