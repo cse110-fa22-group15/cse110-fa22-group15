@@ -19,10 +19,12 @@
         <h2>Richard Christandi Heriawan</h2>
         <p class="title">Team Leader</p>
         <div>
-        <ul>I am Richard 4th year majoring in Computer Science major.</ul>
-        <ul>I am in Warren College.</ul>
-        <ul>My hobbies are singing, playing guitar, and watching movies.</ul>
-        <ul>I have one little dog named Naomi.</ul>
+        <ul>
+           <li>I am Richard 4th year majoring in Computer Science major.</li>
+           <li>I am in Warren College.</li>
+           <li>My hobbies are singing, playing guitar, and watching movies.</li>
+           <li>I have one little dog named Naomi.</li>
+        </ul>
         </div>
         <p>rheriawan@ucsd.edu.com</p>
       </div>
