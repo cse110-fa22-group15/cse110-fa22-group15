@@ -165,6 +165,7 @@
         <div>
         </ul>
         <p>zyuen@ucsd.edu</p>
+        <p>https://github.com/zachyuen</p>
       </div>
     </div>
   </div>
