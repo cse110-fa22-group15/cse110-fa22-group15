@@ -154,7 +154,7 @@
   <div class="row">
   <div class="column">
     <div class="card">
-      <img src="" alt="Bruce" width="150">
+      <img src="teampics/Bruce%20Zhou's%20pic.JPG" alt="Bruce" width="150">
       <div class="container">
         <h2>Bruce Zhou </h2>
         <p class="title">Developer</p>
