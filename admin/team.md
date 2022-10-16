@@ -149,8 +149,17 @@
       <div class="container">
         <h2>Muhan He </h2>
         <p class="title">Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div>
+          <ul>
+           <li>I’m Michelle, senior year studying Math-CS</li>
+           <li>I’m from China</li>
+           <li>Fan of Genshin, Pokemon Unite</li>
+           <li>I love swimming, baking</li>
+           <li>love&hate Leetcode daily challenge</li>
+          </ul>
+        </div>
         <p>mude@ucsd.edu</p>
+        <p>Github page: https://github.com/MuhanHe</p>
       </div>
     </div>
   </div>
