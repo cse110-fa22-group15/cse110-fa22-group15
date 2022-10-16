@@ -27,6 +27,7 @@
         </ul>
         </div>
         <p>rheriawan@ucsd.edu.com</p>
+        <p>https://github.com/RichardHeriawan</p>
       </div>
     </div>
   </div>
