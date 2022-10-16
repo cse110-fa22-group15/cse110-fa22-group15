@@ -194,3 +194,4 @@
   </div>
 
 ## Team Humor and Culture
+<img src="teampics/dream-team-assemble-meme.jpg" width="300">
