@@ -61,6 +61,7 @@
         </ul>
         </div>
         <p>haz039@ucsd.edu</p>
+        <p>https://github.com/bz010</p>
       </div>
     </div>
   </div>
@@ -82,6 +83,7 @@
         <div>
         </ul>
         <p>atowfigh@ucsd.edu</p>
+        <p>Github page: https://github.com/Charlieglider/</p>
       </div>
     </div>
   </div>
@@ -94,7 +96,7 @@
         <h2>Eric Chen</h2>
         <p class="title">Designer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>eyc004@ucsd.edu</p>
+        <p>erchen@ucsd.edu</p>
       </div>
     </div>
   </div>
@@ -106,8 +108,16 @@
       <div class="container">
         <h2>Eric Chen</h2>
         <p class="title">Planner</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>erchen@ucsd.edu</p>
+        <div>
+        <ul>
+           <li>I'm from Orange County, California.</li>
+           <li>2nd year Data Science major.</li>
+           <li>Marshall College.</li>
+           <li>Like to watch YouTube videos.</li>
+           <li>Big K-Pop fan.</li>
+        <ul>
+        <p>eyc004@ucsd.edu</p>
+        <p>Github page: https://github.com/eyc004</p>
       </div>
     </div>
   </div>
@@ -145,7 +155,14 @@
       <div class="container">
         <h2>Zach Yuen </h2>
         <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <ul>
+          <li>My name is Zach Yuen and I'm a 3rd year Math-CS student.</li>
+          <li>I'm from the Bay Area (Palo Alto).</li>
+          <li>My have 3 brothers.</li>
+          <li>My favorite color is red.</li>
+          <li>In my free time I enjoy watching movies and taking naps.</li>
+        <div>
+        </ul>
         <p>zyuen@ucsd.edu</p>
       </div>
     </div>
