@@ -18,7 +18,12 @@
       <div class="container">
         <h2>Richard Christandi Heriawan</h2>
         <p class="title">Team Leader</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div>
+        <ul>I am Richard 4th year majoring in Computer Science major.</ul>
+        <ul>I am in Warren College.</ul>
+        <ul>My hobbies are singing, playing guitar, and watching movies.</ul>
+        <ul>I have one little dog named Naomi.</ul>
+        </div>
         <p>rheriawan@ucsd.edu.com</p>
       </div>
     </div>
