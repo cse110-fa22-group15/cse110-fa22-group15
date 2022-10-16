@@ -20,7 +20,7 @@
         <p class="title">Team Leader</p>
         <div>
         <ul>
-           <li>I am Richard 4th year majoring in Computer Science major.</li>
+           <li>I am Richard 4th year student and majoring in Computer Science.</li>
            <li>I am in Warren College.</li>
            <li>My hobbies are singing, playing guitar, and watching movies.</li>
            <li>I have one little dog named Naomi.</li>
@@ -51,7 +51,15 @@
       <div class="container">
         <h2>Ben Zhang </h2>
         <p class="title">Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div>
+        <ul>
+           <li>I am Ben, a 3rd-year Computer Engineering Major</li>
+           <li>I'm in Seventh College so I experienced the new College Writing Class that is significantly different from other colleges.</li>
+           <li>Because I'm in CE major, I spent all my time working through Electrical Engineering stuff which made my coding skill rusty.</li>
+           <li>I am a Formula-1 fan and work on Formula-style cars in the UCSD team.</li>
+           <li>Working on getting a motorcycle because regular parking is expensive.</li>
+        </ul>
+        </div>
         <p>haz039@ucsd.edu</p>
       </div>
     </div>
@@ -64,7 +72,15 @@
       <div class="container">
         <h2>Alexander Towfigh</h2>
         <p class="title">Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div>
+        <ul>
+           <li>I'm Alex, a 3rd year studying CE.</li>
+           <li>From the Sacramento Area.</li>
+           <li>Sixth College.</li>
+           <li>Enjoy hiking and spending time with friends.</li>
+           <li>Interested in robotics.</li>
+        <div>
+        <ul>
         <p>atowfigh@ucsd.edu</p>
       </div>
     </div>
