@@ -39,8 +39,17 @@
       <div class="container">
         <h2>Alexander Levine</h2>
         <p class="title">Team Leader</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div>
+        <ul>
+           <li>I’m Alex, a 4th-year studying Math-CS in Warren.</li>
+           <li>I’m from La Jolla, CA.</li>
+           <li>I’ve spent multiple years working on computer science research</li>
+           <li>Huge fan of League of Legends</li>
+           <li>Love to surf and hike</li>
+        </ul>
+        </div>
         <p>alevine@ucsd.edu</p>
+        <p>https://github.com/alexlevine1220</p>
       </div>
     </div>
   </div>
