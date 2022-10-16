@@ -106,6 +106,7 @@
         </ul>
         </div>
         <p>erchen@ucsd.edu</p>
+        <p>Github page: https://github.com/EricChen0803/</p>
       </div>
     </div>
   </div>
