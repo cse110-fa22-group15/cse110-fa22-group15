@@ -168,6 +168,7 @@
         <div>
         </ul>
         <p>r4zhou@ucsd.edu</p>
+        <p>Github page: https://github.com/the-bruz</p>
       </div>
     </div>
   </div>
