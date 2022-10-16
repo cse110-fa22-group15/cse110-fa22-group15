@@ -145,7 +145,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="" alt="Muhan" width="150">
+      <img src="teampics/Muhe%20Han's%20pic.jpg" alt="Muhan" width="150">
       <div class="container">
         <h2>Muhan He </h2>
         <p class="title">Developer</p>
