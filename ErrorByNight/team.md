@@ -96,7 +96,15 @@
       <div class="container">
         <h2>Eric Chen</h2>
         <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div>
+        <ul>
+          <li>I'm Eric Chen and I'm a third year Math-Cs major student.</li>
+          <li>Java is the first language I learned in UCSD.</li>
+          <li>I like playing soccer in my free time.</li>
+          <li>I'm a huge fan of Real Madrid.</li>
+          <li>I have a twin brother.</li>
+        </ul>
+        </div>
         <p>erchen@ucsd.edu</p>
       </div>
     </div>
