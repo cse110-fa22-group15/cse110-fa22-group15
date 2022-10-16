@@ -80,7 +80,7 @@
            <li>Enjoy hiking and spending time with friends.</li>
            <li>Interested in robotics.</li>
         <div>
-        <ul>
+        </ul>
         <p>atowfigh@ucsd.edu</p>
       </div>
     </div>
@@ -158,7 +158,15 @@
       <div class="container">
         <h2>Bruce Zhou </h2>
         <p class="title">Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div>
+        <ul>
+          <li>I am Bruce Zhou.</li>
+          <li>I'm from China.</li>
+          <li>My major is math-cs.</li>
+          <li>3rd year in 7th College.</li>
+          <li>I love taking photos.</li>
+        <div>
+        </ul>
         <p>r4zhou@ucsd.edu</p>
       </div>
     </div>
