@@ -151,11 +151,11 @@
         <p class="title">Developer</p>
         <div>
           <ul>
-           <li>I’m Michelle, senior year studying Math-CS</li>
-           <li>I’m from China</li>
-           <li>Fan of Genshin, Pokemon Unite</li>
-           <li>I love swimming, baking</li>
-           <li>love&hate Leetcode daily challenge</li>
+            <li>I’m Michelle, senior year studying Math-CS</li>
+            <li>I’m from China</li>
+            <li>Fan of Genshin, Pokemon Unite</li>
+            <li>I love swimming, baking</li>
+            <li>love&hate Leetcode daily challenge</li>
           </ul>
         </div>
         <p>mude@ucsd.edu</p>
@@ -171,8 +171,17 @@
       <div class="container">
         <h2>Usman Kadir</h2>
         <p class="title">Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div>
+        <ul>
+          <li>Love video games, soccer, wrestling.</li>
+          <li>From the Bay Area.</li>
+          <li>Enjoy spending time with my parents and sister.</li>
+          <li>Favorite shows include Office and Breaking Bad.</li>
+          <li>Am a first gen Pakistani immigrant.</li>
+        </ul>
+        </div>
         <p>ukadir@ucsd.edu</p>
+        <p>Github page: https://github.com/ukadir998</p>
       </div>
     </div>
   </div>
