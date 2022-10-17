@@ -167,7 +167,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="" alt="Usman" width="150">
+      <img src="teampics/Usman%20Kadir's%20pic.jpg" alt="Usman" width="150">
       <div class="container">
         <h2>Usman Kadir</h2>
         <p class="title">Developer</p>
