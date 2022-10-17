@@ -35,7 +35,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="" alt="Alexander" width="150">
+      <img src="teampics/Alexander%20Levine's%20pic.png" alt="Alexander" width="150">
       <div class="container">
         <h2>Alexander Levine</h2>
         <p class="title">Team Leader</p>
