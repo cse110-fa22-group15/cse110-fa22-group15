@@ -1,5 +1,5 @@
 # Team 15 / ErrorByNight
-## Kickoff meeting
+## Brainstorming Project Ideas
 ### Attendance
 - Richard Heriawan
 - Shubham Kumar
