@@ -32,4 +32,4 @@
 - People work on features
 - People work on algorithm inplementaton
 
-
+### [Link to Team Brainstorm Miro](https://miro.com/app/board/uXjVPLVcOy0=/?share_link_id=291252289766)
