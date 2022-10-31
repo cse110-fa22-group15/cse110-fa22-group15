@@ -20,4 +20,4 @@
 - **Any decisions made & their reasoning (if there were dissenting opinions include them, then write why the group decided to make that decision anyways) **
     - N/A
 - **When the meeting finished**
-    - 10:34pm
+    - 10:40am
