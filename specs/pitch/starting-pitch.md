@@ -31,8 +31,8 @@
 <summary>User Stories</summary>
 <br>
 <ul>
-    <div> As a person who wants to lose/gain weight scientifically, I want to measure the amount of calories I take everyday. </div>
-    <div> As a person who wants to lose/gain weight without knowing the formula of weight changing, I want to get recommendation of how I should change my daily diet. </div>
+    <li> As a person who wants to lose/gain weight scientifically, I want to measure the amount of calories I take everyday. </li>
+    <li> As a person who wants to lose/gain weight without knowing the formula of weight changing, I want to get recommendation of how I should change my daily diet. </li>
     <li> As a user I want to make a profile so that the app can have my info and keep track of my progress.</li>
     <li> As a user I want to make a new post after every meal so that I can add my calorie counts in real time.</li>
 </ul>
