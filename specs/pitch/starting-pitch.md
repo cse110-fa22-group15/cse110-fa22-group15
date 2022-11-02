@@ -50,9 +50,8 @@
 <summary>Risks and Rabbit Holes and </summary>
 <br>
 <ul>
-    <li> Trying to implement too many features - takes time, effort, might be confusing to user. <li> 
-    <li> User might not know how many grams of food (quantity) they consume.  <li> 
-    <li> User might not want to give personal information to the website.  <li> 
- </li>
+    <li> Trying to implement too many features - takes time, effort, might be confusing to user. <\li> 
+    <li> User might not know how many grams of food (quantity) they consume.  <\li> 
+    <li> User might not want to give personal information to the website.  <\li> 
 </ul>
 </details>
