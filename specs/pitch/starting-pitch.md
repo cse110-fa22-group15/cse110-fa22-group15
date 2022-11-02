@@ -1,6 +1,6 @@
 
 <details>
-<summary>Basic Idea<summary>
+<summary>Basic Idea</summary>
 <br>
 <ul>
     <li> The user will input meal after eating (for now this will include date, food, and calories). </li>
