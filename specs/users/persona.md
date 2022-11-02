@@ -11,7 +11,7 @@
 ## Quote:
 > "I'm tired of everyone calling me 'Slim Jim'".
 
-##Background:
+## Background:
 **Age:** 20<br> 
 **Location:** New York<br> 
 **Marital Status:** Single<br> 
