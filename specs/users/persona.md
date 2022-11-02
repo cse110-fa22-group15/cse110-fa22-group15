@@ -3,7 +3,8 @@
 ## Name: Jim
 
 ## Image: 
-![Skinny Jim](https://pixy.org/src/128/thumbs350/1280047.jpg)
+
+<img src="[drawing.jpg](https://pixy.org/src/128/thumbs350/1280047.jpg)" alt="drawing" width="200"/>
 
 **Image Credit:** https://pixy.org/src/128/thumbs350/1280047.jpg
 
