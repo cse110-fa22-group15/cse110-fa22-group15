@@ -15,5 +15,5 @@ What features to include?
 
 ## Decision Outcome
 
-Chosen option: Create all above option because it is the basic of CRUD which is create, read, upadte, and delete. 
+Chosen option: Create all of the options because it is the basic of CRUD app which is create, read, upadte, and delete. 
 
