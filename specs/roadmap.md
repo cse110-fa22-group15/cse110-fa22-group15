@@ -13,19 +13,21 @@
         <li>feature 3: </li>
     </ul>
     <h2>Milestones(0/3 Finished): </h2>
-    <h3>*M1(0/0 Finished)://MODIFY HERE</h3>
+    <h3>*Create ADRs(0/0 Finished)://MODIFY HERE</h3>
     <ul>
-        <li>task 1: </li>
-        <li>task 2: </li>
-        <li>task 3: </li>
+        <li>Create: </li>
+        <li>Read: </li>
+        <li>Update: </li>
+        <li>Delete: </li>
+        <li>Coding Style: </li>
+        <li>CI/CD Pipeline: </li>
     </ul>
-    <h3>*M2(0/0 Finished)://MODIFY HERE</h3>
+    <h3>*Design(0/0 Finished)://MODIFY HERE</h3>
     <ul>
-        <li>task 1: </li>
-        <li>task 2: </li>
-        <li>task 3: </li>
+        <li>task 1: Create high-fidelity wireframe</li>
+        <li>task 2: Work with developers to figure out how to implement wireframe</li>
     </ul>
-    <h3>*M3(0/0 Finished)://MODIFY HERE</h3>
+    <h3>*Coding(0/0 Finished)://MODIFY HERE</h3>
     <ul>
         <li>task 1: </li>
         <li>task 2: </li>
