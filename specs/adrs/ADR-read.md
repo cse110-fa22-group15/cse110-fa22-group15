@@ -11,4 +11,4 @@ How to implement the read feature (view the food log)?
 
 ## Decision Outcome
 
-Chosen option: TODO
+Chosen option: Option 3. Utilizing the local storage and tying it with a data visualization tool like Tableau is a good idea to make it more visually appealing. Tableau might work but we're not sure how we can tie it into the app directly. But outputting history in a formatted view is the best for the user since it is easier to understand, as long as we output it in an easy to understand way. 

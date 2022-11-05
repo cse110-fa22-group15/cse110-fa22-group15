@@ -13,4 +13,4 @@ How to implement the create feature (add-a-food to the food log)?
 
 ## Decision Outcome
 
-Chosen option: TODO
+Chosen option: Option 3, utilize the csv file for the food database instead of using the food database api just to make sure that we can keep it local. We can just search for the food and it will find the appropriate food in the list. 
