@@ -11,4 +11,8 @@ How to store the users data (i.e. body measurements, food entries) via local sto
 
 ## Decision Outcome
 
-Chosen option: TODO
+Chosen option: 
+
+Set an entry in local storage that takes the username as the key and their body measurements and food entries as the value. Give the user an option to also store user's body measurements and food entries in a JSON file and prompt the user to save it to their computer, so they can keep the history if they change computer/browsers/etc.
+
+The users will also have the option to delete the local storage whenever they want to change user or they can also download it. 
