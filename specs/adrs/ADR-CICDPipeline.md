@@ -11,8 +11,7 @@ What to implement in the CI/CD pipeline?
 
 * Using the pattern of **continuous integration and continuous delivery** to apply infrastructure changes. 
   * This will be a dedicated pipeline for infrastructure changes that will exist in addition to any CICD pipelines that we deploy for the website code. Using CICD allows us to apply good code based change practices to the infrastructure code.
-* TODO
 
 ## Decision Outcome
 
-Chosen option: TODO
+Chosen option: TBD
