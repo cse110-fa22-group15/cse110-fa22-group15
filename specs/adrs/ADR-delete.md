@@ -11,4 +11,4 @@ How to implement the delete feature (remove an entry in the food log)?
 
 ## Decision Outcome
 
-Chosen option: TODO
+Chosen option: 2nd option. It should be controlled by the user, because there might be a delay if the admin has to handle all the deletions. 
