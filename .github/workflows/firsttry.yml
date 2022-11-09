@@ -1,0 +1,53 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+      - name: ServiceNow CI/CD Run ATF Test Suite
+          # You may pin to the exact commit or the version.
+          # uses: ServiceNow/sncicd-tests-run@49e9a72f68d0d1a2501d24a2cb14ed31b32a9ea8
+        uses: ServiceNow/sncicd-tests-run@2.0.0
+        with:
+          # Name of the browser to use to run the client test. 
+          browserName: chrome
+          # Starting value of the version of the browser specified in browser_name to use to run the test. For example, if you enter '9', that would enable all 9.x.x.x versions
+          browserVersion: 9
+          # Name of the operating system under which to run the test suite.
+          osName: Windows
+          # Starting value of the version of the operating system under which to run the test suite. For example, if you enter '8', that would enable all 8.x.x.x versions.
+          osVersion: 10
+          # Required if testSuiteName is not specified
+          testSuiteSysId: ""
+          # Required if testSuiteSysId is not specified
+          testSuiteName: ""
