@@ -48,6 +48,6 @@ jobs:
           # Starting value of the version of the operating system under which to run the test suite. For example, if you enter '8', that would enable all 8.x.x.x versions.
           osVersion: 10
           # Required if testSuiteName is not specified
-          testSuiteSysId: ""
+          testSuiteSysId: 1
           # Required if testSuiteSysId is not specified
-          testSuiteName: ""
+          testSuiteName: 1
