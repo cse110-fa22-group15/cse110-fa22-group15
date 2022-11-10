@@ -26,7 +26,8 @@
 - **Any decisions made & their reasoning (if there were dissenting opinions include them, then write why the group decided to make that decision anyways)**
     - Decided that we would be working on a calorie tracker since it was something we could all understand
     - We should do a calorie tracker to help people gain weight and lose weight
-​
+​- **When the meeting finished**
+    ![white board](/assets/img/MarineGEO_logo.png "MarineGEO logo")
+    
 - **When the meeting finished**
     - 8:00pm
-Collap
