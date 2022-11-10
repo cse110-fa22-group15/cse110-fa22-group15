@@ -6,9 +6,10 @@
 - Muhan He
 - Eric Chen
 
-### 11/09/2022 14:30 in person cse basement
+### 11/08/2022 14:30 in person cse basement
   
 #### The agenda of what is discussed
+- **Any old unresolved business from the previous meeting**
 - Delegate Front End Tasks among members
   - Eric Chen: CSS for the website
   - Zach Yuen: JavaScript Local Storage to presentation
@@ -20,5 +21,9 @@
   - POP up window will work on its own HTML/CSS/JS and integrate afterwards
   - JS Local storage get the id and class created from previous mentioned tasks.
 
+- **Anything that was on the agenda but was not discussed (save for next meeting's old business**
+
+- **Any decisions made & their reasoning (if there were dissenting opinions include them, then write why the group decided to make that decision anyways)**
+
 - **When the meeting finished**
-    - 15:30 pm
+    - 
