@@ -8,12 +8,13 @@
     <h2>Status History(current version: 1.0):</h2>
     <h3>Version 1: </h3>
     <ul>
-        <li>feature 1: </li>
-        <li>feature 2: </li>
-        <li>feature 3: </li>
+        <li>Pop-Up Box: </li>
+        <li>Reading User's Body Information: </li>
+        <li>Local Storage: </li> 
+        <li>CI/CD Pipeline: </li> 
     </ul>
     <h2>Milestones(0/3 Finished): </h2>
-    <h3>*Create ADRs(0/0 Finished)://MODIFY HERE</h3>
+    <h3>*Create ADRs(0/6 Finished):</h3>
     <ul>
         <li>Create: </li>
         <li>Read: </li>
@@ -22,14 +23,15 @@
         <li>Coding Style: </li>
         <li>CI/CD Pipeline: </li>
     </ul>
-    <h3>*Design(0/0 Finished)://MODIFY HERE</h3>
+    <h3>*Design(0/2 Finished):</h3>
     <ul>
         <li>task 1: Create high-fidelity wireframe</li>
         <li>task 2: Work with developers to figure out how to implement wireframe</li>
     </ul>
-    <h3>*Coding(0/0 Finished)://MODIFY HERE</h3>
+    <h3>*Coding/Functionality(0/4 Finished):</h3>
     <ul>
-        <li>task 1: </li>
-        <li>task 2: </li>
-        <li>task 3: </li>
+        <li>task 1: Adding food entry</li>
+        <li>task 2: Deleting food entry</li>
+        <li>task 3: Create daily calorie count progress bar</li>
+        <li>task 4: Ability to see/edit food entries from different date</li>
     </ul>
