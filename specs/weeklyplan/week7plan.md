@@ -21,4 +21,13 @@
     <li> For Delete, we want our website to allow users to delete their profiles or their calories records. </li>
 </details>
 
+<details>
+<summary>Checklists</summary>
+<br>
+<ul>
+    <li> Made a rough HTML files.</li>
+    <li> Figured out how to store users' data</li>
+    <li> Discussed CI/CD pipelines</li>
+</details>
+
 
