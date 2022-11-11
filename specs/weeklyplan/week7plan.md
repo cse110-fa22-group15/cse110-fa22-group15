@@ -1,5 +1,5 @@
 <details>
-<summary>Week 7 Plan</summary>
+<summary>#Week 7 Plan</summary>
 <br>
 <ul>
     <li> Finalize the high-fidelity wireframes by Saturday.</li>
@@ -11,7 +11,7 @@
 </details>
 
 <details>
-<summary>Summary</summary>
+<summary>#Summary</summary>
 <br>
 <ul>
     <li> This week we are basically want to make our website to do CRUD.</li>
