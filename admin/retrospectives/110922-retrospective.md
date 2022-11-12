@@ -1,5 +1,5 @@
 ## Retrospective 1
-### Date: Nov 9 2022
+### Date: Nov 9 and 12 2022
 ### What went well?
 - We were able to succesfully split up and delegate tasks
 - Decided on an overall design (visually and functionally)
