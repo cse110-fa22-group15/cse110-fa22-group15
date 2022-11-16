@@ -1,6 +1,6 @@
 # **Error By Night**
 
-<img src="branding/Error%20By%20Night%20Logo.png" width="300">
+<img src="branding/ErrorByNightLogo.png" width="300">
 
 ## Team Values
 1) Creativity and openness to change
