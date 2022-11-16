@@ -28,6 +28,20 @@
     <div id="Home" class="tabcontent">
       <div class="row" style="background-color:#d5e2ed;">
         <button type="button">Add Food + </button>
+        <!-- The pop_up div integrated-->
+        <div class="pop_Up" onclick="check_Pop_Food()">Add Food +
+          <form action="" class="pop_Up_Text" id="food">
+            <label for="Calories">Calories:</label><br>
+            <input type="number" id="Calories" name="Calories" value=""><br>
+            <label for="food_Type">Food Type</label><br>
+            <input type="search" id="food_Type" name="food_Type" value="API or Local Storage"><br>
+            <label for="food_Type">Food Type</label><br>
+            <input type="radio" id="mealB" name="meal_Type">Breakfest<br>
+            <input type="radio" id="mealL" name="meal_Type">Lunch<br>
+            <input type="radio" id="mealD" name="meal_Type">Dinner<br><br>
+            <input type="submit" value="Submit" onclick=reset_Check()>
+          </form> 
+        </div>
         <h2 id = "pick">Pick a date
           <input type="date" id="datepicker">
         </h2>
@@ -139,6 +153,57 @@
         new Item("Fruit"),
       ]));
 
+      var check = 0;
+      var mode = 0;
+      function reset_Check(){
+        if(mode == 0){
+          document.getElementById("food").submit();
+        }
+        else if(mode == 1){
+          document.getElementById("goal").submit();
+        }
+
+        else if(mode == 2){
+          document.getElementById("new_User").submit();
+        }
+        check = 0;
+      }
+      function check_Pop_User(){
+        mode = 2;
+        check_Pop()
+      }
+      function check_Pop_Goal(){
+        mode = 1;
+        check_Pop()
+      }
+      function check_Pop_Food(){
+        mode = 0;
+        check_Pop();
+      }
+
+      function check_Pop(){
+        //if(check < 10){
+          click_Pop();
+        //}
+      }
+
+
+
+      // When the user clicks on div, open the pop_Up
+      function click_Pop() {
+        check += 1;
+        if(mode == 0){
+          var pop_Up = document.getElementById("food");
+        }
+        else if(mode == 1){
+          var pop_Up = document.getElementById("goal");
+        }
+        else if(mode == 2){
+          var pop_Up = document.getElementById("new_User");
+        }
+      
+        pop_Up.classList.toggle("show");
+      }
     </script>
 
   </body>
