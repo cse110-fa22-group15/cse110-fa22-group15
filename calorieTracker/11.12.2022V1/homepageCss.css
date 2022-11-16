@@ -193,3 +193,43 @@ h3[id="bf"]{
     height: 30px;
     background-color: #04AA6D;
   }
+  .pop_Up {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-color: lightblue;
+  }
+  
+  /* The poped window */
+  .pop_Up .pop_Up_Text {
+    visibility: hidden;
+    background-color: rgb(111, 202, 157);
+    color: #000;
+    text-align: center;
+    border-radius: 2px;
+    padding: 30% 30%;
+    position: absolute;
+    top: 20%;
+    margin: auto;
+    text-decoration-style: dashed;
+  }
+  
+  /* Hide and show Pop up */
+  .pop_Up .show {
+    visibility: visible;
+    -webkit-animation: fade_In 1s;
+    animation: fade_In 1s;
+    z-index: 99;
+  
+  }
+  
+  /* Animation, Hope webkit works*/
+  @-webkit-keyframes fade_In {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fade_In {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
