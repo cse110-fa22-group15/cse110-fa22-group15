@@ -193,6 +193,7 @@ h3[id="bf"]{
     height: 30px;
     background-color: #04AA6D;
   }
+  /* All the styles for pop_up */
   .pop_Up {
     position: relative;
     display: inline-block;

@@ -28,6 +28,7 @@
     <div id="Home" class="tabcontent">
       <div class="row" style="background-color:#d5e2ed;">
         <button type="button">Add Food + </button>
+        <!-- The pop_up div integrated-->
         <div class="pop_Up" onclick="check_Pop_Food()">Add Food +
           <form action="" class="pop_Up_Text" id="food">
             <label for="Calories">Calories:</label><br>
@@ -153,7 +154,7 @@
       ]));
 
       var check = 0;
-      var mod = 0;
+      var mode = 0;
       function reset_Check(){
         if(mode == 0){
           document.getElementById("food").submit();
@@ -181,9 +182,9 @@
       }
 
       function check_Pop(){
-        if(check < 1){
+        //if(check < 10){
           click_Pop();
-        }
+        //}
       }
 
 
