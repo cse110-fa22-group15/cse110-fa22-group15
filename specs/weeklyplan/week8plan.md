@@ -1,5 +1,5 @@
 <details>
-<summary>Week 7 Plan</summary>
+<summary>Week 8 Plan</summary>
 <br>
 <ul>
     <li> Meet once with the corresponding front-end team member to implement the add and delete function, and set it up in local storage.</li>
