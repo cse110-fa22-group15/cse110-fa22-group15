@@ -1,0 +1,60 @@
+header {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    border-radius: 10%;
+  }
+article{
+    background-color: #d5e2ed;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 400px;
+    padding: 80px;
+    text-align: center;
+    border-radius: 10%;
+    border-style:groove;
+}
+
+.yes {
+    width: 120px;
+    height: 60px;
+    background-color: green;
+    border-radius: 50%;
+    color: white;
+    padding: 14px 20px;
+    font-size:20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.no {
+    width: 120px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    padding: 14px 20px;
+    font-size:20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.yes:hover {
+    background-color: #4CAF50;
+}
+.no:hover {
+    background-color: grey;
+}
