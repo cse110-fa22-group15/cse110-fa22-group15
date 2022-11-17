@@ -114,7 +114,6 @@ class EntryCard extends HTMLElement {
     set data(data) {
 
       if (!data) return;
-  
       
       var article_select = this.shadowRoot.querySelector('article');
       
