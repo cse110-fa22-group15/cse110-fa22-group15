@@ -27,19 +27,22 @@
 
     <div id="Home" class="tabcontent">
       <div class="row" style="background-color:#d5e2ed;">
-        <button type="button">Add Food + </button>
+        <button type="button" onclick="check_Pop_Food()">Add Food + </button>
         <!-- The pop_up div integrated-->
-        <div class="pop_Up" onclick="check_Pop_Food()">Add Food +
+        <div class="pop_Up">
           <form action="" class="pop_Up_Text" id="food">
-            <label for="Calories">Calories:</label><br>
-            <input type="number" id="Calories" name="Calories" value=""><br>
-            <label for="food_Type">Food Type</label><br>
-            <input type="search" id="food_Type" name="food_Type" value="API or Local Storage"><br>
-            <label for="food_Type">Food Type</label><br>
-            <input type="radio" id="mealB" name="meal_Type">Breakfest<br>
-            <input type="radio" id="mealL" name="meal_Type">Lunch<br>
-            <input type="radio" id="mealD" name="meal_Type">Dinner<br><br>
+            <label for="foodType">Food Name</label><br>
+            <input type="search" id="foodType" name="foodType" value="Enter food to autofill"><br>
+            <label for="mealType">Meal Type</label><br>
+            <select name="mealType" id="mealType">
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+            </select><br>
+            <label for="calories">Calories:</label><br>
+            <input type="number" id="calories" name="calories" value=""><br>
             <input type="submit" value="Submit" onclick=reset_Check()>
+            <input type="button" value="Cancel" onclick="reset_Check()">
           </form> 
         </div>
         <h2 id = "pick">Pick a date
@@ -153,7 +156,7 @@
         new Item("Fruit"),
       ]));
 
-      var check = 0;
+      var check = false;
       var mode = 0;
       function reset_Check(){
         if(mode == 0){
@@ -166,25 +169,19 @@
         else if(mode == 2){
           document.getElementById("new_User").submit();
         }
-        check = 0;
+        check = false;
       }
       function check_Pop_User(){
         mode = 2;
-        check_Pop()
+        click_Pop();
       }
       function check_Pop_Goal(){
         mode = 1;
-        check_Pop()
+        click_Pop();
       }
       function check_Pop_Food(){
         mode = 0;
-        check_Pop();
-      }
-
-      function check_Pop(){
-        //if(check < 10){
-          click_Pop();
-        //}
+        click_Pop();
       }
 
 
