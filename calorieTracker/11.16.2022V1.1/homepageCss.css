@@ -64,6 +64,7 @@ button[data-bind="click: deleteMarkedItems"]{
   transition: all .14s ease-out;
   white-space: nowrap
 }
+
 button[data-bind="click: deleteMarkedItems"]:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px,-4px);
