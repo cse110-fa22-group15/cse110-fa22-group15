@@ -50,9 +50,9 @@ TODO
 ```
 
 ##### 4. Deleting a Food
-If the user clicks the delete button next to a food entry, it needs to be removed from local storage:
+If the user clicks the delete button next to a food entry, it needs to be removed from foodsArray:
 ```
-localStorage.removeItem(foodsArray[index]); 
+TODO: Need to work with backend to see how we want to implement this. One possible way is use indexOf and splice to remove the specific meal's array from foodsArray.
 ```
 
 ## Decision Outcome
