@@ -15,3 +15,4 @@
 - There's some confusion here and there between the different subgroups
 - We haven't done with the local storage and CI/CD pipelines 
 - Unable to get full attendance at meetings which makes it hard for everyone to be on the same page.
+- Lack of understanding of what the other team has done/not done so far
