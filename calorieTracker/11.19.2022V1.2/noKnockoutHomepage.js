@@ -36,23 +36,57 @@ function initFormHandler() {
         // Loops through all the entries and sees if they are checked
         for (var i = 0; i < bt_entries.length; i++) {
             if(bt_entries[i].shadowRoot.querySelectorAll('input')[0].checked == true) {
-                console.log('hello');
+
             }
         }
-        
 
-        //console.log(bt.getElementsByTagName('entry-card')[0].shadowRoot.getElementById('apple1').checked);
+       
     })
 
-    // bt is equal to the table
-    var bt = document.getElementById('breakfast_table');
-    //console.log(bt);
-    // List of breakfast entry cards
-    var bt_entries = bt.getElementsByTagName('entry-card')
-    //console.log()
 
-    
-    //console.log(bt.getElementsByTagName('entry-card')[0]);
-    //console.log(bt.getElementsByTagName('entry-card')[0].shadowRoot.querySelectorAll('input')[0].checked);
+}
+
+// When the user clicks on div, open the pop_Up
+var check = false;
+var mode = 0;
+function reset_Check(){
+  if(mode == 0){
+    document.getElementById("food").submit();
+  }
+  else if(mode == 1){
+    document.getElementById("goal").submit();
+  }
+
+  else if(mode == 2){
+    document.getElementById("new_User").submit();
+  }
+  check = false;
+}
+function check_Pop_User(){
+  mode = 2;
+  click_Pop();
+}
+function check_Pop_Goal(){
+  mode = 1;
+  click_Pop();
+}
+function check_Pop_Food(){
+  mode = 0;
+  click_Pop();
+}
+
+function click_Pop() {
+  check += 1;
+  if(mode == 0){
+    var pop_Up = document.getElementById("food");
+  }
+  else if(mode == 1){
+    var pop_Up = document.getElementById("goal");
+  }
+  else if(mode == 2){
+    var pop_Up = document.getElementById("new_User");
+  }
+
+  pop_Up.classList.toggle("show");
 }
   
