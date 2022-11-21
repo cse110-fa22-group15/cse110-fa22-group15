@@ -92,7 +92,51 @@
 
 
     <script>
-      
+      var check = false;
+      var mode = 0;
+      function reset_Check(){
+        if(mode == 0){
+          document.getElementById("food").submit();
+        }
+        else if(mode == 1){
+          document.getElementById("goal").submit();
+        }
+
+        else if(mode == 2){
+          document.getElementById("new_User").submit();
+        }
+        check = false;
+      }
+      function check_Pop_User(){
+        mode = 2;
+        click_Pop();
+      }
+      function check_Pop_Goal(){
+        mode = 1;
+        click_Pop();
+      }
+      function check_Pop_Food(){
+        mode = 0;
+        click_Pop();
+      }
+
+
+
+      // When the user clicks on div, open the pop_Up
+      function click_Pop() {
+        check += 1;
+        if(mode == 0){
+          var pop_Up = document.getElementById("food");
+        }
+        else if(mode == 1){
+          var pop_Up = document.getElementById("goal");
+        }
+        else if(mode == 2){
+          var pop_Up = document.getElementById("new_User");
+        }
+
+        pop_Up.classList.toggle("show");
+      }
     </script>
 
   </body>
