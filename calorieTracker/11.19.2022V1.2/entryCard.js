@@ -121,8 +121,9 @@ class EntryCard extends HTMLElement {
       //           literals (tempalte strings) and element.innerHTML for this.
       article_select.innerHTML = `
       <input type="checkbox" id="${data['id']}">
-        <label for="food1">${data['foodName']}</label>`
+        <label for="${data['id']}">${data['foodName']}</label>`
     }
+    
   }
   
   // A8. TODO - Define the Class as a customElement so that you can create
