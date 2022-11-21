@@ -92,6 +92,49 @@
 
 
     <script>
+      function openTab(tabName, elmnt, color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(tabName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+
+      }
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+      // Progress bar
+      var i = 0;
+      // There supposed to be a number represents calorie intake passed in for function move()
+      // like: function move(value) {
+      function move() {
+        if (i == 0) {
+          i = 1;
+          var elem = document.getElementById("myBar");
+          var width = 1;
+          var id = setInterval(frame, 10);
+
+          function frame() {
+            // The width now is set as 90 since there's no calorie intake data pass in
+            //eg: you should change it as if (width >= value) { 
+            // where value is 90, calculated by: (calorie intake/ calorie goal) * 100
+            // it will also handle over-intaked calories
+            if (width >= 80) {
+              clearInterval(id);
+              i = 0;
+            } else {
+              width++;
+              elem.style.width = width + "%";
+            }
+          }
+        }
+      }
+      
       var check = false;
       var mode = 0;
       function reset_Check(){
@@ -101,7 +144,6 @@
         else if(mode == 1){
           document.getElementById("goal").submit();
         }
-
         else if(mode == 2){
           document.getElementById("new_User").submit();
         }
