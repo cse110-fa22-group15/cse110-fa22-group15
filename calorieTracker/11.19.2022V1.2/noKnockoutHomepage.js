@@ -69,6 +69,7 @@ function initFormHandler() {
         }*/
         var toDelete = []
         var diary = getFoodFromStorage();
+        // Loops through and finds which indices need to be deleted
         for (var i = 0; i < bt_entries.length; i++) {
             if (bt_entries[i].shadowRoot.querySelectorAll('input')[0].checked == true) {
                 toDelete.push(i);
