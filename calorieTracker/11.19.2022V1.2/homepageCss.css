@@ -48,7 +48,7 @@ transform: translate(-4px,-4px);
 button[type="button"]:focus-visible{
 outline-offset: 1px;
 }
-button[data-bind="click: deleteMarkedItems"]{
+#deletefood{
 margin-top: 10px;
 margin-left: 10px;
 outline: 0;
@@ -72,11 +72,11 @@ text-overflow: ellipsis;
 transition: all .14s ease-out;
 white-space: nowrap
 }
-button[data-bind="click: deleteMarkedItems"]:hover {
+#deletefood:hover {
 box-shadow: 4px 4px 0 #000;
 transform: translate(-4px,-4px);
 }
-button[data-bind="click: deleteMarkedItems"]:focus-visible{
+#deletefood:focus-visible{
 outline-offset: 1px;
 }
 button[onclick="move()"]{

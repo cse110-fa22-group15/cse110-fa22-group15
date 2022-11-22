@@ -22,8 +22,7 @@
     <h2><img src="logo.PNG" alt="" id = "pc"></h2>
   </header>
   <article>
-    <h2>Let’s build your profile!</h2>
-    <form action="GoalWeight.html" method = "post">
+    <h2>Let's build your profile!</h2>
       <label for="name">User name:</label><br>
       <input type="text" id="name" name="name" placeholder="Mike"><br>
       <label for="sex">Sex</label><br>
@@ -34,9 +33,13 @@
       </select><br>
       <label for="Age">Age:</label><br>
       <input type="number" id="age" name="age" placeholder=32><br>
-      <input type="submit" value = "Continue"><br>
-    </form>
+      <input type="submit" value = "Continue"  onClick="NewUser()"><br>
   </article>
+  <script>
+    function NewUser() {
+      window.location.href="GoalWeight.html";
+    }
+  </script>
 
 </body>
 </html>
