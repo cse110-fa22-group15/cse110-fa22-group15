@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="homepageCss.css">
     <style>
@@ -11,6 +12,11 @@
       }
 
     </style>
+
+    <script src="./entryCard.js" type="module"></script>
+    <script src="./noKnockoutHomepage.js" type="module"></script>
+
+    
   </head>
 
   <body>
@@ -52,20 +58,16 @@
         
         <div class="column" id = "column1" style="background-color:#DBB04Aff;">
           <h3 id = "bf">Breakfast</h3>
-          <table>
-            <tbody data-bind="foreach: items">
-              <tr>
-                <td>
-                  <input data-bind="value: name" />
-                </td>
-                <td>
-                  <input type="checkbox" id="breakfast_food" data-bind="checked: markedForDeletion" />
-                </td>
-              </tr>
-            </tbody>
+          <table id="breakfast_table">
+            
           </table>
-
-          <button data-bind="click: deleteMarkedItems">Delete Marked</button>
+          <h3 id = "lnh">Lunch</h3>
+          <table id="lunch_table">
+          </table>
+          <h3 id = "din">Dinner</h3>
+          <table id="dinner_table">
+          </table>
+          <button id = 'deletefood'>Delete Marked</button>
         </div>
         <div class="column" id = "column2" style="background-color:#DBB04Aff;">
           <button onclick="move()">Daily Goal</button><br>
@@ -90,7 +92,6 @@
 
 
     <script>
-
       function openTab(tabName, elmnt, color) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
@@ -133,34 +134,10 @@
           }
         }
       }
-
-      // Using Knockout.js library, we can add/delete checkboxes we want
-      // Since I am not familar to do it in DOM, I just do it using a framework Knockout 2.0.0 version
-      // The algo will be the same using DOM, so this lines of codes are used as an inspiration
-      // TO VIEW the effect:
-      // You can copy and paste all codes in this HTML file to fiddle.net, and set the Javascript's library as Knockout 2.0.0
-      var Item = function(name) {
-        this.name = ko.observable(name);
-        this.markedForDeletion = ko.observable(false);
-      };
-
-      var ViewModel = function(items) {
-        this.items = ko.observableArray(items);
-        this.deleteMarkedItems = function() {
-          this.items.remove(function(item) {
-            return item.markedForDeletion();
-          });
-        };
-      };
-
-      ko.applyBindings(new ViewModel([
-        new Item("Bacon"),
-        new Item("Egg"),
-        new Item("Fruit"),
-      ]));
-
+      
       var check = false;
       var mode = 0;
+      
       function reset_Check(){
         if(mode == 0){
           document.getElementById("food").submit();
@@ -168,7 +145,6 @@
         else if(mode == 1){
           document.getElementById("goal").submit();
         }
-
         else if(mode == 2){
           document.getElementById("new_User").submit();
         }
@@ -188,7 +164,6 @@
       }
 
 
-
       // When the user clicks on div, open the pop_Up
       function click_Pop() {
         check += 1;
@@ -204,7 +179,6 @@
 
         pop_Up.classList.toggle("show");
       }
-
     </script>
 
   </body>
