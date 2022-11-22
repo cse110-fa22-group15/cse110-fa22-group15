@@ -88,6 +88,7 @@ function initFormHandler() {
     submitButton.addEventListener('click', (event) => {
         event.preventDefault();
         var foodType = JSON.stringify(document.getElementById("foodType").value);
+        var mealType = JSON.stringify(document.getElementById("mealType").value)
         
         
         var foodEntry = {};
