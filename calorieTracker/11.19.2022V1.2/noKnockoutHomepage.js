@@ -7,7 +7,7 @@ function init() {
 }
 
 function getFoodFromStorage() {
-    var diary = JSON.parse(localStorage.getItem('foodDiary'));
+    var diary = JSON.parse(window.localStorage.getItem('diary'));
     if (diary == null) {
         return [];
     }
@@ -19,13 +19,15 @@ function addFoodsToDocument(foodDiary) {
     for (var i = 0; i < foodDiary.length; i++) {
         var ec = document.createElement('entry-card');
         ec.data = foodDiary[i];
-        breakfast_table.append(rc);
+        breakfast_table.append(ec);
     }
 }
 
 function saveFoodToDiary(foodDiary) {
-    localStorage.foodDiary = JSON.stringify(foodDiary);
+    localStorage.diary = JSON.stringify(foodDiary);
 }
+
+
 
 
 function initFormHandler() {
@@ -44,23 +46,12 @@ function initFormHandler() {
     entry2['foodName'] = 'carrots';
     entryCard2.data = entry2;
 
-    let foods = getFoodFromStorage();
-    addFoodsToDocument(foods);
-    let diary = [];
-    diary.push(entryCard);
-    localStorage.setItem('diary', JSON.stringify([entry, entry2]));
-    console.log(JSON.parse(localStorage.getItem('diary')));
 
     // Gets a reference to the breakfast table
     var breakfast_table = document.getElementById('breakfast_table');
 
-    breakfast_table.append(entryCard);
-    breakfast_table.append(entryCard2);
+    var x = JSON.parse(localStorage.getItem('diary'))
 
-    //breakfast_table.append(entryCard);
-    //var lunch_table = document.getElementById('lunch_table');
-    //breakfast_table.append(entryCard2);
-    //console.log(JSON.parse(localStorage.getItem('diary')));
     var deleteButton = document.getElementById('deletefood');
 
     deleteButton.addEventListener('click', (event) => {
@@ -82,26 +73,20 @@ function initFormHandler() {
     var submitButton = document.getElementById('popButton1');
     submitButton.addEventListener('click', (event) => {
         event.preventDefault();
-       // var date = JSON.stringify(document.getElementById("datepicker")); 
         var foodType = JSON.stringify(document.getElementById("foodType").value);
-       // var mealTime = JSON.stringify(document.getElementById("mealType"));
-       // var calories = JSON.stringify(document.getElementById("calories"));
-        //console.log(date);
+        
+        
         var foodEntry = {};
         foodEntry['id'] = 'apple1';
-        foodEntry['foodName'] = document.getElementById("foodType").value;
+        foodEntry['foodName'] = foodType;
         var foodEntryCard = document.createElement('entry-card');
         foodEntryCard.data = foodEntry;
         
-        var foodStorage = getFoodFromStorage();
-
-        var breakfast_table1 = document.getElementById('breakfast_table');
-        breakfast_table1.append(recipeCard);
-    // B9. TODO - Get the recipes array from localStorage, add this new recipe to it, and
-    //            then save the recipes array back to localStorage
-        var temp_arr = getFoodFromStorage();
-        temp_arr.push(foodEntry);
-        localStorage.setItem('diary', JSON.stringify(temp_arr));
+        var alreadyAdded = getFoodFromStorage();
+        alreadyAdded.push(foodEntry);
+        
+        localStorage.diary = JSON.stringify(alreadyAdded);
+        
     })
     
 
