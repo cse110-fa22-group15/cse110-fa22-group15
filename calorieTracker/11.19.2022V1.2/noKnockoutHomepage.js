@@ -75,6 +75,7 @@ function initFormHandler() {
                 toDelete.push(i);
             }
         }
+        // Goes and deletes the indices
         for (var i = toDelete.length - 1; i >= 0; i--) {
             diary.splice(toDelete[i], 1);
         }
