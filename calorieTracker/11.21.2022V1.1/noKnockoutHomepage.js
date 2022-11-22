@@ -16,10 +16,20 @@ function getFoodFromStorage() {
 
 function addFoodsToDocument(foodDiary) {
     var breakfast_table = document.getElementById('breakfast_table');
+    var lunch_table = document.getElementById('lunch_table');
+    var dinner_table = document.getElementById('dinner_table');
     for (var i = 0; i < foodDiary.length; i++) {
         var ec = document.createElement('entry-card');
         ec.data = foodDiary[i];
-        breakfast_table.append(ec);
+        if (foodDiary[i]['mealType'] == JSON.stringify("breakfast")) {
+            breakfast_table.append(ec);
+        }
+        if (foodDiary[i]['mealType'] == JSON.stringify("lunch")) {
+            lunch_table.append(ec);
+        }
+        if (foodDiary[i]['mealType'] == JSON.stringify("dinner")) {
+            dinner_table.append(ec);
+        }
     }
 }
 
@@ -55,18 +65,18 @@ function initFormHandler() {
     var deleteButton = document.getElementById('deletefood');
 
     deleteButton.addEventListener('click', (event) => {
-        // bt is the table of entry cards
+        // bt is the breakfast table of entry cards
         var bt = document.getElementById('breakfast_table');
-        // Gets a list of all the entries
+        // Gets a list of all the entries in breakfast
         var bt_entries = bt.getElementsByTagName('entry-card');
 
-        // Loops through all the entries and sees if they are checked
-        /*
-        for (var i = 0; i < bt_entries.length; i++) {
-            if(bt_entries[i].shadowRoot.querySelectorAll('input')[0].checked == true) {
-                
-            }
-        }*/
+        var lt = document.getElementById('lunch_table');
+        var lt_entries = lt.getElementsByTagName('entry-card');
+
+        var dt = document.getElementById('dinner_table');
+        var dt_entries = dt.getElementsByTagName('entry-card');
+
+
         var toDelete = []
         var diary = getFoodFromStorage();
         // Loops through and finds which indices need to be deleted
@@ -88,12 +98,13 @@ function initFormHandler() {
     submitButton.addEventListener('click', (event) => {
         event.preventDefault();
         var foodType = JSON.stringify(document.getElementById("foodType").value);
-        var mealType = JSON.stringify(document.getElementById("mealType").value)
+        var mealType = JSON.stringify(document.getElementById("mealType").value);
         
         
         var foodEntry = {};
         foodEntry['id'] = 'apple1';
         foodEntry['foodName'] = foodType;
+        foodEntry['mealType'] = mealType;
         var foodEntryCard = document.createElement('entry-card');
         foodEntryCard.data = foodEntry;
         

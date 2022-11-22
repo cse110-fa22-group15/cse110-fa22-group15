@@ -105,13 +105,26 @@
     </div>
 
     <div id="Settings" class="tabcontent">
-      <h1>London</h1>
-      <p>London is the capital city of England.</p>
-
+      <label for="unit">Weight Unit:</label>
+      <select id="unit" name="unit">
+        <option value="lb">lb</option>
+        <option value="kg">kg</option>
+      </select><br>
+      <label for="mode_c">Change mode:</label>
+      <button class="mode" onclick="light()">Toggle light mode</button>
+      <button class="mode" onclick="dark()">Toggle dark mode</button>
     </div>
 
 
     <script>
+      function light() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+      }
+      function dark() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
       function User() {
         window.location.href="Homepage.html";  
       }
