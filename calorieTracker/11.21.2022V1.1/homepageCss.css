@@ -313,3 +313,12 @@ align-items: stretch;
     #popButton2:focus-visible{
     outline-offset: 1px;
     }
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+    
+    .light-mode {
+      background-color: whitesmoke;
+      color: black;
+    }
