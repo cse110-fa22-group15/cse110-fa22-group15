@@ -58,15 +58,28 @@ function initFormHandler() {
         // bt is the table of entry cards
         var bt = document.getElementById('breakfast_table');
         // Gets a list of all the entries
-        var bt_entries = bt.getElementsByTagName('entry-card')
+        var bt_entries = bt.getElementsByTagName('entry-card');
 
         // Loops through all the entries and sees if they are checked
+        /*
         for (var i = 0; i < bt_entries.length; i++) {
             if(bt_entries[i].shadowRoot.querySelectorAll('input')[0].checked == true) {
                 
             }
+        }*/
+        var toDelete = []
+        var diary = getFoodFromStorage();
+        // Loops through and finds which indices need to be deleted
+        for (var i = 0; i < bt_entries.length; i++) {
+            if (bt_entries[i].shadowRoot.querySelectorAll('input')[0].checked == true) {
+                toDelete.push(i);
+            }
         }
-
+        for (var i = toDelete.length - 1; i >= 0; i--) {
+            diary.splice(toDelete[i], 1);
+        }
+        saveFoodToDiary(diary);
+        location.reload();
        
     })
 
