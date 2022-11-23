@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="homepageCss.css">
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        background-color:#97B3D0FF;
+      }
+
+    </style>
+
+    <script src="/calorieTracker/11.19.2022V1.2/entryCard.js" type="module"></script>
+    <script src="/calorieTracker/11.19.2022V1.2/noKnockoutHomepage.js" type="module"></script>
+
+    
+  </head>
+
+  <body>
+
+    <header>
+      <!-- upload logo as background in header -->
+      <img src="logo.PNG" alt="" id = "pc">
+      <h2>Welcome Jason!</h2>
+      
+    </header>
+    <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
+    <button class="tablink" onclick="openTab('Profile', this, '#DFDCE5FF')">Profile</button>
+    <button class="tablink" onclick="openTab('Home', this, '#DFDCE5FF')" id="defaultOpen">Home</button>
+
+    <div id="Home" class="tabcontent">
+      <div class="row" style="background-color:#DFDCE5FF;">
+        <button type="button" onclick="check_Pop_Food()">Add Food + </button>
+        <!-- The pop_up div integrated-->
+        <div class="pop_Up">
+          <form action="" class="pop_Up_Text" id="food">
+            <label for="foodType">Food Name</label><br>
+            <input type="search" id="foodType" name="foodType" value="Enter food to autofill"><br>
+            <label for="mealType">Meal Type</label><br>
+            <select name="mealType" id="mealType">
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+            </select><br>
+            <label for="calories">Calories:</label><br>
+            <input type="number" id="calories" name="calories" value=""><br>
+            <input type="submit" value="Submit" onclick=reset_Check() id = "popButton1">
+            <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton2">
+          </form> 
+        </div>
+        <h2 id = "pick">Pick a date
+          <input type="date" id="datepicker">
+        </h2>
+        <div id="test">
+        
+        <div class="column" id = "column1" style="background-color:#DBB04Aff;">
+          <h3 id = "bf">Breakfast</h3>
+          <table id="breakfast_table">
+            
+          </table>
+          <h3 id = "lnh">Lunch</h3>
+          <table id="lunch_table">
+          </table>
+          <h3 id = "din">Dinner</h3>
+          <table id="dinner_table">
+          </table>
+          <button id = 'deletefood'>Delete Marked</button>
+        </div>
+        <div class="column" id = "column2" style="background-color:#DBB04Aff;">
+          <button onclick="move()">Daily Goal</button><br>
+          <div id="myProgress">
+            <div id="myBar"></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="Profile" class="tabcontent">
+      <h1>Tokyo</h1>
+    </div>
+
+    <div id="Settings" class="tabcontent">
+      <h1>London</h1>
+      <p>London is the capital city of England.</p>
+
+    </div>
+
+
+    <script>
+      
+    </script>
+
+  </body>
+
+</html>

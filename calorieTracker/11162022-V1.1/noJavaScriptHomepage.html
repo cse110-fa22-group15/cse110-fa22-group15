@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="noKnockoutCss.css">
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        background-color:#8bf0ba;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      <!-- upload logo as background in header -->
+      <img src="" alt="">
+      <h2>Welcome Jassssson!!!</h2>
+      
+    </header>
+    <button class="tablink" onclick="openTab('Settings', this, '#d5e2ed')">Settings</button>
+    <button class="tablink" onclick="openTab('Profile', this, '#d5e2ed')">Profile</button>
+    <button class="tablink" onclick="openTab('Home', this, '#d5e2ed')" id="defaultOpen">Home</button>
+
+    <div id="Home" class="tabcontent">
+      <div class="row" style="background-color:#d5e2ed;">
+        <button type="button">Add Food + </button>
+        <h2 id = "pick">Pick a date
+          <input type="date" id="datepicker">
+        </h2>
+        <div id="test">
+        
+        <div class="column" id = "column1" style="background-color:#b0d3bf;">
+          <h3 id = "bf">Breakfast</h3>
+          <table>
+
+          </table>
+
+          <button data-bind="click: deleteMarkedItems">Delete Marked</button>
+        </div>
+        <div class="column" id = "column2" style="background-color:#b0d3bf;">
+          <button onclick="move()">Daily Goal</button><br>
+          <div id="myProgress">
+            <div id="myBar"></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="Profile" class="tabcontent">
+      <h1>Tokyo</h1>
+    </div>
+
+    <div id="Settings" class="tabcontent">
+      <h1>London</h1>
+      <p>London is the capital city of England.</p>
+
+    </div>
+
+
+    <script type="text/javascript" src="homepage.js"></script>
+
+  </body>
+
+</html>
