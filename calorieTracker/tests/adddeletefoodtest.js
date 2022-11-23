@@ -1,16 +1,12 @@
 const { it } = require('node:test');
 
-describe('Add & Delete Food tests', () => {
-    // Change this constant value before testing!
-    console.log("get html file")
-    const fs = require('fs');
-    const path = require('path');
-    const html = fs.readFileSync(path.resolve(__dirname, '../11232022-V1.4 copy/Homepage.html'), 'utf8');
+// unit.test.js
 
-    console.log("got html file")
+const functions = require('../11232022-V1.4 copy/Homepage');
 
-    it('Directly go to homepage if not a new user', async () => {
-        
-        expect(currPage).toBe('Homepage.html')
-      });
+// TODO - Part 2
+test('checks if 925-333-8756 is a valid phone number', () => {
+    var y = 4;
+    expect(y).toBe(4);
 });
+
