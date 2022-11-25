@@ -19,16 +19,10 @@ header:first-of-type{
   font-size: 30px;
 }
 
-:root {
-  --color-primary: #8b8888;
-  --color-secondary: #292828;
-  --color-tertiary: #141413;
-  --color-quaternary: #0b0b0b;
-  --color-quinary: #000000;
-}
-
 .content {
   display: flex;
+  justify-content: center;
+  margin-left: 300px;
 }
 
 .text_shadows {
