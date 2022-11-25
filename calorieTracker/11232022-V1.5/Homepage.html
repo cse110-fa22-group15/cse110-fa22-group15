@@ -65,23 +65,13 @@
           <button id = 'deletefood'>Delete Marked</button>
         </div>
         <div class="column" id = "column2" style="background-color:#B6CEC7;">
-          <button id="dailyGoal" onclick="move()">Daily Goal</button><br>
-          <div class="myProgress">
-            <div class="outer">
-                <div id="number">
-                  100%
-                </div>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-              <defs>
-                 <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#51e91e" />
-                    <stop offset="100%" stop-color="#e91e63"/>
-                 </linearGradient>
-              </defs>
-              <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-            </svg>
+          <div id="dailyGoal">Daily Goal<br>
+          <div class="progress"> 
+            <div id="download" class="progress__bar"></div>
           </div>
+          <label id="dailyCalorie" for="set-value">Update your daily calories: </label>
+          <input id="set-value">
+          <input id="submit" type="submit" value="Update">
         </div>
         </div>
       </div>
@@ -177,15 +167,29 @@
       //     }
       //   }
       // }
-      let number = document.getElementById("number");
-      let calories = document.getElementById("calories").value;
-      let counter = 0; 
-      if(counter == 100) {
-        clearInterval();
-      } else {
-        totalCalories += calories; 
-        number.innerHTML = totalCalories + "%";
-      }
+
+  let progressbar = document.getElementById("download");
+
+  function updateProgressBar(value) {
+    if (value >= 0 && value <= 1000) {
+      progressbar.style.width = value + "%"; 
+    }
+  }
+
+  function handleInput() {
+    let value = document.getElementById('set-value').value;
+    if (value > 1000) {
+      value = 100;
+      document.getElementById('set-value').value = 1000;
+    }
+    if (value < 0) {
+      value = 0;
+      document.getElementById('set-value').value = 0;
+    }
+    updateProgressBar(value/10);
+  }
+  
+  document.getElementById("submit").addEventListener("click", handleInput, false);
       
       var check = false;
       var mode = 0;

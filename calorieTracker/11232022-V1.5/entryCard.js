@@ -19,7 +19,7 @@ class EntryCard extends HTMLElement {
       article {
         align-items: center;
         border: 1px solid black;
-        background-color: #DFDCE5FF;
+        background-color: rgb(188, 115, 20);
         border-radius: 8px;
         height: 30px;
         font-size: 18px;
