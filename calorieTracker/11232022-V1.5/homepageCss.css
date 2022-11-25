@@ -1,16 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+body {
+  font-family: 'Montserrat';
+  background-color: rgb(145, 173, 158);
+}
+
 header:first-of-type{
   margin-top:100px;
-  color: white;
   font-size: 30px;
-  font-style:italic;
-  text-shadow: -2px 2px 0 #04AA6D,
-                2px 2px 0  #04AA6D,
-                2px -2px 0  #04AA6D,
-               -2px -2px 0  #04AA6D;
+}
+
+:root {
+  --color-primary: #8b8888;
+  --color-secondary: #292828;
+  --color-tertiary: #141413;
+  --color-quaternary: #0b0b0b;
+  --color-quinary: #000000;
+}
+
+.content {
+  display: flex;
+}
+
+.text_shadows {
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+  color: black;
+  letter-spacing: 0.4rem;
 }
 
 #pc{
-  margin-top: -100px;
+  margin-top: -90px;
   margin-right: -150px;
   height:300px;
   width:600px;
@@ -112,17 +145,17 @@ outline-offset: 1px;
 }
 h2[id="pick"]{
 margin-left: 10px;
-color:#0e0fed;
+font-weight: bold;
+color:black;
 }
-h3[id="bf"]{
-margin-left: 10px;
-color:#0e0fed;
-}
+
+
 .tablink {
 outline: 0;
 grid-gap: 8px;
 align-items: center;
 background: 0 0;
+background-color: #9ec9bc;
 border: 1px solid #000;
 border-radius: 4px;
 cursor: pointer;
@@ -152,28 +185,38 @@ white-space: nowrap;
   border: 2px solid;
   padding: 10px;
   box-shadow: 6px 4px 8px 4px;
-  
   display: inline-block;
   width: 100%;
   height: 100%;
   text-align: left;
 }
+#bf{
+  padding: 20px;
+  color:#1f1f4c;
+}
+
 #lnh{
-  margin-left: 10px;
-  color:#0e0fed;
+  padding: 20px;
+  color:#1f1f4c;
 }
 #din{
-  margin-left: 10px;
-  color:#0e0fed;
+  padding: 20px;
+  color:#1b1b5c;
+}
+
+#column1{
+  border-radius: 25px;
+  border-color: #000;
 }
 
 .column {
+  border-radius: 25px;
   float: left;
-  width: 49.5%;
+  width: 45%;
   min-height: 100%;
-  color:#000;
-  border-style:groove;
+  color:rgb(0, 0, 0);
 }
+
 div[id='test']{
 display: flex;
 align-items: stretch;
@@ -182,34 +225,92 @@ align-items: stretch;
 .row:after {
   content: "";
   display: table;
+  display: flex;
   clear: both;
+  
+}
+
+.row{
+  padding-left:150px;
+  margin-right:26px;
+  height:100%;
 }
 
 #Settings {
-  background-color: #0A1612;
+  background-color: #addad8;
 }
 
 #Profile {
-  background-color: #1A2930;
+  background-color: #197f7b;
 }
 
 #Home {
-  background-color: #C5C1C0;
+  background-color: #6cc256;
 }
 
-#myProgress {
+/* #myProgress {
   width: 80%;
   background-color: #ddd;
   /* It should be rotated by 90 deg, but it need to be fixed for relative percentage to layout */
-  /* transform: rotate(90deg); */
+  /* transform: rotate(90deg); 
 }
 
 #myBar {
-  width: 1%;
   height: 30px;
+  width: 30px;
   background-color: #04AA6D;
+}  */
+
+.myProgress{
+  width: 160px;
+  height: 160px;
+  position: relative;
 }
 
+.outer{
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), 
+              -6px -6px 10px -1px rgba(70, 163, 58, 0.7);
+  margin-left: 150px;
+}
+
+#number{
+  font-weight: 600px;
+  color: #555; 
+  padding-top: 68px;
+  padding-left: 63.5px;
+}
+
+circle{
+  fill:none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
+  margin-left: 20px; 
+}
+
+svg{
+  position:absolute; 
+  margin-left: 150px;
+  top: 0px; 
+  left: 0px; 
+}
+
+@keyframes anim{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+#dailyGoal{
+  margin-top: 20px;
+  margin-left: 10px;
+}
 
 .pop_Up .pop_Up_Text {
   visibility: hidden;
@@ -325,12 +426,23 @@ align-items: stretch;
     #popButton2:focus-visible{
     outline-offset: 1px;
     }
+
     .dark-mode {
       background-color: black;
       color: white;
     }
     
     .light-mode {
-      background-color: whitesmoke;
+      background-color: rgb(255, 255, 255);
       color: black;
+    }
+
+    .info{
+      background-color: aqua;
+      padding: 20px;
+      margin-right: 23px;
+    }
+
+    .name {
+      font-size: 20px;
     }

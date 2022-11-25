@@ -5,15 +5,6 @@
     <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="homepageCss.css">
-    <style>
-      body {
-        font-family: "Lato", sans-serif;
-        background-image: url("https://b-static.besthdwallpaper.com/landscape-minimalist-mountain-and-sky-wallpaper-1680x1260-87866_24.jpg");
-        background-size:cover;
-      }
-
-    </style>
-
     <script src="./entryCard.js" type="module"></script>
     <script src="./Homepage.js" type="module"></script>
 
@@ -21,30 +12,33 @@
   </head>
 
   <body>
+    
 
     <header>
       <!-- upload logo as background in header -->
       <img src="logo.PNG" alt="" id = "pc">
-      <h2>Welcome Jason!</h2>
+      <div class="content">
+      <h2 class="text_shadows">Welcome to Calcumole!</h2>
+      </div>
       
     </header>
-    <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
-    <button class="tablink" onclick="openTab('Profile', this, '#DFDCE5FF')">Profile</button>
     <button class="tablink" onclick="openTab('Home', this, '#DFDCE5FF')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openTab('Profile', this, '#DFDCE5FF')">Profile</button>
+    <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
 
     <div id="Home" class="tabcontent">
-      <div class="row" style="background-color:#DFDCE5FF;">
-        <button type="button" onclick="check_Pop_Food()">Add Food + </button>
+      <div class="row" style="background-color: #cbdfda;">
+        <button type="button" onclick="check_Pop_Food()">Add Food (+)</button>
         <!-- The pop_up div integrated-->
         <div class="pop_Up">
           <form action="" class="pop_Up_Text" id="food">
             <label for="foodType">Food Name</label><br>
-            <input type="search" id="foodType" name="foodType" value="Enter food to autofill"><br>
+            <input type="search" id="foodType" name="foodType" value='Enter food'><br>
             <label for="mealType">Meal Type</label><br>
             <select name="mealType" id="mealType">
-              <option value="breakfast">Breakfast</option>
-              <option value="lunch">Lunch</option>
-              <option value="dinner">Dinner</option>
+              <option value="breakfast">BREAKFAST</option>
+              <option value="lunch">LUNCH</option>
+              <option value="dinner">DINNER</option>
             </select><br>
             <label for="calories">Calories:</label><br>
             <input type="number" id="calories" name="calories" value=""><br>
@@ -57,35 +51,47 @@
         </h2>
         <div id="test">
         
-        <div class="column" id = "column1" style="background-color:#90EE90;">
-          <h3 id = "bf">Breakfast</h3>
+        <div class="column" id = "column1" style="background-color:#D8E0BB;">
+          <h3 id = "bf">BREAKFAST</h3>
           <table id="breakfastTable">
             
           </table>
-          <h3 id = "lnh">Lunch</h3>
+          <h3 id = "lnh">LUNCH</h3>
           <table id="lunchTable">
           </table>
-          <h3 id = "din">Dinner</h3>
+          <h3 id = "din">DINNER</h3>
           <table id="dinnerTable">
           </table>
           <button id = 'deletefood'>Delete Marked</button>
         </div>
-        <div class="column" id = "column2" style="background-color:#90EE90;">
-          <button onclick="move()">Daily Goal</button><br>
-          <div id="myProgress">
-            <div id="myBar"></div>
+        <div class="column" id = "column2" style="background-color:#B6CEC7;">
+          <button id="dailyGoal" onclick="move()">Daily Goal</button><br>
+          <div class="myProgress">
+            <div class="outer">
+                <div id="number">
+                  100%
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+              <defs>
+                 <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#51e91e" />
+                    <stop offset="100%" stop-color="#e91e63"/>
+                 </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+            </svg>
           </div>
         </div>
         </div>
       </div>
     </div>
 
-
     <div id="Profile" class="tabcontent">
-      <h2 class="ifo">Edit your profile</h2>
+      <h2 class="info">EDIT PROFILE</h2>
 
       <label for="name">Name:</label><br>
-      <input type="name" id="name" name="name" placeholder=Jason><br>
+      <input type="name" id="name" name="name" placeholder="Tony Stark"><br>
 
       <label for="sex">Sex</label><br>
       <select id="sex" name="sex">
@@ -112,8 +118,8 @@
         <option value="kg">kg</option>
       </select><br>
       <label for="mode_c">Change mode:</label>
-      <button class="mode" onclick="light()">Toggle light mode</button>
-      <button class="mode" onclick="dark()">Toggle dark mode</button>
+      <button class="mode" onclick="light()">Light mode</button>
+      <button class="mode" onclick="dark()">Dark mode</button>
     </div>
 
 
@@ -146,30 +152,39 @@
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
       // Progress bar
-      var i = 0;
-      // There supposed to be a number represents calorie intake passed in for function move()
-      // like: function move(value) {
-      function move() {
-        if (i == 0) {
-          i = 1;
-          var elem = document.getElementById("myBar");
-          var width = 1;
-          var id = setInterval(frame, 10);
+      // var i = 0;
+      // // There supposed to be a number represents calorie intake passed in for function move()
+      // // like: function move(value) {
+      // function move() {
+      //   if (i == 0) {
+      //     i = 1;
+      //     var elem = document.getElementById("myBar");
+      //     var width = 1;
+      //     var id = setInterval(frame, 10);
 
-          function frame() {
-            // The width now is set as 90 since there's no calorie intake data pass in
-            //eg: you should change it as if (width >= value) { 
-            // where value is 90, calculated by: (calorie intake/ calorie goal) * 100
-            // it will also handle over-intaked calories
-            if (width >= 80) {
-              clearInterval(id);
-              i = 0;
-            } else {
-              width++;
-              elem.style.width = width + "%";
-            }
-          }
-        }
+      //     function frame() {
+      //       // The width now is set as 90 since there's no calorie intake data pass in
+      //       //eg: you should change it as if (width >= value) { 
+      //       // where value is 90, calculated by: (calorie intake/ calorie goal) * 100
+      //       // it will also handle over-intaked calories
+      //       if (width >= 80) {
+      //         clearInterval(id);
+      //         i = 0;
+      //       } else {
+      //         width++;
+      //         elem.style.width = width + "%";
+      //       }
+      //     }
+      //   }
+      // }
+      let number = document.getElementById("number");
+      let calories = document.getElementById("calories").value;
+      let counter = 0; 
+      if(counter == 100) {
+        clearInterval();
+      } else {
+        totalCalories += calories; 
+        number.innerHTML = totalCalories + "%";
       }
       
       var check = false;
@@ -217,7 +232,4 @@
         pop_Up.classList.toggle("show");
       }
     </script>
-
-  </body>
-
 </html>

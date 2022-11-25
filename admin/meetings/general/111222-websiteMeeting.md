@@ -1,5 +1,5 @@
 # Team 15 / ErrorByNight
-## Team Meeting 
+## Website Meeting 
 ### Attendance
 - Richard Heriawan
 - Ben Zhang

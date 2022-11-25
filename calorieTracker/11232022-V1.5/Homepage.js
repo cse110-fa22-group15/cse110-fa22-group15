@@ -156,6 +156,4 @@ function initFormHandler() {
         }
         
     })
-    
-
 }
