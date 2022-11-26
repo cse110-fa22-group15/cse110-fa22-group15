@@ -9,7 +9,7 @@
 - Eruc Chen 2
 - Usman Kadir
 - Zach Yuen
--
+  
 ### 11/09, 6:00 pm, in person CSE 4th Floor Common Area
   
 #### The agenda of what is discussed
