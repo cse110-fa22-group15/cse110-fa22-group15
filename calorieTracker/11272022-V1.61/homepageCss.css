@@ -255,7 +255,7 @@ align-items: stretch;
 }
 
 #Home {
-  background-color: #51a270;
+  background-color: #597a59;
 }
 
 /* #myProgress {
@@ -324,14 +324,14 @@ svg{
 
 .pop_Up .pop_Up_Text {
   visibility: hidden;
-  background-color: rgb(111, 202, 157);
+  background-color: rgb(190, 220, 138);
   color: #000;
   text-align: center;
-  border-radius: 2px;
-  padding: 10% 10%;
-  position:absolute;
-  top:0%;
-  left:0%;
+  border-radius: 20%;
+  padding: 10% 10% 10% 10%;
+  position:fixed;
+  top:25%;
+  left:35%;
   border-style: groove;
   border-width: 2px;
   border-color: black;
@@ -575,10 +575,10 @@ padding: 15px;
 margin-right: 300px;
 display: inline-block;  
 border: none;  
-background: #f1f1f1;  
+background: #f1f1f1; 
+font-size: 18px; 
 }  
 input[type=number]:focus, input[type=name]:focus {  
-background-color: rgb(112, 163, 137);  
-outline: none;  
+background-color: rgb(211, 240, 225);  
+outline:invert;
 }  
-

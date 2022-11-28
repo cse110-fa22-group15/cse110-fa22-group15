@@ -5,10 +5,11 @@ header {
 #pc{
 	height:200px;
 	width:200px;
+	margin-top: 12px;
 }
 
 article {
-    margin-top: -13px;
+    margin-top: -18px;
     background-color: #d5e2ed;
     display: block;
     margin-left: auto;
