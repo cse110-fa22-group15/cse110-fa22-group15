@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 // describe('Basic Pageflow Tests for Website', () => {
 //     // Change this constant value before testing!
 //     const loginUrl = 'http://127.0.0.1:5501/calorieTracker/11.22.2022V1.3/LoginPage.html';
 //     beforeAll(async () => {
 //       await page.goto(loginUrl)
 //     });
+=======
+describe('Basic Pageflow Tests for Website', () => {
+    // Change this constant value before testing!
+    const loginUrl = 'http://127.0.0.1:5501/calorieTracker/11272022-V1.61/LoginPage.html';
+    beforeAll(async () => {
+      await page.goto(loginUrl)
+    });
+>>>>>>> af9f7af719ca66e5aaadf1386479545058891806
 
 //     it('Go to create user page if a new user', async () => {
 //       const yesBtn = await page.$('.yes')
