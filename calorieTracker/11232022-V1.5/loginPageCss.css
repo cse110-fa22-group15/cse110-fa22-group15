@@ -1,23 +1,25 @@
 header {
     text-align: center;
   }
-  #pc{
-    width: 600px;
-    height: 300px;
+
+#pc{
+	height:200px;
+	width:200px;
 }
-article{
-    margin-top: -40px;
+
+article {
+    margin-top: -13px;
     background-color: #d5e2ed;
     display: block;
     margin-left: auto;
     margin-right: auto;
     height: 400px;
     width: 400px;
-    padding: 80px;
+    padding: 40px;
     text-align: center;
     border-radius: 10%;
     border-style:groove;
-}
+  }
 
 .yes {
     text-align: center;
@@ -42,7 +44,6 @@ article{
 	animation: wiggle 2s linear infinite;
 }
 .no {
-	
     text-align: center;
 	background: #fff;
 	font-size: 14px;
@@ -63,6 +64,11 @@ article{
 	cursor: pointer;
 	transition: .2s;
 }
+
+
+form{
+    padding: 10px;
+  }
 
 @keyframes wiggle {
 	0%, 7% {
