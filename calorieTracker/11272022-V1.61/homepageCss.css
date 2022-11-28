@@ -11,7 +11,7 @@ html,body
 
 body {
   font-family: 'Montserrat';
-  background-color: rgb(145, 173, 158);
+  background-color: rgb(175, 182, 127);
 }
 
 header:first-of-type{
@@ -141,6 +141,7 @@ text-overflow: ellipsis;
 transition: all .14s ease-out;
 white-space: nowrap
 }
+
 button[onclick="move()"]:hover {
 box-shadow: 4px 4px 0 #000;
 transform: translate(-4px,-4px);
@@ -227,7 +228,7 @@ white-space: nowrap;
   color:rgb(0, 0, 0);
 }
 
-div[id='test']{
+div[id='test'] {
 display: flex;
 align-items: stretch;
 }
@@ -237,13 +238,12 @@ align-items: stretch;
   display: table;
   display: flex;
   clear: both;
-  
 }
 
 .row{
-  padding-left:150px;
-  margin-right:26px;
-  height:100%;
+  padding-left: 150px;
+  margin-right: 22px;
+  height: 100%;
 }
 
 #Settings {
@@ -255,7 +255,7 @@ align-items: stretch;
 }
 
 #Home {
-  background-color: #6cc256;
+  background-color: #51a270;
 }
 
 /* #myProgress {
@@ -455,7 +455,7 @@ svg{
 .info{
   padding: 20px;
   width: 100%;
-  margin-right: -10px;
+  color: #ffffff;
 }
 
 .name {
