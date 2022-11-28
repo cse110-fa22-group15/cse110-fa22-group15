@@ -582,6 +582,7 @@ button[class="mode"]:focus-visible {
   padding-top: 50px;
 }
 
+<<<<<<< HEAD
 input[type=number],
 input[type=name],
 textarea {
@@ -599,3 +600,19 @@ input[type=name]:focus {
   background-color: rgb(211, 240, 225);
   outline: invert;
 }
+=======
+input[type=number], input[type=name], textarea {  
+width: 96.5%; 
+padding: 15px;  
+margin-right: 300px;
+display: inline-block;  
+border: none;  
+background: #f1f1f1; 
+font-size: 18px; 
+}  
+
+input[type=number]:focus, input[type=name]:focus {  
+background-color: rgb(211, 240, 225);  
+outline:invert;
+}  
+>>>>>>> 0ebaed9d4a827545321d2cc2fc0ba1bb7d2c0900
