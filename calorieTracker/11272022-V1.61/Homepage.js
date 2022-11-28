@@ -61,6 +61,19 @@ function saveFoodToDiary(breakfastDiary, lunchDiary, dinnerDiary) {
 
 function initFormHandler() {
 
+    // Set default date to today
+    var datePicker = document.getElementById('datepicker');
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd;
+    console.log(today);
+    datePicker.value = today;
+
+    
+
     // Deletion function relies on the delete button and checkmarks
     var deleteButton = document.getElementById('deletefood');
     deleteButton.addEventListener('click', (event) => {
