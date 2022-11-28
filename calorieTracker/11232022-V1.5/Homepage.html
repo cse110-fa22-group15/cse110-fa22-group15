@@ -50,7 +50,22 @@
           <input type="date" id="datepicker">
         </h2>
         <div id="test">
-        
+          <div class="pop_Up">
+            <form action="" class="pop_Up_Text" id="edit">
+              <label for="foodType">Food Name</label><br>
+              <input type="search" id="foodType" name="foodType" value='Enter food'><br>
+              <label for="mealType">Meal Type</label><br>
+              <select name="mealType" id="mealType">
+                <option value="breakfast">BREAKFAST</option>
+                <option value="lunch">LUNCH</option>
+                <option value="dinner">DINNER</option>
+              </select><br>
+              <label for="calories">Calories:</label><br>
+              <input type="number" id="calories" name="calories" value=""><br>
+              <input type="submit" value="Submit" onclick=reset_Check() id = "popButton3">
+              <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton2">
+            </form> 
+          </div>
         <div class="column" id = "column1" style="background-color:#D8E0BB;">
           <h3 id = "bf">BREAKFAST</h3>
           <table id="breakfastTable">
@@ -114,7 +129,7 @@
     </div>
 
 
-    <script>
+    <script id = "thescript">
       function light() {
         var element = document.body;
         element.classList.toggle("light-mode");
@@ -209,12 +224,6 @@
         if(mode == 0){
           document.getElementById("food").submit();
         }
-        else if(mode == 1){
-          document.getElementById("goal").submit();
-        }
-        else if(mode == 2){
-          document.getElementById("new_User").submit();
-        }
         check = false;
       }
       function check_Pop_User(){
@@ -245,6 +254,14 @@
         }
 
         pop_Up.classList.toggle("show");
+      }
+      function click_Pop_Edit(foodname){
+        var foodname = foodname;
+        if(check == false){
+          var pop_Up = document.getElementById("edit");
+          pop_Up.classList.toggle("show");
+          check = true;
+        }
       }
     </script>
 </html>
