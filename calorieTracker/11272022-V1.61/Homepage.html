@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset = "UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="homepageCss.css">
-    <script src="./entryCard.js" type="module"></script>
-    <script src="./Homepage.js" type="module"></script>
-    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+<head>
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="homepageCss.css">
+  <script src="./entryCard.js" type="module"></script>
+  <script src="./Homepage.js" type="module"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
 <script>
   window.TrackJS && TrackJS.install({ 
     token: "7a1415d608764917aad585c8bcc275fa"
@@ -15,7 +15,7 @@
   });
 </script>
                         
-  </head>
+</head>
   <body>
     <header>
       <!-- upload logo as background in header -->
@@ -23,14 +23,13 @@
       <div class="content">
       <h2 class="text_shadows">Welcome to Calcumole!</h2>
       </div>
-      
     </header>
     <button class="tablink" onclick="openTab('Home', this, '#DFDCE5FF')" id="defaultOpen">Home</button>
     <button class="tablink" onclick="openTab('Profile', this, '#DFDCE5FF')">Profile</button>
     <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
 
     <div id="Home" class="tabcontent">
-      <div class="row" style="background-color: #cbdfda;">
+      <div class="row" style="background-color: #d1dfcb;">
         <button type="button" onclick="check_Pop_Food()">Add Food (+)</button>
         <!-- The pop_up div integrated-->
         <div class="pop_Up">
@@ -44,7 +43,7 @@
               <option value="dinner">DINNER</option>
             </select><br>
             <label for="calories">Calories:</label><br>
-            <input type="number" id="calories" name="calories" value=""><br>
+            <input type="numberCal" id="calories" name="calories" value=""><br>
             <input type="submit" value="Submit" onclick=reset_Check() id = "popButton1">
             <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton2">
           </form> 
@@ -53,26 +52,9 @@
           <input type="date" id="datepicker">
         </h2>
         <div id="test">
-          <div class="pop_Up">
-            <form action="" class="pop_Up_Text" id="edit">
-              <label for="foodType">Food Name</label><br>
-              <input type="search" id="foodType" name="foodType" value='Enter food'><br>
-              <label for="mealType">Meal Type</label><br>
-              <select name="mealType" id="mealType">
-                <option value="breakfast">BREAKFAST</option>
-                <option value="lunch">LUNCH</option>
-                <option value="dinner">DINNER</option>
-              </select><br>
-              <label for="calories">Calories:</label><br>
-              <input type="number" id="calories" name="calories" value=""><br>
-              <input type="submit" value="Submit" onclick=reset_Check() id = "popButton3">
-              <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton2">
-            </form> 
-          </div>
         <div class="column" id = "column1" style="background-color:#D8E0BB;">
           <h3 id = "bf">BREAKFAST</h3>
           <table id="breakfastTable">
-            
           </table>
           <h3 id = "lnh">LUNCH</h3>
           <table id="lunchTable">
@@ -97,30 +79,30 @@
     </div>
 
     <div id="Profile" class="tabcontent">
-      <h2 class="info">EDIT PROFILE</h2>
-
+      <h2 class="info">Edit Your Profile</h2>
+      <div id = "ProfileBox">
       <label for="name">Name:</label><br>
       <input type="name" id="name" name="name" placeholder="Tony Stark"><br>
-
       <label for="sex">Sex</label><br>
       <select id="sex" name="sex">
         <!-- backend - should show user's sex in default -->
         <option value="Female">Male</option>
         <option value="Male">Female</option>
       </select><br>
-
       <label for="Age">Age:</label><br>
       <input type="number" id="age" name="age" placeholder=27><br>
-
       <label for="weight">Current Weight:</label><br>
       <input type="number" id="weight" name="weight" placeholder="190 lb"><br>
       <label for="weight">Goal Weight:</label><br>
       <input type="number" id="weight" name="weight" placeholder="195 lb"><br>
       <input class="reset" type="reset" value = "Reset">
       <input type="submit" value = "Save" onClick="User()"><br>
+      </div>
     </div>
 
     <div id="Settings" class="tabcontent">
+      <h2 class="changeSet">Change Your Settings</h2>
+      <div id="SettingBox">
       <label for="unit">Weight Unit:</label>
       <select id="unit" name="unit">
         <option value="lb">lb</option>
@@ -129,10 +111,11 @@
       <label for="mode_c">Change mode:</label>
       <button class="mode" onclick="light()">Light mode</button>
       <button class="mode" onclick="dark()">Dark mode</button>
+      </div>
     </div>
 
 
-    <script id = "thescript">
+    <script>
       function light() {
         var element = document.body;
         element.classList.toggle("light-mode");
@@ -227,6 +210,12 @@
         if(mode == 0){
           document.getElementById("food").submit();
         }
+        else if(mode == 1){
+          document.getElementById("goal").submit();
+        }
+        else if(mode == 2){
+          document.getElementById("new_User").submit();
+        }
         check = false;
       }
       function check_Pop_User(){
@@ -257,14 +246,6 @@
         }
 
         pop_Up.classList.toggle("show");
-      }
-      function click_Pop_Edit(foodname){
-        var foodname = foodname;
-        if(check == false){
-          var pop_Up = document.getElementById("edit");
-          pop_Up.classList.toggle("show");
-          check = true;
-        }
       }
     </script>
 </html>

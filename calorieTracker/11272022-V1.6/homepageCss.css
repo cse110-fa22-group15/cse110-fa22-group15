@@ -27,25 +27,20 @@ header:first-of-type{
 
 .text_shadows {
   font-family: bungee, sans-serif;
-  font-weight: bold;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 50px;
-  margin-right: 70px;
   text-align: center;
   margin-top: 20px;
-  color: rgb(86, 65, 8);
-  text-shadow: 0px 3px 0px #b2a98f,
-               0px 14px 10px rgba(0,0,0,0.15),
-               0px 24px 2px rgba(0,0,0,0.1),
-               0px 34px 30px rgba(0,0,0,0.1);
+  color: black;
   letter-spacing: 0.4rem;
 }
 
 #pc{
-  margin-top: -70px;
-  margin-right: 50px;
-  height:220px;
-  width:220px;
+  margin-top: -90px;
+  margin-right: -150px;
+  height:300px;
+  width:600px;
   float:right;
 }
 
@@ -73,16 +68,13 @@ text-overflow: ellipsis;
 transition: all .14s ease-out;
 white-space: nowrap
 }
-
 button[type="button"]:hover {
 box-shadow: 4px 4px 0 #000;
 transform: translate(-4px,-4px);
 }
-
 button[type="button"]:focus-visible{
 outline-offset: 1px;
 }
-
 #deletefood{
 margin-top: 10px;
 margin-left: 10px;
@@ -107,16 +99,13 @@ text-overflow: ellipsis;
 transition: all .14s ease-out;
 white-space: nowrap
 }
-
 #deletefood:hover {
 box-shadow: 4px 4px 0 #000;
 transform: translate(-4px,-4px);
 }
-
 #deletefood:focus-visible{
 outline-offset: 1px;
 }
-
 button[onclick="move()"]{
 margin-left:2px;
 margin-top:5px;
@@ -145,16 +134,15 @@ button[onclick="move()"]:hover {
 box-shadow: 4px 4px 0 #000;
 transform: translate(-4px,-4px);
 }
-
 button[onclick="move()"]:focus-visible{
 outline-offset: 1px;
 }
-
 h2[id="pick"]{
 margin-left: 10px;
 font-weight: bold;
 color:black;
 }
+
 
 .tablink {
 outline: 0;
@@ -183,11 +171,9 @@ white-space: nowrap;
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px,-4px);
 }
-
 .tablink:focus-visible{
   outline-offset: 1px;
 }
-
 /* Style the tab content */
 .tabcontent {
   border: 2px solid;
@@ -198,7 +184,6 @@ white-space: nowrap;
   height: 100%;
   text-align: left;
 }
-
 #bf{
   padding: 20px;
   color:#1f1f4c;
@@ -208,7 +193,6 @@ white-space: nowrap;
   padding: 20px;
   color:#1f1f4c;
 }
-
 #din{
   padding: 20px;
   color:#1b1b5c;
@@ -398,16 +382,13 @@ svg{
   transition: all .14s ease-out;
   white-space: nowrap
   }
-
   #popButton1:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px,-4px);
   }
-
   #popButton1:focus-visible{
   outline-offset: 1px;
   }
-
   #popButton2{
     margin-top: 10px;
     margin-left: 10px;
@@ -432,12 +413,10 @@ svg{
     transition: all .14s ease-out;
     white-space: nowrap
     }
-
     #popButton2:hover {
     box-shadow: 4px 4px 0 #000;
     transform: translate(-4px,-4px);
     }
-
     #popButton2:focus-visible{
     outline-offset: 1px;
     }
@@ -455,7 +434,9 @@ svg{
     .info{
       background-color: aqua;
       padding: 20px;
-      margin-right: 23px;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .name {
@@ -505,3 +486,55 @@ svg{
       height: 25px;
       margin-right: 5px;
     }
+
+    button[class="mode"]{
+      margin-top: 10px;
+      margin-left: 10px;
+      outline: 0;
+      grid-gap: 8px;
+      align-items: center;
+      background: 0 0;
+      border: 1px solid #000;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      flex-shrink: 0;
+      font-size: 12px;
+      font-weight: bold;
+      gap: 8px;
+      justify-content: center;
+      line-height: 1.5;
+      overflow: hidden;
+      padding: 12px 16px;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      transition: all .14s ease-out;
+      white-space: nowrap
+      }
+      button[class="mode"]:hover {
+      box-shadow: 4px 4px 0 #000;
+      transform: translate(-4px,-4px);
+      }
+      button[class="mode"]:focus-visible{
+      outline-offset: 1px;
+      }
+
+  #ProfileBox{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #B6CEC7;
+    width: 50%;
+    height: 50%;
+    border-radius: 3%;
+    padding-top: 50px;
+  }
+  #SettingBox{
+    text-align: center;
+    margin-left: 10%;
+    background-color: #B6CEC7;
+    width: 50%;
+    height: 30%;
+    border-radius: 3%;
+    padding-top: 50px;
+  }

@@ -11,7 +11,7 @@ html,body
 
 body {
   font-family: 'Montserrat';
-  background-color: rgb(145, 173, 158);
+  background-color: rgb(175, 182, 127);
 }
 
 header:first-of-type{
@@ -33,7 +33,7 @@ header:first-of-type{
   margin-right: 70px;
   text-align: center;
   margin-top: 20px;
-  color: rgb(86, 65, 8);
+  color: rgb(96, 71, 0);
   text-shadow: 0px 3px 0px #b2a98f,
                0px 14px 10px rgba(0,0,0,0.15),
                0px 24px 2px rgba(0,0,0,0.1),
@@ -42,10 +42,10 @@ header:first-of-type{
 }
 
 #pc{
-  margin-top: -70px;
+  margin-top: -50px;
   margin-right: 50px;
-  height:220px;
-  width:220px;
+  height:200px;
+  width:200px;
   float:right;
 }
 
@@ -141,6 +141,7 @@ text-overflow: ellipsis;
 transition: all .14s ease-out;
 white-space: nowrap
 }
+
 button[onclick="move()"]:hover {
 box-shadow: 4px 4px 0 #000;
 transform: translate(-4px,-4px);
@@ -227,7 +228,7 @@ white-space: nowrap;
   color:rgb(0, 0, 0);
 }
 
-div[id='test']{
+div[id='test'] {
 display: flex;
 align-items: stretch;
 }
@@ -237,25 +238,24 @@ align-items: stretch;
   display: table;
   display: flex;
   clear: both;
-  
 }
 
 .row{
-  padding-left:150px;
-  margin-right:26px;
-  height:100%;
+  padding-left: 150px;
+  margin-right: 22px;
+  height: 100%;
 }
 
 #Settings {
-  background-color: #addad8;
+  background-color: #80b0ae;
 }
 
 #Profile {
-  background-color: #197f7b;
+  background-color: #708f7e;
 }
 
 #Home {
-  background-color: #6cc256;
+  background-color: #51a270;
 }
 
 /* #myProgress {
@@ -397,111 +397,188 @@ svg{
   text-overflow: ellipsis;
   transition: all .14s ease-out;
   white-space: nowrap
-  }
+}
 
-  #popButton1:hover {
+#popButton1:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px,-4px);
-  }
+}
 
-  #popButton1:focus-visible{
+#popButton1:focus-visible{
   outline-offset: 1px;
-  }
+}
 
-  #popButton2{
-    margin-top: 10px;
-    margin-left: 10px;
-    outline: 0;
-    grid-gap: 8px;
-    align-items: center;
-    background: 0 0;
-    border: 1px solid #000;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-flex;
-    flex-shrink: 0;
-    font-size: 12px;
-    font-weight: bold;
-    gap: 8px;
-    justify-content: center;
-    line-height: 1.5;
-    overflow: hidden;
-    padding: 12px 16px;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    transition: all .14s ease-out;
-    white-space: nowrap
-    }
+#popButton2{
+  margin-top: 10px;
+  margin-left: 10px;
+  outline: 0;
+  grid-gap: 8px;
+  align-items: center;
+  background: 0 0;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: bold;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all .14s ease-out;
+  white-space: nowrap
+}
 
-    #popButton2:hover {
-    box-shadow: 4px 4px 0 #000;
-    transform: translate(-4px,-4px);
-    }
+#popButton2:hover {
+  box-shadow: 4px 4px 0 #000;
+  transform: translate(-4px,-4px);
+}
 
-    #popButton2:focus-visible{
-    outline-offset: 1px;
-    }
+#popButton2:focus-visible{
+  outline-offset: 1px;
+}
 
-    .dark-mode {
-      background-color: black;
-      color: white;
-    }
+.dark-mode {
+  background-color: black;
+  color: white;
+}
     
-    .light-mode {
-      background-color: rgb(255, 255, 255);
-      color: black;
-    }
+.light-mode {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
 
-    .info{
-      background-color: aqua;
-      padding: 20px;
-      margin-right: 23px;
-    }
+.info{
+  padding: 20px;
+  width: 100%;
+  font-weight: bold;
+  color: #ffffff;
+}
 
-    .name {
-      font-size: 20px;
-    }
+.changeSet{
+  padding: 20px;
+  width: 100%;
+  font-weight: bold;
+  color: #deebd4;
+}
 
-    .progress {
-      padding: 10px;
-      margin-top: 10px;
-      margin-left: 10px;
-      margin-bottom: 20px;
-      width: 100%;
-      max-width: 500px;
-      background: white;
-      border: 1px solid #000;
-      border-radius: 5px;
-      height: 10px;
-      overflow: hidden;
-    }
+.name {
+  font-size: 20px;
+}
+
+.progress {
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border: 1px solid #000;
+  border-radius: 5px;
+  height: 10px;
+  overflow: hidden;
+}
     
-    .progress .progress__bar {
-      height: 10px;
-      width: 0;
-      border-radius: 4px;
-      background-image: linear-gradient(45deg, red, green);
-      transition: 0.3s;
-    }
+.progress .progress__bar {
+  height: 10px;
+  width: 0;
+  border-radius: 4px;
+  background-image: linear-gradient(45deg, red, green);
+  transition: 0.3s;
+}
     
-    #dailyCal {
-      color: rgb(0, 0, 0);
-      margin-left: 10px;
-      font-size: 16px;
-    }
+#dailyCal {
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+  font-size: 16px;
+}
 
-    #input {
-      box-sizing: border-box;
-      width: 80px;
-      border-radius: 5px;
-      height: 25px;
-      margin-right: 5px;
-    }
+#input {
+  box-sizing: border-box;
+  width: 80px;
+  border-radius: 5px;
+  height: 25px;
+  margin-right: 5px;
+}
 
-    #submit {
-      box-sizing: border-box;
-      width: 80px;
-      border-radius: 5px;
-      height: 25px;
-      margin-right: 5px;
-    }
+#submit {
+  box-sizing: border-box;
+  width: 80px;
+  border-radius: 5px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+button[class="mode"]{
+  margin-top: 10px;
+  margin-left: 10px;
+  outline: 0;
+  grid-gap: 8px;
+  align-items: center;
+  background: 0 0;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: bold;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all .14s ease-out;
+  white-space: nowrap
+}
+button[class="mode"]:hover {
+  box-shadow: 4px 4px 0 #000;
+  transform: translate(-4px,-4px);
+}
+
+button[class="mode"]:focus-visible{
+  outline-offset: 1px;
+}
+
+#ProfileBox{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #B6CEC7;
+  width: 50%;
+  height: 50%;
+  border-radius: 3%;
+  padding-top: 50px;
+}
+
+#SettingBox{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #B6CEC7;
+  width: 50%;
+  height: 30%;
+  border-radius: 3%;
+  padding-top: 50px;
+}
+
+input[type=number], input[type=name], textarea {  
+width: 96.5%;  
+padding: 15px;  
+margin-right: 300px;
+display: inline-block;  
+border: none;  
+background: #f1f1f1;  
+}  
+input[type=number]:focus, input[type=name]:focus {  
+background-color: rgb(112, 163, 137);  
+outline: none;  
+}  
+
