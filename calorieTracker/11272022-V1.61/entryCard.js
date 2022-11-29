@@ -31,7 +31,10 @@ class EntryCard extends HTMLElement {
     this.shadowRoot.append(articleElem)
   }
 
- 
+  get data () {
+    if(!data) return;
+    return this.data;
+  }
 
   set data (data) {
     // If nothing was passed in, return

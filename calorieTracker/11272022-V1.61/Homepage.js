@@ -158,6 +158,8 @@ function initFormHandler () {
       const alreadyAddedToDinner = getFoodFromStorage()[2]
       alreadyAddedToDinner.push(foodEntry)
       localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner)
+
+      
     }
   })
 }
