@@ -257,7 +257,7 @@ div[id="test"] {
   background-color: #597a59;
 }
 
-.myProgress {
+.my-progress {
   width: 160px;
   height: 160px;
   position: relative;
@@ -267,7 +267,8 @@ div[id="test"] {
   height: 160px;
   width: 160px;
   border-radius: 50%;
-  box-shadow: 6px 6px 10px -1px rgba(0 0 0 15%),
+  box-shadow: 
+    6px 6px 10px -1px rgba(0 0 0 15%),
     -6px -6px 10px -1px rgba(70 163 58 70%);
   margin-left: 150px;
 }
@@ -314,7 +315,7 @@ svg {
   color: #000;
   text-align: center;
   border-radius: 20%;
-  padding: 10% 10% 10% 10%;
+  padding: 10% ;
   position: fixed;
   top: 25%;
   left: 35%;
@@ -327,10 +328,9 @@ svg {
 /* Hide and show Pop up */
 .pop-Up .show {
   visibility: visible;
-  -webkit-animation: fade_In 1s;
-  animation: fade_In 1s;
+  -webkit-animation: fade_in 1s;
+  animation: fade_in 1s;
   z-index: 99;
-
 }
 
 /* Animation, Hope webkit works*/
@@ -354,13 +354,13 @@ svg {
   }
 }
 
-#foodType {
+#food-type {
   margin-bottom: 10%;
   width: 170px;
   height: 20px;
 }
 
-#mealType {
+#meal-type {
   margin-bottom: 10%;
   width: 170px;
   height: 20px;
