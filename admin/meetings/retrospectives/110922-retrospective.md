@@ -1,5 +1,5 @@
-## Retrospective 1
-### Date: Nov 9 and 12 2022
+# Retrospective 1
+## Date: Nov 9 and 12 2022
 ### What went well?
 - We were able to succesfully split up and delegate tasks
 - Decided on an overall design (visually and functionally)
@@ -8,7 +8,7 @@
 - Wireframe and Webpage matched
 - We have a clear idea on what the final product will be
 - Get started at the page
-- We managed to do our tasks and discussed about our websites design.
+- We managed to do our tasks and discussed about our websites design
 - Every task is delegated and good progress on the front-end
 ### What didn't go well?
 - We didn't document everything us much as we should
