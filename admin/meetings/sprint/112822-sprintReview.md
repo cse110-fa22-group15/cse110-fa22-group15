@@ -1,4 +1,4 @@
-### Sprint Review Meeting
+# Sprint Review Meeting
 ### Date: Nov 28 2022
 ### What we have accomplished?
 - Changed our site logo and CSS
