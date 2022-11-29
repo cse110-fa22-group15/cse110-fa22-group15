@@ -454,10 +454,10 @@ svg {
   padding: 20px;
   width: 100%;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
 }
 
-.changeSet {
+.change-set {
   padding: 20px;
   width: 100%;
   font-weight: bold;
@@ -490,7 +490,7 @@ svg {
   transition: 0.3s;
 }
 
-#dailyCal {
+#daily-cal {
   color: rgb(0 0 0);
   margin-left: 10px;
   font-size: 16px;
@@ -534,7 +534,7 @@ button[class="mode"] {
   text-decoration: none;
   text-overflow: ellipsis;
   transition: all 0.14s ease-out;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 button[class="mode"]:hover {
@@ -546,7 +546,7 @@ button[class="mode"]:focus-visible {
   outline-offset: 1px;
 }
 
-#ProfileBox {
+#profile-box {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -557,7 +557,7 @@ button[class="mode"]:focus-visible {
   padding-top: 50px;
 }
 
-#SettingBox {
+#setting-box {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
