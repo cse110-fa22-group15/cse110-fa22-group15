@@ -232,7 +232,7 @@ div[id="test"] {
   align-items: stretch;
 }
 
-.row:after {
+.row::after {
   content: "";
   display: table;
   display: flex;
@@ -328,13 +328,13 @@ svg {
 /* Hide and show Pop up */
 .pop-up .show {
   visibility: visible;
-  -webkit-animation: fade_in 1s;
-  animation: fade_in 1s;
+  -webkit-animation: fade-in 1s;
+  animation: fade-in 1s;
   z-index: 99;
 }
 
-/* Animation, Hope webkit works*/
-@-webkit-keyframes fade_In {
+/* Animation, Hope webkit works */
+@-webkit-keyframes fade-in {
   from {
     opacity: 0;
   }
@@ -344,7 +344,7 @@ svg {
   }
 }
 
-@keyframes fade_In {
+@keyframes fade-in {
   from {
     opacity: 0;
   }
