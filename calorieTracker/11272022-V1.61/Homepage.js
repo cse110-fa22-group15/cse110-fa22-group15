@@ -26,26 +26,26 @@ function getFoodFromStorage () {
 }
 
 function addFoodsToDocument (breakfastDiary, lunchDiary, dinnerDiary) {
-  const breakfastTable = document.getElementById('breakfastTable')
-  const lunchTable = document.getElementById('lunchTable')
-  const dinnerTable = document.getElementById('dinnerTable')
+  const breakfasttable = document.getElementById('breakfasttable')
+  const lunchtable = document.getElementById('lunchtable')
+  const dinnertable = document.getElementById('dinnertable')
 
-  for (var i = 0; i < breakfastDiary.length; i++) {
-    var ec = document.createElement('entry-card')
+  for (let i = 0; i < breakfastDiary.length; i++) {
+    let ec = document.createElement('entry-card')
     ec.data = breakfastDiary[i]
-    breakfastTable.append(ec)
+    breakfasttable.append(ec)
   }
 
-  for (var i = 0; i < lunchDiary.length; i++) {
-    var ec = document.createElement('entry-card')
+  for (let i = 0; i < lunchDiary.length; i++) {
+    let ec = document.createElement('entry-card')
     ec.data = lunchDiary[i]
-    lunchTable.append(ec)
+    lunchtable.append(ec)
   }
 
-  for (var i = 0; i < dinnerDiary.length; i++) {
-    var ec = document.createElement('entry-card')
+  for (let i = 0; i < dinnerDiary.length; i++) {
+    let ec = document.createElement('entry-card')
     ec.data = dinnerDiary[i]
-    dinnerTable.append(ec)
+    dinnertable.append(ec)
   }
 }
 
@@ -72,51 +72,51 @@ function initFormHandler () {
   deleteButton.addEventListener('click', (event) => {
     // Find the breakfast, lunch, and dinner tables and grab all the entry cards for each respective
     // table
-    const bt = document.getElementById('breakfastTable')
-    const bt_entries = bt.getElementsByTagName('entry-card')
+    const bt = document.getElementById('breakfasttable')
+    const btentries = bt.getElementsByTagName('entry-card')
 
-    const lt = document.getElementById('lunchTable')
-    const lt_entries = lt.getElementsByTagName('entry-card')
+    const lt = document.getElementById('lunchtable')
+    const ltentries = lt.getElementsByTagName('entry-card')
 
-    const dt = document.getElementById('dinnerTable')
-    const dt_entries = dt.getElementsByTagName('entry-card')
+    const dt = document.getElementById('dinnertable')
+    const dtentries = dt.getElementsByTagName('entry-card')
 
     // Loop through each diaries entry cards and inspects if the checkmark is checked
     // Adds all the indices into an array and goes back and deletes entries from the diaries
     let toDelete = []
     const breakfastDiary = getFoodFromStorage()[0]
-    for (var i = 0; i < bt_entries.length; i++) {
+    for (let i = 0; i < bt_entries.length; i++) {
       if (bt_entries[i].shadowRoot.querySelectorAll('input')[0].checked == true) {
         toDelete.push(i)
       }
     }
 
-    for (var i = toDelete.length - 1; i >= 0; i--) {
+    for (let i = toDelete.length - 1; i >= 0; i--) {
       breakfastDiary.splice(toDelete[i], 1)
     }
 
     // Does the same thing as above but for lunch
     toDelete = []
     const lunchDiary = getFoodFromStorage()[1]
-    for (var i = 0; i < lt_entries.length; i++) {
+    for (let i = 0; i < lt_entries.length; i++) {
       if (lt_entries[i].shadowRoot.querySelectorAll('input')[0].checked == true) {
         toDelete.push(i)
       }
     }
-    for (var i = toDelete.length - 1; i >= 0; i--) {
+    for (let i = toDelete.length - 1; i >= 0; i--) {
       lunchDiary.splice(toDelete[i], 1)
     }
 
     // Does the same thing as above but for dinner
     toDelete = []
     const dinnerDiary = getFoodFromStorage()[2]
-    for (var i = 0; i < dt_entries.length; i++) {
+    for (let i = 0; i < dt_entries.length; i++) {
       if (dt_entries[i].shadowRoot.querySelectorAll('input')[0].checked == true) {
         toDelete.push(i)
       }
     }
 
-    for (var i = toDelete.length - 1; i >= 0; i--) {
+    for (let i = toDelete.length - 1; i >= 0; i--) {
       dinnerDiary.splice(toDelete[i], 1)
     }
 
@@ -129,7 +129,7 @@ function initFormHandler () {
   submitButton.addEventListener('click', (event) => {
     event.preventDefault()
 
-    // Create two variables that grab the values from the form
+    // Create two letiables that grab the values from the form
     const foodType = JSON.stringify(document.getElementById('foodType').value)
     const mealType = JSON.stringify(document.getElementById('mealType').value)
 
