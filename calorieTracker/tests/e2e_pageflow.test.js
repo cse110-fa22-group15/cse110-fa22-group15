@@ -1,13 +1,10 @@
 
-
-
 describe('Basic Pageflow Tests for Website', () => {
   // Change this constant value before testing!
-  const loginUrl = 'http://127.0.0.1:5501/calorieTracker/11272022-V1.61/LoginPage.html';
+  const loginUrl = 'http://127.0.0.1:5501/calorieTracker/11272022-V1.61/LoginPage.html'
   beforeAll(async () => {
     await page.goto(loginUrl)
-  });
-
+  })
 
   //     it('Go to create user page if a new user', async () => {
   //       const yesBtn = await page.$('.yes')
@@ -46,5 +43,4 @@ describe('Basic Pageflow Tests for Website', () => {
   //       expect(currPage).toBe('Homepage.html')
   //     });
   // });
-
-});
+})
