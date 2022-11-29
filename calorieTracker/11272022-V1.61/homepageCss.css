@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: Montserrat;
   background-color: rgb(175 182 127);
 }
 
@@ -190,7 +190,7 @@ h2[id="pick"] {
   outline-offset: 1px;
 }
 
- /* Style the tab content */
+/* Style the tab content */
 .tabcontent {
   border: 2px solid;
   padding: 10px;
