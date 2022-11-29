@@ -1,5 +1,5 @@
 # Sprint Review Meeting
-### Date: Nov 28 2022
+## Date: Nov 28 2022
 ### What we have accomplished?
 - Changed our site logo and CSS
 - Delegated tasks to each person and created GitHub issues
