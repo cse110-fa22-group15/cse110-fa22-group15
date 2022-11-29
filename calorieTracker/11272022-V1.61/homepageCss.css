@@ -245,18 +245,17 @@ div[id="test"] {
   height: 100%;
 }
 
-#Settings {
+#settings {
   background-color: #80b0ae;
 }
 
-#Profile {
+#profile {
   background-color: #708f7e;
 }
 
-#Home {
+#home {
   background-color: #597a59;
 }
-
 
 .myProgress {
   width: 160px;
@@ -293,8 +292,8 @@ circle {
 svg {
   position: absolute;
   margin-left: 150px;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
 
 @keyframes anim {
@@ -325,7 +324,7 @@ svg {
   text-decoration-style: dashed;
 }
 
- /* Hide and show Pop up */
+/* Hide and show Pop up */
 .pop-Up .show {
   visibility: visible;
   -webkit-animation: fade_In 1s;
@@ -334,7 +333,7 @@ svg {
 
 }
 
- /* Animation, Hope webkit works*/
+/* Animation, Hope webkit works*/
 @-webkit-keyframes fade_In {
   from {
     opacity: 0;
