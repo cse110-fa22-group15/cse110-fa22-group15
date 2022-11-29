@@ -46,7 +46,7 @@
           </select><br>
           <label for="calories">Calories:</label><br>
           <input type="numberCal" id="calories" name="calories" value=""><br>
-          <input type="submit" value="Submit" onclick="reset_Check()"" id=" pop-button1">
+          <input type="submit" value="Submit" onclick="reset_Check()" id=" pop-button1">
           <input type="button" value="Cancel" onclick="reset_Check()" id="pop-button2">
         </form>
       </div>
@@ -94,15 +94,15 @@
       <label for="Age">Age</label><br>
       <input type="number" id="age" name="age" placeholder="27"><br>
       <label for="weight">Current Weight</label><br>
-      <input type="number" id="weight" name="weight" placeholder="190 lb"><br>
+      <input type="number" id="weight1" name="weight" placeholder="190 lb"><br>
       <label for="weight">Goal Weight</label><br>
-      <input type="number" id="weight" name="weight" placeholder="195 lb"><br>
+      <input type="number" id="weight2" name="weight" placeholder="195 lb"><br>
       <input class="reset" type="reset" value="Reset">
       <input type="submit" value="Save" onClick="User()"><br>
     </div>
   </div>
 
-  <div id="Settings" class="tabcontent">
+  <div id="settings" class="tabcontent">
     <h2 class="change-set">Change Your Settings</h2>
     <div id="setting-box">
       <label for="unit">Weight Unit:</label>
@@ -144,34 +144,7 @@
 
     }
     // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-    // Progress bar
-    // var i = 0;
-    // // There supposed to be a number represents calorie intake passed in for function move()
-    // // like: function move(value) {
-    // function move() {
-    //   if (i == 0) {
-    //     i = 1;
-    //     var elem = document.getElementById("myBar");
-    //     var width = 1;
-    //     var id = setInterval(frame, 10);
-
-    //     function frame() {
-    //       // The width now is set as 90 since there's no calorie intake data pass in
-    //       //eg: you should change it as if (width >= value) { 
-    //       // where value is 90, calculated by: (calorie intake/ calorie goal) * 100
-    //       // it will also handle over-intaked calories
-    //       if (width >= 80) {
-    //         clearInterval(id);
-    //         i = 0;
-    //       } else {
-    //         width++;
-    //         elem.style.width = width + "%";
-    //       }
-    //     }
-    //   }
-    // }
-
+    document.getElementById("defaultopen").click();
     let progressbar = document.getElementById("download");
 
     function updateProgressBar(value) {
