@@ -21,7 +21,7 @@
       <!-- upload logo as background in header -->
       <img src="logo.PNG" alt="" id = "pc">
       <div class="content">
-      <h2 class="text_shadows">Welcome to Calcumole!</h2>
+      <h2 class="text-shadows">Welcome to Calcumole!</h2>
       </div>
     </header>
     <button class="tablink" onclick="openTab('Home', this, '#DFDCE5FF')" id="defaultOpen">Home</button>
@@ -30,10 +30,10 @@
 
     <div id="Home" class="tabcontent">
       <div class="row" style="background-color: #d1dfcb;">
-        <button type="button" onclick="check_Pop_Food()" id="add_food">Add Food (+)</button>
+        <button type="button" onclick="check_Pop_Food()" id="add-food">Add Food (+)</button>
         <!-- The pop_up div integrated-->
-        <div class="pop_Up">
-          <form action="" class="pop_Up_Text" id="food">
+        <div class="pop-Up">
+          <form action="" class="pop-Up-Text" id="food">
             <label for="foodType">Food Name</label><br>
             <input type="search" id="foodType" name="foodType" value='Enter food'><br>
             <label for="mealType">Meal Type</label><br>
@@ -67,7 +67,7 @@
         <div class="column" id = "column2" style="background-color:#B6CEC7;">
           <div id="dailyGoal">Daily Goal<br>
           <div class="progress"> 
-            <div id="download" class="progress__bar"></div>
+            <div id="download" class="progress-bar"></div>
           </div>
           <label id="dailyCalorie" for="set-value">Update your daily calories: </label>
           <input id="set-value">
@@ -108,7 +108,7 @@
         <option value="lb">lb</option>
         <option value="kg">kg</option>
       </select><br>
-      <label for="mode_c">Change mode:</label>
+      <label for="mode-c">Change mode:</label>
       <button class="mode" onclick="light()">Light mode</button>
       <button class="mode" onclick="dark()">Dark mode</button>
       </div>
@@ -214,7 +214,7 @@
           document.getElementById("goal").submit();
         }
         else if(mode == 2){
-          document.getElementById("new_User").submit();
+          document.getElementById("new-User").submit();
         }
         check = false;
       }
