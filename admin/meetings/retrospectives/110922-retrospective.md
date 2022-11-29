@@ -5,7 +5,7 @@
 - Decided on an overall design (visually and functionally)
 - We got a strong start on all the different components of the site
 - Going through the updated wireframes and having more updated messaging
-- Wireframe and Webpage matched
+- Wireframe and webpage matched
 - We have a clear idea on what the final product will be
 - Get started at the page
 - We managed to do our tasks and discussed about our site design
