@@ -1,4 +1,4 @@
-## Sprint Review Meeting
+### Sprint Review Meeting
 ### Date: Nov 16 and 19 2022
 ### What we have accomplished? 
 - Created our website logo 

@@ -1,4 +1,4 @@
-## Sprint Review Meeting
+### Sprint Review Meeting
 ### Date: Nov 9 and 12 2022
 ### What we have accomplished? 
 - We managed to split into two groups: Front-End and Back-End.
