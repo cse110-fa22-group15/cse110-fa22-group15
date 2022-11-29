@@ -13,7 +13,7 @@
         <li>CI/CD Pipeline: Rough Draft In Progress </li> 
         <li>CSS: Functionally done </li> 
     </ul>
-    <h2>Milestones (1/3 Finished): </h2>
+    <h2>Milestones (2/3 Finished): </h2>
     <h3>*Create ADRs (6/6 Finished):</h3>
     <ul>
         <li>Create: DONE </li>
