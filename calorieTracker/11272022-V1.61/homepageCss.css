@@ -267,7 +267,7 @@ div[id="test"] {
   height: 160px;
   width: 160px;
   border-radius: 50%;
-  box-shadow: 
+  box-shadow:
     6px 6px 10px -1px rgba(0 0 0 15%),
     -6px -6px 10px -1px rgba(70 163 58 70%);
   margin-left: 150px;
@@ -282,7 +282,7 @@ div[id="test"] {
 
 circle {
   fill: none;
-  stroke: url(#GradientColor);
+  stroke: url("#GradientColor");
   stroke-width: 20px;
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
@@ -428,7 +428,7 @@ svg {
   text-decoration: none;
   text-overflow: ellipsis;
   transition: all 0.14s ease-out;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 #pop-button2:hover {
