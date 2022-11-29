@@ -46,7 +46,7 @@
           </select><br>
           <label for="calories">Calories:</label><br>
           <input type="numberCal" id="calories" name="calories" value=""><br>
-          <input type="submit" value="Submit" onclick="reset_Check()" id=" pop-button1">
+          <input type="submit" value="Submit" onclick="reset_Check()" id="pop-button1">
           <input type="button" value="Cancel" onclick="reset_Check()" id="pop-button2">
         </form>
       </div>
@@ -167,17 +167,6 @@
     }
 
     document.getElementById("submit").addEventListener("click", handleInput, false);
-    // let number = document.getElementById("number");
-    // let calories = document.getElementById("calories").value;
-    // let counter = 0; 
-    // if(counter == 100) {
-    //   clearInterval();
-    // } else {
-    //   totalCalories += calories; 
-    //   number.innerHTML = totalCalories + "%";
-
-    // }
-
     var check = false;
     var mode = 0;
 
@@ -223,5 +212,6 @@
       pop_Up.classList.toggle("show");
     }
   </script>
+</body>
 
 </html>
