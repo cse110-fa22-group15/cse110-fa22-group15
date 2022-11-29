@@ -332,8 +332,6 @@ svg {
   z-index: 99;
 }
 
-
-
 @keyframes fade-in {
   from {
     opacity: 0;
