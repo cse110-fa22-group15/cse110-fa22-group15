@@ -31,8 +31,6 @@ class EntryCard extends HTMLElement {
     this.shadowRoot.append(articleElem)
   }
 
-
-
   set data (data) {
     // If nothing was passed in, return
     if (!data) return
@@ -51,7 +49,7 @@ class EntryCard extends HTMLElement {
 
   get data () {
     if (!data) return
-    return this.data
+    return this.data.innerHTML;
   }
 }
 
