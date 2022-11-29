@@ -5,9 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="homepageCss.css">
-
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
   <title>Calcomole Homepage</title>
+</head>
+
+<body>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script src="./entryCard.js" type="module"></script>
   <script src="./Homepage.js" type="module"></script>
   <script>
@@ -16,11 +19,6 @@
       // for more configuration options, see https://docs.trackjs.com
     });
   </script>
-
-</head>
-
-<body>
-  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <header>
     <!-- upload logo as background in header -->
     <img src="logo.PNG" alt="" id="pc">
@@ -48,7 +46,7 @@
           </select><br>
           <label for="calories">Calories:</label><br>
           <input type="numberCal" id="calories" name="calories" value=""><br>
-          <input type="submit" value="Submit" onclick=reset_Check() id="pop-button1">
+          <input type="submit" value="Submit" onclick="reset_Check()"" id=" pop-button1">
           <input type="button" value="Cancel" onclick="reset_Check()" id="pop-button2">
         </form>
       </div>
@@ -58,15 +56,15 @@
       <div id="test">
         <div class="column" id="column1" style="background-color:#D8E0BB;">
           <h3 id="bf">BREAKFAST</h3>
-          <table id="breakfastTable">
+          <table id="breakfasttable">
           </table>
           <h3 id="lnh">LUNCH</h3>
-          <table id="lunchTable">
+          <table id="lunchtable">
           </table>
           <h3 id="din">DINNER</h3>
-          <table id="dinnerTable">
+          <table id="dinnertable">
           </table>
-          <button id='deletefood'>Delete Marked</button>
+          <button id="deletefood">Delete Marked</button>
         </div>
         <div class="column" id="column2" style="background-color:#B6CEC7;">
           <div id="daily-goal">Daily Goal<br>
@@ -82,10 +80,10 @@
     </div>
   </div>
 
-  <div id="Profile" class="tabcontent">
+  <div id="profile" class="tabcontent">
     <h2 class="info">Edit Your Profile</h2>
     <div id="profile-box">
-      <label id="profName" for="name">Name</label><br>
+      <label id="profname" for="name">Name</label><br>
       <input type="name" id="name" name="name" placeholder="Tony Stark"><br>
       <label for="sex">Sex</label><br>
       <select id="sex" name="sex">
@@ -94,7 +92,7 @@
         <option value="Male">Female</option>
       </select><br>
       <label for="Age">Age</label><br>
-      <input type="number" id="age" name="age" placeholder=27><br>
+      <input type="number" id="age" name="age" placeholder="27"><br>
       <label for="weight">Current Weight</label><br>
       <input type="number" id="weight" name="weight" placeholder="190 lb"><br>
       <label for="weight">Goal Weight</label><br>
