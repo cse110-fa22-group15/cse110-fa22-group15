@@ -309,13 +309,13 @@ svg {
   margin-left: 10px;
 }
 
-.pop-Up .pop-Up-Text {
+.pop-up .pop-up-text {
   visibility: hidden;
   background-color: rgb(190 220 138);
   color: #000;
   text-align: center;
   border-radius: 20%;
-  padding: 10% ;
+  padding: 10%;
   position: fixed;
   top: 25%;
   left: 35%;
@@ -372,7 +372,7 @@ svg {
   height: 20px;
 }
 
-#popButton1 {
+#pop-button1 {
   margin-top: 10px;
   margin-left: 10px;
   outline: 0;
@@ -394,19 +394,19 @@ svg {
   text-decoration: none;
   text-overflow: ellipsis;
   transition: all 0.14s ease-out;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
-#popButton1:hover {
+#pop-button1:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px, -4px);
 }
 
-#popButton1:focus-visible {
+#pop-button1:focus-visible {
   outline-offset: 1px;
 }
 
-#popButton2 {
+#pop-button2 {
   margin-top: 10px;
   margin-left: 10px;
   outline: 0;
@@ -431,12 +431,12 @@ svg {
   white-space: nowrap
 }
 
-#popButton2:hover {
+#pop-button2:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px, -4px);
 }
 
-#popButton2:focus-visible {
+#pop-button2:focus-visible {
   outline-offset: 1px;
 }
 
