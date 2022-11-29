@@ -49,11 +49,9 @@ class EntryCard extends HTMLElement {
 
   get data () {
     if (!data) return
-    return this.data.innerHTML;
+    return this.data()
   }
 }
-
-
 
 // A8. TODO - Define the Class as a customElement so that you can create
 //           'recipe-card' elements
