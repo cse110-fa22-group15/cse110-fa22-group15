@@ -8,7 +8,7 @@ body {
 }
 
 body {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   background-color: rgb(175 182 127);
 }
 
@@ -328,13 +328,13 @@ svg {
 /* Hide and show Pop up */
 .pop-up .show {
   visibility: visible;
-  -webkit-animation: fade-in 1s;
+  /* -webkit-animation: fade-in 1s; */
   animation: fade-in 1s;
   z-index: 99;
 }
 
 /* Animation, Hope webkit works */
-@-webkit-keyframes fade-in {
+/* @keyframes fade-in {
   from {
     opacity: 0;
   }
@@ -342,7 +342,7 @@ svg {
   to {
     opacity: 1;
   }
-}
+} */
 
 @keyframes fade-in {
   from {
