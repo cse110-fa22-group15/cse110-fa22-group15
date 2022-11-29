@@ -13,13 +13,13 @@ function getFoodFromStorage () {
   let lunchDiary = JSON.parse(window.localStorage.getItem('lunchDiary'))
   let dinnerDiary = JSON.parse(window.localStorage.getItem('dinnerDiary'))
 
-  if (breakfastDiary == null) {
+  if (breakfastDiary === null) {
     breakfastDiary = []
   }
-  if (lunchDiary == null) {
+  if (lunchDiary === null) {
     lunchDiary = []
   }
-  if (dinnerDiary == null) {
+  if (dinnerDiary === null) {
     dinnerDiary = []
   }
   return [breakfastDiary, lunchDiary, dinnerDiary]
@@ -31,19 +31,19 @@ function addFoodsToDocument (breakfastDiary, lunchDiary, dinnerDiary) {
   const dinnertable = document.getElementById('dinnertable')
 
   for (let i = 0; i < breakfastDiary.length; i++) {
-    let ec = document.createElement('entry-card')
+    const ec = document.createElement('entry-card')
     ec.data = breakfastDiary[i]
     breakfasttable.append(ec)
   }
 
   for (let i = 0; i < lunchDiary.length; i++) {
-    let ec = document.createElement('entry-card')
+    const ec = document.createElement('entry-card')
     ec.data = lunchDiary[i]
     lunchtable.append(ec)
   }
 
   for (let i = 0; i < dinnerDiary.length; i++) {
-    let ec = document.createElement('entry-card')
+    const ec = document.createElement('entry-card')
     ec.data = dinnerDiary[i]
     dinnertable.append(ec)
   }
@@ -85,8 +85,8 @@ function initFormHandler () {
     // Adds all the indices into an array and goes back and deletes entries from the diaries
     let toDelete = []
     const breakfastDiary = getFoodFromStorage()[0]
-    for (let i = 0; i < bt_entries.length; i++) {
-      if (bt_entries[i].shadowRoot.querySelectorAll('input')[0].checked == true) {
+    for (let i = 0; i < btentries.length; i++) {
+      if (btentries[i].shadowRoot.querySelectorAll('input')[0].checked === true) {
         toDelete.push(i)
       }
     }
@@ -98,8 +98,8 @@ function initFormHandler () {
     // Does the same thing as above but for lunch
     toDelete = []
     const lunchDiary = getFoodFromStorage()[1]
-    for (let i = 0; i < lt_entries.length; i++) {
-      if (lt_entries[i].shadowRoot.querySelectorAll('input')[0].checked == true) {
+    for (let i = 0; i < ltentries.length; i++) {
+      if (ltentries[i].shadowRoot.querySelectorAll('input')[0].checked === true) {
         toDelete.push(i)
       }
     }
@@ -110,8 +110,8 @@ function initFormHandler () {
     // Does the same thing as above but for dinner
     toDelete = []
     const dinnerDiary = getFoodFromStorage()[2]
-    for (let i = 0; i < dt_entries.length; i++) {
-      if (dt_entries[i].shadowRoot.querySelectorAll('input')[0].checked == true) {
+    for (let i = 0; i < dtentries.length; i++) {
+      if (dtentries[i].shadowRoot.querySelectorAll('input')[0].checked === true) {
         toDelete.push(i)
       }
     }
@@ -142,19 +142,19 @@ function initFormHandler () {
     foodEntryCard.data = foodEntry
 
     // Checks which meal to append the card to based on what the user chooses
-    if (mealType == JSON.stringify('breakfast')) {
+    if (mealType === JSON.stringify('breakfast')) {
       const alreadyAddedToBreakfast = getFoodFromStorage()[0]
       alreadyAddedToBreakfast.push(foodEntry)
       localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast)
     }
 
-    if (mealType == JSON.stringify('lunch')) {
+    if (mealType === JSON.stringify('lunch')) {
       const alreadyAddedToLunch = getFoodFromStorage()[1]
       alreadyAddedToLunch.push(foodEntry)
       localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch)
     }
 
-    if (mealType == JSON.stringify('dinner')) {
+    if (mealType === JSON.stringify('dinner')) {
       const alreadyAddedToDinner = getFoodFromStorage()[2]
       alreadyAddedToDinner.push(foodEntry)
       localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner)
