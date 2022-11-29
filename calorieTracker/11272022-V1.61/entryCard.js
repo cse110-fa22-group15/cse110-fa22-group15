@@ -31,18 +31,20 @@ class EntryCard extends HTMLElement {
     this.shadowRoot.append(articleElem)
   }
 
+ 
+
   set data (data) {
     // If nothing was passed in, return
     if (!data) return
 
     // Select the <article> we added to the Shadow DOM in the constructor
-    const article_select = this.shadowRoot.querySelector('article')
+    const articleselect = this.shadowRoot.querySelector('article')
 
     //           Set the contents of the <article> with the <article> template given in
     //           cardTemplate.html and the data passed in (You should only have one <article>,
     //           do not nest an <article> inside another <article>). You should use Template
     //           literals (tempalte strings) and element.innerHTML for this.
-    article_select.innerHTML = `
+    articleselect.innerHTML = `
       <input type="checkbox" id="${data.id}">
         <label for="${data.id}">${data.foodName}</label>`
   }
