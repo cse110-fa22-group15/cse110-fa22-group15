@@ -40,7 +40,7 @@ class EntryCard extends HTMLElement {
 
     //           Set the contents of the <article> with the <article> template given in
     //           cardTemplate.html and the data passed in (You should only have one <article>,
-    //           do not nest an <article> inside another <article>). You should  use Template
+    //           do not nest an <article> inside a nother <article>). You should  use Template
     //           literals (tempalte strings) and element.innerHTML for  this.
     articleselect.innerHTML = `
       <input type="checkbox" id="${data.id}">
