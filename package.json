@@ -6,5 +6,8 @@
     "roots": [
       "<rootDir>/calorieTracker/tests"
     ]
+    "preset": "jest-puppeteer",
+    "verbose": true
+
   }
 }
