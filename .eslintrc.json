@@ -1,5 +1,5 @@
 {
   "rules": {
-    "setWithoutGet": true
+    "setWithoutGet": 0
   }
 }
