@@ -48,6 +48,10 @@ class EntryCard extends HTMLElement {
       <input type="checkbox" id="${data.id}">
         <label for="${data.id}">${data.foodName}</label>`
   }
+
+  get data () {
+    console.log("a");
+  }
 }
 
 // A8. TODO - Define the Class as a customElement so that you can create
