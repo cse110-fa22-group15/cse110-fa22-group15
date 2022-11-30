@@ -1,3 +1,6 @@
+/*global page, a*/
+/*eslint no-undef: "error"*/
+
 describe('Test Add/Delete Button on Home Page.', () => {
   // Change this constant value before testing!
   const homeUrl = 'http://127.0.0.1:5501/calorieTracker/11272022-V1.61/Homepage.html'
