@@ -1,3 +1,4 @@
+
 /* global page, describe, beforeAll, it, expect */
 /* eslint no-undef: "error" */
 
