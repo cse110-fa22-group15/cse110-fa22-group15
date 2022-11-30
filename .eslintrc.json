@@ -1,5 +1,15 @@
 {
   "rules": {
-    "setWithoutGet": true
-  }
+    "accessor-pairs": "off"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "es6": true
+  },
+  "ignorePatterns": ["**/*.json", "node_modules/"]
 }

@@ -1,26 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
+html,
 body {
-  font-family: 'Montserrat';
-  background-color: rgb(175, 182, 127);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
-header:first-of-type{
-  margin-top:100px;
+
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: rgb(175 182 127);
+}
+
+header:first-of-type {
+  margin-top: 100px;
   font-size: 30px;
 }
+
 .content {
   display: flex;
   justify-content: center;
   margin-left: 300px;
 }
-.text_shadows {
+
+.text-shadows {
   font-family: bungee, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -28,147 +31,120 @@ header:first-of-type{
   margin-right: 70px;
   text-align: center;
   margin-top: 20px;
-  color: rgb(96, 71, 0);
-  text-shadow: 0px 3px 0px #b2a98f,
-               0px 14px 10px rgba(0,0,0,0.15),
-               0px 24px 2px rgba(0,0,0,0.1),
-               0px 34px 30px rgba(0,0,0,0.1);
+  color: rgb(96 71 0);
+  text-shadow:
+    0 3px 0 #b2a98f,
+    0 14px 10px rgba(0 0 0 15%),
+    0 24px 2px rgba(0 0 0 15%),
+    0 34px 30px rgba(0 0 0 10%);
   letter-spacing: 0.4rem;
 }
-#pc{
+
+#pc {
   margin-top: -50px;
   margin-right: 50px;
-  height:200px;
-  width:200px;
-  float:right;
+  height: 200px;
+  width: 200px;
+  float: right;
 }
-button[type="button"]{
-margin-top: 10px;
-margin-left: 10px;
-outline: 0;
-grid-gap: 8px;
-align-items: center;
-background: 0 0;
-border: 1px solid #000;
-border-radius: 4px;
-cursor: pointer;
-display: inline-flex;
-flex-shrink: 0;
-font-size: 12px;
-font-weight: bold;
-gap: 8px;
-justify-content: center;
-line-height: 1.5;
-overflow: hidden;
-padding: 12px 16px;
-text-decoration: none;
-text-overflow: ellipsis;
-transition: all .14s ease-out;
-white-space: nowrap
+
+button[type="button"],
+#deletefood,
+button[class="mode"]:hover,
+#pop-button4,
+#pop-button3,
+#pop-button2,
+#pop-button1,
+button[onclick="move()"] {
+  margin-top: 10px;
+  margin-left: 10px;
+  outline: 0;
+  grid-gap: 8px;
+  align-items: center;
+  background: 0 0;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: bold;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all 0.14s ease-out;
+  white-space: nowrap;
 }
+
 button[type="button"]:hover {
-box-shadow: 4px 4px 0 #000;
-transform: translate(-4px,-4px);
-}
-button[type="button"]:focus-visible{
-outline-offset: 1px;
-}
-#deletefood{
-margin-top: 10px;
-margin-left: 10px;
-outline: 0;
-grid-gap: 8px;
-align-items: center;
-background: 0 0;
-border: 1px solid #000;
-border-radius: 4px;
-cursor: pointer;
-display: inline-flex;
-flex-shrink: 0;
-font-size: 12px;
-font-weight: bold;
-gap: 8px;
-justify-content: center;
-line-height: 1.5;
-overflow: hidden;
-padding: 12px 16px;
-text-decoration: none;
-text-overflow: ellipsis;
-transition: all .14s ease-out;
-white-space: nowrap
-}
-#deletefood:hover {
-box-shadow: 4px 4px 0 #000;
-transform: translate(-4px,-4px);
-}
-#deletefood:focus-visible{
-outline-offset: 1px;
-}
-button[onclick="move()"]{
-margin-left:2px;
-margin-top:5px;
-outline: 0;
-grid-gap: 8px;
-align-items: center;
-background: 0 0;
-border: 1px solid #000;
-border-radius: 4px;
-cursor: pointer;
-display: inline-flex;
-flex-shrink: 0;
-font-size: 12px;
-font-weight: bold;
-gap: 8px;
-justify-content: center;
-line-height: 1.5;
-overflow: hidden;
-padding: 12px 16px;
-text-decoration: none;
-text-overflow: ellipsis;
-transition: all .14s ease-out;
-white-space: nowrap
-}
-button[onclick="move()"]:hover {
-box-shadow: 4px 4px 0 #000;
-transform: translate(-4px,-4px);
-}
-button[onclick="move()"]:focus-visible{
-outline-offset: 1px;
-}
-h2[id="pick"]{
-margin-left: 10px;
-font-weight: bold;
-color:black;
-}
-.tablink {
-outline: 0;
-grid-gap: 8px;
-align-items: center;
-background: 0 0;
-background-color: #9ec9bc;
-border: 1px solid #000;
-border-radius: 4px;
-cursor: pointer;
-display: inline-flex;
-flex-shrink: 0;
-font-size: 16px;
-gap: 8px;
-justify-content: center;
-line-height: 1.5;
-overflow: hidden;
-padding: 12px 16px;
-text-decoration: none;
-text-overflow: ellipsis;
-transition: all .14s ease-out;
-white-space: nowrap;
-}
-.tablink:hover {
   box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px,-4px);
+  transform: translate(-4px, -4px);
 }
-.tablink:focus-visible{
+
+button[type="button"]:focus-visible {
   outline-offset: 1px;
 }
+
+#deletefood:hover {
+  box-shadow: 4px 4px 0 #000;
+  transform: translate(-4px, -4px);
+}
+
+#deletefood:focus-visible {
+  outline-offset: 1px;
+}
+
+button[onclick="move()"]:hover {
+  box-shadow: 4px 4px 0 #000;
+  transform: translate(-4px, -4px);
+}
+
+button[onclick="move()"]:focus-visible {
+  outline-offset: 1px;
+}
+
+h2[id="pick"] {
+  margin-left: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.tablink {
+  outline: 0;
+  grid-gap: 8px;
+  align-items: center;
+  background: 0 0;
+  background-color: #9ec9bc;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 16px;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all 0.14s ease-out;
+  white-space: nowrap;
+}
+
+.tablink:hover {
+  box-shadow: 4px 4px 0 #000;
+  transform: translate(-4px, -4px);
+}
+
+.tablink:focus-visible {
+  outline-offset: 1px;
+}
+
 /* Style the tab content */
 .tabcontent {
   border: 2px solid;
@@ -179,317 +155,232 @@ white-space: nowrap;
   height: 100%;
   text-align: left;
 }
-#bf{
+
+#bf {
   padding: 20px;
-  color:#1f1f4c;
+  color: #1f1f4c;
 }
-#lnh{
+
+#lnh {
   padding: 20px;
-  color:#1f1f4c;
+  color: #1f1f4c;
 }
-#din{
+
+#din {
   padding: 20px;
-  color:#1b1b5c;
+  color: #1b1b5c;
 }
-#column1{
+
+#column1 {
   border-radius: 25px;
   border-color: #000;
 }
+
 .column {
   border-radius: 25px;
   float: left;
   width: 45%;
   min-height: 100%;
-  color:rgb(0, 0, 0);
+  color: rgb(0 0 0);
 }
-div[id='test'] {
-display: flex;
-align-items: stretch;
+
+div[id="test"] {
+  display: flex;
+  align-items: stretch;
 }
-.row:after {
+
+.row::after {
   content: "";
   display: table;
   display: flex;
   clear: both;
 }
-.row{
+
+.row {
   padding-left: 150px;
   margin-right: 22px;
   height: 100%;
 }
-#Settings {
+
+#settings {
   background-color: #80b0ae;
 }
-#Profile {
+
+#profile {
   background-color: #708f7e;
 }
-#Home {
+
+#home {
   background-color: #597a59;
 }
-/* #myProgress {
-  width: 80%;
-  background-color: #ddd;
-  /* It should be rotated by 90 deg, but it need to be fixed for relative percentage to layout */
-  /* transform: rotate(90deg); 
-}
-#myBar {
-  height: 30px;
-  width: 30px;
-  background-color: #04AA6D;
-}  */
-.myProgress{
+
+.my-progress {
   width: 160px;
   height: 160px;
   position: relative;
 }
-.outer{
+
+.outer {
   height: 160px;
   width: 160px;
   border-radius: 50%;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), 
-              -6px -6px 10px -1px rgba(70, 163, 58, 0.7);
+  box-shadow:
+    6px 6px 10px -1px rgba(0 0 0 15%),
+    -6px -6px 10px -1px rgba(70 163 58 70%);
   margin-left: 150px;
 }
-#number{
+
+#number {
   font-weight: 600px;
-  color: #555; 
+  color: #555;
   padding-top: 68px;
   padding-left: 63.5px;
 }
-circle{
-  fill:none;
-  stroke: url(#GradientColor);
+
+circle {
+  fill: none;
+  stroke: url("#GradientColor");
   stroke-width: 20px;
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
   animation: anim 2s linear forwards;
-  margin-left: 20px; 
+  margin-left: 20px;
 }
-svg{
-  position:absolute; 
+
+svg {
+  position: absolute;
   margin-left: 150px;
-  top: 0px; 
-  left: 0px; 
+  top: 0;
+  left: 0;
 }
-@keyframes anim{
-  100%{
+
+@keyframes anim {
+  100% {
     stroke-dashoffset: 0;
   }
 }
-#dailyGoal{
+
+#daily-goal {
   font-size: 20px;
   margin-top: 40px;
   margin-left: 10px;
 }
-.pop_Up .pop_Up_Text {
+
+.pop-up .pop-up-text {
   visibility: hidden;
-  background-color: rgb(190, 220, 138);
+  background-color: rgb(190 220 138);
   color: #000;
   text-align: center;
   border-radius: 20%;
-  padding: 10% 10% 10% 10%;
-  position:fixed;
-  top:25%;
-  left:35%;
+  padding: 10%;
+  position: fixed;
+  top: 25%;
+  left: 35%;
   border-style: groove;
   border-width: 2px;
   border-color: black;
   text-decoration-style: dashed;
 }
+
 /* Hide and show Pop up */
-.pop_Up .show {
+.pop-up .show {
   visibility: visible;
-  -webkit-animation: fade_In 1s;
-  animation: fade_In 1s;
+  animation: fade-in 1s;
   z-index: 99;
 }
-/* Animation, Hope webkit works*/
-@-webkit-keyframes fade_In {
-  from {opacity: 0;} 
-  to {opacity: 1;}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
-@keyframes fade_In {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-#foodTyped1{
+
+#food-type {
   margin-bottom: 10%;
-  width:170px;
-  height:20px;
+  width: 170px;
+  height: 20px;
 }
-#foodTyped2{
+
+#meal-type {
   margin-bottom: 10%;
-  width:170px;
-  height:20px;
+  width: 170px;
+  height: 20px;
 }
-#mealTyped1{
+
+#calories {
   margin-bottom: 10%;
-  width:170px;
-  height:20px;
+  width: 170px;
+  height: 20px;
 }
-#mealTyped2{
-  margin-bottom: 10%;
-  width:170px;
-  height:20px;
-}
-#calories1{
-  margin-bottom: 10%;
-  width:170px;
-  height:20px;
-}
-#calories2{
-  margin-bottom: 10%;
-  width:170px;
-  height:20px;
-}
-#popButton1{
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
-}
-#popButton1:hover {
+
+#pop-button1:hover {
   box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px,-4px);
+  transform: translate(-4px, -4px);
 }
-#popButton1:focus-visible{
+
+#pop-button1:focus-visible {
   outline-offset: 1px;
 }
-#popButton2{
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
-}
-#popButton2:hover {
+
+#pop-button2:hover {
   box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px,-4px);
+  transform: translate(-4px, -4px);
 }
-#popButton2:focus-visible{
+
+#pop-button2:focus-visible {
   outline-offset: 1px;
 }
-#popButton3{
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
-}
-#popButton3:hover {
+
+#pop-button3:hover {
   box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px,-4px);
+  transform: translate(-4px, -4px);
 }
-#popButton3:focus-visible{
+
+#pop-button3:focus-visible {
   outline-offset: 1px;
 }
-#popButton4{
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
-}
-#popButton4:hover {
+
+#pop-button4:hover {
   box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px,-4px);
+  transform: translate(-4px, -4px);
 }
-#popButton4:focus-visible{
+
+#pop-button4:focus-visible {
   outline-offset: 1px;
 }
+
 .dark-mode {
   background-color: black;
   color: white;
 }
-    
+
 .light-mode {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255 255 255);
   color: black;
 }
-.info{
+
+.info {
   padding: 20px;
   width: 100%;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
 }
-.changeSet{
+
+.change-set {
   padding: 20px;
   width: 100%;
   font-weight: bold;
   color: #deebd4;
 }
+
 .name {
   font-size: 20px;
 }
+
 .progress {
   padding: 10px;
   margin-top: 10px;
@@ -503,20 +394,21 @@ svg{
   height: 10px;
   overflow: hidden;
 }
-    
-.progress .progress__bar {
+
+.progress .progress-bar {
   height: 10px;
   width: 0;
   border-radius: 4px;
   background-image: linear-gradient(45deg, red, green);
   transition: 0.3s;
 }
-    
-#dailyCal {
-  color: rgb(0, 0, 0);
+
+#daily-cal {
+  color: rgb(0 0 0);
   margin-left: 10px;
   font-size: 16px;
 }
+
 #input {
   box-sizing: border-box;
   width: 80px;
@@ -524,6 +416,7 @@ svg{
   height: 25px;
   margin-right: 5px;
 }
+
 #submit {
   box-sizing: border-box;
   width: 80px;
@@ -531,94 +424,52 @@ svg{
   height: 25px;
   margin-right: 5px;
 }
-button[class="mode"]{
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
-}
+
 button[class="mode"]:hover {
   box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px,-4px);
+  transform: translate(-4px, -4px);
 }
-button[class="mode"]:focus-visible{
+
+button[class="mode"]:focus-visible {
   outline-offset: 1px;
 }
-#ProfileBox{
+
+#profile-box {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  background-color: #B6CEC7;
+  background-color: #b6cec7;
   width: 50%;
   height: 50%;
   border-radius: 3%;
   padding-top: 50px;
 }
-#SettingBox{
+
+#setting-box {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  background-color: #B6CEC7;
+  background-color: #b6cec7;
   width: 50%;
   height: 30%;
   border-radius: 3%;
   padding-top: 50px;
 }
-#name{
-  width: 95.6%;
-  padding: 15px;  
+
+input[type="number"],
+input[type="name"],
+textarea {
+  width: 96.5%;
+  padding: 15px;
   margin-right: 300px;
-  display: inline-block;  
-  border: none;  
-  background: #f1f1f1; 
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
   font-size: 18px;
 }
-#age{
-  width: 95.6%;
-  padding: 15px;  
-  margin-right: 300px;
-  display: inline-block;  
-  border: none;  
-  background: #f1f1f1; 
-  font-size: 18px;
+
+input[type="number"]:focus,
+input[type="name"]:focus {
+  background-color: rgb(211 240 225);
+  outline: invert;
 }
-#weight1{
-  width: 95.6%;
-  padding: 15px;  
-  margin-right: 300px;
-  display: inline-block;  
-  border: none;  
-  background: #f1f1f1; 
-  font-size: 18px;
-}
-#weight2{
-  width: 95.6%;
-  padding: 15px;  
-  margin-right: 300px;
-  display: inline-block;  
-  border: none;  
-  background: #f1f1f1; 
-  font-size: 18px;
-}
-input[type=number]:focus, input[type=name]:focus {  
-background-color: rgb(211, 240, 225);  
-outline:invert;
-}  

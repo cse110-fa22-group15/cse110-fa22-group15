@@ -2,88 +2,89 @@
 <html>
 
 <head>
-  <meta charset = "UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="homepageCss.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <title>Calcomole Homepage</title>
+</head>
+
+<body>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script src="./entryCard.js" type="module"></script>
   <script src="./Homepage.js" type="module"></script>
-  <script src="./calorieCalculations.js" type="module"></script>
-  <script src="./ProfileTab.js" type="module"></script>
-  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-<script>
-  window.TrackJS && TrackJS.install({ 
-    token: "7a1415d608764917aad585c8bcc275fa"
-    // for more configuration options, see https://docs.trackjs.com
-  });
-</script>
-                        
-</head>
-  <body>
-    <header>
-      <!-- upload logo as background in header -->
-      <img src="logo.PNG" alt="" id = "pc">
-      <div class="content">
-      <h2 class="text_shadows">Welcome to Calcumole!</h2>
-      </div>
-    </header>
-    <button class="tablink" onclick="openTab('Home', this, '#DFDCE5FF')" id="defaultOpen">Home</button>
-    <button class="tablink" onclick="openTab('Profile', this, '#DFDCE5FF')">Profile</button>
-    <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
+  <script>
+    window.TrackJS && TrackJS.install({
+      token: "7a1415d608764917aad585c8bcc275fa"
+      // for more configuration options, see https://docs.trackjs.com
+    });
+  </script>
+  <header>
+    <!-- upload logo as background in header -->
+    <img src="logo.PNG" alt="" id="pc">
+    <div class="content">
+      <h2 class="text-shadows">Welcome to Calcumole!</h2>
+    </div>
+  </header>
+  <button class="tablink" onclick="openTab('home', this, '#DFDCE5FF')" id="default-open">Home</button>
+  <button class="tablink" onclick="openTab('profile', this, '#DFDCE5FF')">Profile</button>
+  <button class="tablink" onclick="openTab('settings', this, '#DFDCE5FF')">Settings</button>
 
-    <div id="Home" class="tabcontent">
-      <div class="row" style="background-color: #d1dfcb;">
-        <button type="button" onclick="check_Pop_Food()" id="add_food">Add Food (+)</button>
-        <!-- The pop_up div integrated-->
-        <div class="pop_Up">
-          <form action="" class="pop_Up_Text" id="food">
-            <label for="foodType">Food Name</label><br>
-            <input type="search" id="foodType" name="foodType" placeholder='Enter food'><br>
-            <label for="mealType">Meal Type</label><br>
-            <select name="mealType" id="mealType">
-              <option value="breakfast">BREAKFAST</option>
-              <option value="lunch">LUNCH</option>
-              <option value="dinner">DINNER</option>
-            </select><br>
-            <label for="calories">Calories:</label><br>
-            <input type="number" id="calories1" name="calories1" value=""><br>
-            <input type="submit" value="Submit" onclick="reset_Check()" id = "popButton1">
-            <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton2">
-          </form> 
+  <div id="home" class="tabcontent">
+    <div class="row" style="background-color: #d1dfcb;">
+      <button type="button" onclick="check_Pop_Food()" id="add-food">Add Food (+)</button>
+      <!-- The pop_up div integrated-->
+      <div class="pop-up">
+        <form action="" class="pop-up-text" id="food">
+          <label for="food-type">Food Name</label><br>
+          <input type="search" id="food-type" name="food-type" value="Enter food"><br>
+          <label for="meal-type">Meal Type</label><br>
+          <select name="meal-type" id="meal-type">
+            <option value="breakfast">BREAKFAST</option>
+            <option value="lunch">LUNCH</option>
+            <option value="dinner">DINNER</option>
+          </select><br>
+          <label for="calories">Calories:</label><br>
+          <input type="numberCal" id="calories" name="calories" value=""><br>
+          <input type="submit" value="Submit" onclick="reset_Check()" id="pop-button1">
+          <input type="button" value="Cancel" onclick="reset_Check()" id="pop-button2">
+        </form>
+      </div>
+      <h2 id="pick">Pick a date
+        <input type="date" id="datepicker">
+      </h2>
+      <div id="test">
+        <div class="column" id="column1" style="background-color:#D8E0BB;">
+          <h3 id="bf">BREAKFAST</h3>
+          <table id="breakfasttable">
+
+          </table>
+          <h3 id="lnh">LUNCH</h3>
+          <table id="lunchtable">
+          </table>
+          <h3 id="din">DINNER</h3>
+          <table id="dinnertable">
+          </table>
+          <button id="deletefood">Delete Marked</button>
         </div>
-        <h2 id = "pick">Pick a date
-          <input type="date" id="datepicker">
-        </h2>
-        <div id="test">
-        <div class="column" id = "column1" style="background-color:#D8E0BB;">
-          <h3 id = "bf">BREAKFAST</h3>
-          <table id="breakfastTable">
-          </table>
-          <h3 id = "lnh">LUNCH</h3>
-          <table id="lunchTable">
-          </table>
-          <h3 id = "din">DINNER</h3>
-          <table id="dinnerTable">
-          </table>
-          <button id = 'deletefood'>Delete Marked</button>
-        </div>
-        <div class="column" id = "column2" style="background-color:#B6CEC7;">
-          <div id="dailyGoal">Daily Goal<br>
-          <div class="progress"> 
-            <div id="download" class="progress__bar"></div>
+        <div class="column" id="column2" style="background-color:#B6CEC7;">
+          <div id="daily-goal">Daily Goal<br>
+            <div class="progress">
+              <div id="download" class="progress-bar"></div>
+            </div>
+            <label id="daily-calorie" for="set-value">Update your daily calories: </label>
+            <input id="set-value">
+            <input id="submit" type="submit" value="Update">
           </div>
-          <label id="dailyCalorie" for="set-value">Update your daily calories: </label>
-          <input id="set-value">
-          <input id="submit" type="submit" value="Update">
-          </div>
-        </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div id="Profile" class="tabcontent">
-      <h2 class="info">Edit Your Profile</h2>
-      <div id = "ProfileBox">
-      <label id="profName" for="name">Name</label><br>
+  <div id="profile" class="tabcontent">
+    <h2 class="info">Edit Your Profile</h2>
+    <div id="profile-box">
+      <label id="profname" for="name">Name</label><br>
       <input type="name" id="name" name="name" placeholder="Tony Stark"><br>
       <label for="sex">Sex</label><br>
       <select id="sex" name="sex">
@@ -93,162 +94,127 @@
         <option value="Female">Female</option>
       </select><br>
       <label for="Age">Age</label><br>
-      <input type="number" id="age" name="age" placeholder=27><br>
+      <input type="number" id="age" name="age" placeholder="27"><br>
       <label for="weight">Current Weight</label><br>
-      <input type="number" id="weight1" name="weight1" placeholder="190 lb"><br>
+      <input type="number" id="weight1" name="weight" placeholder="190 lb"><br>
       <label for="weight">Goal Weight</label><br>
-      <input type="number" id="weight2" name="weight2" placeholder="195 lb"><br>
-      <input class="reset" type="reset" value = "Reset"> // TODO change this to a button? and add it to ProfileTab.js
-      <input type="submit" value = "Save" onclick="User()" id = "popButton3"><br>
-      </div>
-    </div>
+      <input type="number" id="weight2" name="weight" placeholder="195 lb"><br>
+      <input class="reset" type="reset" value="Reset">
+      <input type="submit" value="Save" onClick="User()"><br>
 
-    <div id="Settings" class="tabcontent">
-      <h2 class="changeSet">Change Your Settings</h2>
-      <div id="SettingBox">
+    </div>
+  </div>
+
+  <div id="settings" class="tabcontent">
+    <h2 class="change-set">Change Your Settings</h2>
+    <div id="setting-box">
       <label for="unit">Weight Unit:</label>
       <select id="unit" name="unit">
         <option value="lb">lb</option>
         <option value="kg">kg</option>
       </select><br>
-      <label for="mode_c">Change mode:</label>
+      <label for="mode-c">Change mode:</label>
       <button class="mode" onclick="light()">Light mode</button>
       <button class="mode" onclick="dark()">Dark mode</button>
-      </div>
     </div>
+  </div>
 
 
-    <script>
-      function light() {
-        var element = document.body;
-        element.classList.toggle("light-mode");
-      }
-      function dark() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-      }
-      function User() {
-        window.location.href="Homepage.html";  
-      }
-      function openTab(tabName, elmnt, color) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].style.backgroundColor = "";
-        }
-        document.getElementById(tabName).style.display = "block";
-        elmnt.style.backgroundColor = color;
-
-      }
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-      // Progress bar
-      // var i = 0;
-      // // There supposed to be a number represents calorie intake passed in for function move()
-      // // like: function move(value) {
-      // function move() {
-      //   if (i == 0) {
-      //     i = 1;
-      //     var elem = document.getElementById("myBar");
-      //     var width = 1;
-      //     var id = setInterval(frame, 10);
-
-      //     function frame() {
-      //       // The width now is set as 90 since there's no calorie intake data pass in
-      //       //eg: you should change it as if (width >= value) { 
-      //       // where value is 90, calculated by: (calorie intake/ calorie goal) * 100
-      //       // it will also handle over-intaked calories
-      //       if (width >= 80) {
-      //         clearInterval(id);
-      //         i = 0;
-      //       } else {
-      //         width++;
-      //         elem.style.width = width + "%";
-      //       }
-      //     }
-      //   }
-      // }
-
-  let progressbar = document.getElementById("download");
-
-  function updateProgressBar(value) {
-    if (value >= 0 && value <= 1000) {
-      progressbar.style.width = value + "%"; 
+  <script>
+    function light() {
+      var element = document.body;
+      element.classList.toggle("light-mode");
     }
-  }
-
-  function handleInput() {
-    let value = document.getElementById('set-value').value;
-    if (value > 1000) {
-      value = 100;
-      document.getElementById('set-value').value = 1000;
+    function dark() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
     }
-    if (value < 0) {
-      value = 0;
-      document.getElementById('set-value').value = 0;
+    function User() {
+      window.location.href = "Homepage.html";
     }
-    updateProgressBar(value/10);
-  }
-  
-  document.getElementById("submit").addEventListener("click", handleInput, false);
-  // let number = document.getElementById("number");
-      // let calories = document.getElementById("calories").value;
-      // let counter = 0; 
-      // if(counter == 100) {
-      //   clearInterval();
-      // } else {
-      //   totalCalories += calories; 
-      //   number.innerHTML = totalCalories + "%";
-           
-      // }
-      
-      var check = false;
-      var mode = 0;
-      
-      function reset_Check(){
-        if(mode == 0){
-          document.getElementById("food").submit();
-        }
-        else if(mode == 1){
-          document.getElementById("goal").submit();
-        }
-        else if(mode == 2){
-          document.getElementById("new_User").submit();
-        }
-        check = false;
+    function openTab(tabName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
       }
-      function check_Pop_User(){
-        mode = 2;
-        click_Pop();
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
       }
-      function check_Pop_Goal(){
-        mode = 1;
-        click_Pop();
+      document.getElementById(tabName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultopen").click();
+    let progressbar = document.getElementById("download");
+
+    function updateProgressBar(value) {
+      if (value >= 0 && value <= 1000) {
+        progressbar.style.width = value + "%";
       }
-      function check_Pop_Food(){
-        mode = 0;
-        click_Pop();
+    }
+
+    function handleInput() {
+      let value = document.getElementById('set-value').value;
+      if (value > 1000) {
+        value = 100;
+        document.getElementById('set-value').value = 1000;
       }
+      if (value < 0) {
+        value = 0;
+        document.getElementById('set-value').value = 0;
+      }
+      updateProgressBar(value / 10);
+    }
+
+    document.getElementById("submit").addEventListener("click", handleInput, false);
+    var check = false;
+    var mode = 0;
+
+    function reset_Check() {
+      if (mode == 0) {
+        document.getElementById("food").submit();
+      }
+      else if (mode == 1) {
+        document.getElementById("goal").submit();
+      }
+      else if (mode == 2) {
+        document.getElementById("new-User").submit();
+      }
+      check = false;
+    }
+    function check_Pop_User() {
+      mode = 2;
+      click_Pop();
+    }
+    function check_Pop_Goal() {
+      mode = 1;
+      click_Pop();
+    }
+    function check_Pop_Food() {
+      mode = 0;
+      click_Pop();
+    }
 
 
-      // When the user clicks on div, open the pop_Up
-      function click_Pop() {
-        check += 1;
-        if(mode == 0){
-          var pop_Up = document.getElementById("food");
-        }
-        else if(mode == 1){
-          var pop_Up = document.getElementById("goal");
-        }
-        else if(mode == 2){
-          var pop_Up = document.getElementById("new_User");
-        }
-
-        pop_Up.classList.toggle("show");
+    // When the user clicks on div, open the pop_Up
+    function click_Pop() {
+      check += 1;
+      if (mode == 0) {
+        var pop_Up = document.getElementById("food");
       }
-    </script>
+      else if (mode == 1) {
+        var pop_Up = document.getElementById("goal");
+      }
+      else if (mode == 2) {
+        var pop_Up = document.getElementById("new_User");
+      }
+
+      pop_Up.classList.toggle("show");
+    }
+  </script>
+</body>
+
 </html>
