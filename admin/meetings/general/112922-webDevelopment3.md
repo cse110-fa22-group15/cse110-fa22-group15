@@ -25,11 +25,11 @@
   - How to fix the daily goal bar
 
 - **Anything that was on the agenda but was not discussed (save for next meeting's old business**
-  - Making our website functional 
+  - Making our website functional
   - Fixing all problems with the local storage
 
 - **Any decisions made & their reasoning (if there were dissenting opinions include them, then write why the group decided to make that decision anyways)**
-  - People are assigned with smaller task to work on for final week 
+  - People are assigned with smaller task to work on for final week
   - Having a clear knowledge on what should do for this week
   - Have the plan for next week ready
   - Fill our repository with documents
