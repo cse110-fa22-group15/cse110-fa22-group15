@@ -3,10 +3,10 @@
 
 describe('Test Add/Delete Button on Home Page.', () => {
   // Change this constant value before testing!
-  const homeUrl = 'https://cse110-fa22-group15.github.io/cse110-fa22-group15/calorieTracker/calcumoleCode/Homepage.html';
+  const homeUrl = 'https://cse110-fa22-group15.github.io/cse110-fa22-group15/calorieTracker/calcumoleCode/Homepage.html'
   beforeAll(async () => {
     await page.goto(homeUrl)
-  });
+  })
 
   it('Add milk to breakfast', async () => {
     await page.click('#add_food')
