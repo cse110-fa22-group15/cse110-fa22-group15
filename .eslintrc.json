@@ -1,11 +1,12 @@
-/* eslint-disable */
-
 {
   "rules": {
     "setWithoutGet": 0
   },
   "parserOptions": {
-    "ecmaVersion": "latest"
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
   },
   "env": {
     "es6": true
