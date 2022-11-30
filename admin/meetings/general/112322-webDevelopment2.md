@@ -16,7 +16,7 @@
   
 #### The agenda of what is discussed
 - **Any old unresolved business from the previous meeting**
-  - Website design
+  - Site design
   - Task splitting
   - CI/CD pipelines
 - **Any new business to be discussed**
@@ -30,7 +30,7 @@
 - **Anything that was on the agenda but was not discussed (save for next meeting's old business**
   - Finalizing CI/CD pipeline
   - Integrating different functions into one web program
-   
+
 - **Any decisions made & their reasoning (if there were dissenting opinions include them, then write why the group decided to make that decision anyways)**
   - People are assigned with smaller task to work on
   - Having a clear knowledge on what should do for this week
