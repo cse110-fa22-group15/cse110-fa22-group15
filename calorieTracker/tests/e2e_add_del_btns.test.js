@@ -1,6 +1,6 @@
 describe('Test Add/Delete Button on Home Page.', () => {
     // Change this constant value before testing!
-    const homeUrl = 'http://127.0.0.1:5501/calorieTracker/11272022-V1.61/Homepage.html';
+    const homeUrl = 'http://127.0.0.1:5501/calorieTracker/calcumoleCode/Homepage.html';
     beforeAll(async () => {
       await page.goto(homeUrl)
     });
@@ -16,7 +16,7 @@ describe('Test Add/Delete Button on Home Page.', () => {
       await page.focus('#foodType')
       await page.keyboard.type('milk')
       await page.select('#mealType', 'breakfast')
-      await page.focus('#calories')
+      await page.focus('#calories1')
       await page.keyboard.type('50')
       await Promise.all([
         page.click('#popButton1'),
@@ -24,7 +24,7 @@ describe('Test Add/Delete Button on Home Page.', () => {
       ]);
 
       let localStorage = await page.evaluate(() =>  Object.assign({}, window.localStorage))
-      expect(localStorage.breakfastDiary).toBe("[{\"id\":\"apple1\",\"foodName\":\"\\\"milkEnter food\\\"\",\"mealType\":\"\\\"breakfast\\\"\"}]")
+      expect(localStorage.breakfastDiary).toBe("[{\"foodName\":\"milk\",\"mealType\":\"breakfast\",\"calories\":\"50\"}]")
     })
     
     it('Add burger to lunch and steak to dinner', async() => {
@@ -32,7 +32,7 @@ describe('Test Add/Delete Button on Home Page.', () => {
       await page.focus('#foodType')
       await page.keyboard.type('burger')
       await page.select('#mealType', 'lunch')
-      await page.focus('#calories')
+      await page.focus('#calories1')
       await page.keyboard.type('800')
       await Promise.all([
         page.click('#popButton1'),
@@ -43,7 +43,7 @@ describe('Test Add/Delete Button on Home Page.', () => {
       await page.focus('#foodType')
       await page.keyboard.type('steak')
       await page.select('#mealType', 'dinner')
-      await page.focus('#calories')
+      await page.focus('#calories1')
       await page.keyboard.type('1000')
       await Promise.all([
         page.click('#popButton1'),
@@ -51,8 +51,8 @@ describe('Test Add/Delete Button on Home Page.', () => {
       ]);
 
       let localStorage = await page.evaluate(() =>  Object.assign({}, window.localStorage))
-      expect(localStorage.lunchDiary).toBe("[{\"id\":\"apple1\",\"foodName\":\"\\\"burgerEnter food\\\"\",\"mealType\":\"\\\"lunch\\\"\"}]")
-      expect(localStorage.dinnerDiary).toBe("[{\"id\":\"apple1\",\"foodName\":\"\\\"steakEnter food\\\"\",\"mealType\":\"\\\"dinner\\\"\"}]")
+      expect(localStorage.lunchDiary).toBe("[{\"foodName\":\"burger\",\"mealType\":\"lunch\",\"calories\":\"800\"}]")
+      expect(localStorage.dinnerDiary).toBe("[{\"foodName\":\"steak\",\"mealType\":\"dinner\",\"calories\":\"1000\"}]")
     })
 
     it('Check the number of entries on screen after adding 3 foods', async() => {
@@ -75,9 +75,8 @@ describe('Test Add/Delete Button on Home Page.', () => {
       ]);
 
       let localStorage = await page.evaluate(() =>  Object.assign({}, window.localStorage))
-      console.log(localStorage)
       expect(localStorage.breakfastDiary).toBe('[]')
-      expect(localStorage.lunchDiary).toBe("[{\"id\":\"apple1\",\"foodName\":\"\\\"burgerEnter food\\\"\",\"mealType\":\"\\\"lunch\\\"\"}]")
+      expect(localStorage.lunchDiary).toBe("[{\"foodName\":\"burger\",\"mealType\":\"lunch\",\"calories\":\"800\"}]")
       expect(localStorage.dinnerDiary).toBe('[]')
     })
 
@@ -85,4 +84,10 @@ describe('Test Add/Delete Button on Home Page.', () => {
       let entries = await page.$$('entry-card');
       expect(entries.length).toBe(1);
     })
+
+    it('Clear all local storage after test', async () => {
+      await page.evaluate(() => localStorage.clear())
+      let localStorage = await page.evaluate(() =>  Object.assign({}, window.localStorage))
+      expect(JSON.stringify(localStorage)).toBe("{}")
+    });
 });
