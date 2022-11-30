@@ -1,3 +1,5 @@
+/* global localStorage */
+/* eslint no-undef: "error" */
 window.addEventListener('DOMContentLoaded', init)
 
 const LBS_TO_CALS = 300
@@ -26,19 +28,19 @@ function addUpDailyCals () {
   // Adds up the calories from each entry
   const breakfastDiary = getFoodFromStorage()[0]
   let breakfastCals = 0
-  for (var i = 0; i < breakfastDiary.length; i++) {
+  for (let i = 0; i < breakfastDiary.length; i++) {
     breakfastCals += parseInt(breakfastDiary[i].calories)
   }
 
   const lunchDiary = getFoodFromStorage()[1]
   let lunchCals = 0
-  for (var i = 0; i < lunchDiary.length; i++) {
+  for (let i = 0; i < lunchDiary.length; i++) {
     lunchCals += parseInt(lunchDiary[i].calories)
   }
 
   const dinnerDiary = getFoodFromStorage()[2]
   let dinnerCals = 0
-  for (var i = 0; i < dinnerDiary.length; i++) {
+  for (let i = 0; i < dinnerDiary.length; i++) {
     dinnerCals += parseInt(dinnerDiary[i].calories)
   }
 
@@ -59,7 +61,7 @@ function calculateDailyGoal () {
     dailyGoal = FEMALE_AVG_DAILY_CALS
   }
 
-  if (sex == 'Male') {
+  if (sex === 'Male') {
     dailyGoal += FEMALE_TO_MALE
   }
   localStorage.setItem('dailyGoal', dailyGoal)
