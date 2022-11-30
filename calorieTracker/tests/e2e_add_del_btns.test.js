@@ -1,14 +1,12 @@
-/* global page, window, expect, it, describe, beforeAll, console */
+/* global page, window, expect, it, describe, beforeAll */
 /* eslint no-undef: "error" */
 
 describe('Test Add/Delete Button on Home Page.', () => {
-
   // Change this constant value before testing!
-  const homeUrl = 'http://127.0.0.1:5501/calorieTracker/calcumoleCode/Homepage.html';
+  const homeUrl = 'http://127.0.0.1:5501/calorieTracker/calcumoleCode/Homepage.html'
   beforeAll(async () => {
     await page.goto(homeUrl)
-  });
-
+  })
 
   it('Add milk to breakfast', async () => {
     await page.click('#add_food')
@@ -22,7 +20,6 @@ describe('Test Add/Delete Button on Home Page.', () => {
       page.waitForNavigation()
     ])
 
-
     it('Add milk to breakfast', async () => {
       await page.click('#add_food')
       await page.focus('#foodType')
@@ -32,8 +29,8 @@ describe('Test Add/Delete Button on Home Page.', () => {
       await page.keyboard.type('50')
       await Promise.all([
         page.click('#popButton1'),
-        page.waitForNavigation(),
-      ]);
+        page.waitForNavigation()
+      ])
 
       let localStorage = await page.evaluate(() => Object.assign({}, window.localStorage))
       expect(localStorage.breakfastDiary).toBe("[{\"foodName\":\"milk\",\"mealType\":\"breakfast\",\"calories\":\"50\"}]")
@@ -49,7 +46,7 @@ describe('Test Add/Delete Button on Home Page.', () => {
       await Promise.all([
         page.click('#popButton1'),
         page.waitForNavigation(),
-      ]);
+      ])
 
       await page.click('#add_food')
       await page.focus('#foodType')
@@ -60,13 +57,12 @@ describe('Test Add/Delete Button on Home Page.', () => {
       await Promise.all([
         page.click('#popButton1'),
         page.waitForNavigation(),
-      ]);
+      ])
 
       let localStorage = await page.evaluate(() => Object.assign({}, window.localStorage))
       expect(localStorage.lunchDiary).toBe("[{\"foodName\":\"burger\",\"mealType\":\"lunch\",\"calories\":\"800\"}]")
       expect(localStorage.dinnerDiary).toBe("[{\"foodName\":\"steak\",\"mealType\":\"dinner\",\"calories\":\"1000\"}]")
     })
-
 
     it('Check the number of entries on screen after adding 3 foods', async () => {
       const entries = await page.$$('entry-card')
@@ -94,14 +90,14 @@ describe('Test Add/Delete Button on Home Page.', () => {
     })
 
     it('Check the number of entries on screen after deleting 2 foods', async () => {
-      let entries = await page.$$('entry-card');
-      expect(entries.length).toBe(1);
+      let entries = await page.$$('entry-card')
+      expect(entries.length).toBe(1)
     })
 
     it('Clear all local storage after test', async () => {
       await page.evaluate(() => localStorage.clear())
       let localStorage = await page.evaluate(() => Object.assign({}, window.localStorage))
       expect(JSON.stringify(localStorage)).toBe("{}")
-    });
+    })
   })
 })
