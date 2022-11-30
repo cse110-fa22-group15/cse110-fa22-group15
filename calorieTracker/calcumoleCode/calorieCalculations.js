@@ -1,4 +1,4 @@
-/* global localStorage */
+/* global localStorage, window */
 /* eslint no-undef: "error" */
 window.addEventListener('DOMContentLoaded', init)
 
