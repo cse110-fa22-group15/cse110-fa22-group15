@@ -49,12 +49,12 @@ header:first-of-type {
 }
 
 button[type="button"],
- #deletefood, 
- button[class="mode"]:hover, 
- #pop-button4, 
- #pop-button3, 
- #pop-button2, 
- button[onclick="move()"] {
+#deletefood,
+button[class="mode"]:hover, 
+#pop-button4,
+#pop-button3,
+#pop-button2,
+button[onclick="move()"] {
   margin-top: 10px;
   margin-left: 10px;
   outline: 0;
