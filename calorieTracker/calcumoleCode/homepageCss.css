@@ -48,7 +48,8 @@ header:first-of-type {
   float: right;
 }
 
-button[type="button"], #deletefood  {
+button[type="button"],
+ #deletefood {
   margin-top: 10px;
   margin-left: 10px;
   outline: 0;
@@ -81,7 +82,6 @@ button[type="button"]:hover {
 button[type="button"]:focus-visible {
   outline-offset: 1px;
 }
-
 
 #deletefood:hover {
   box-shadow: 4px 4px 0 #000;
