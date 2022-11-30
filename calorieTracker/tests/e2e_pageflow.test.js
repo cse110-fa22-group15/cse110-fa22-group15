@@ -2,9 +2,9 @@
 /* global page, describe, beforeAll, it, expect */
 /* eslint no-undef: "error" */
 
-describe('Basic Pageflow Tests for Website', async () => {
+describe('Basic Pageflow Tests for Website', () => {
   // Change this constant value before testing!
-  const loginUrl = 'http://127.0.0.1:5501/calorieTracker/calcumoleCode/LoginPage.html'
+  const loginUrl = 'https://cse110-fa22-group15.github.io/cse110-fa22-group15/calorieTracker/calcumoleCode/LoginPage.html'
   beforeAll(async () => {
     await page.goto(loginUrl)
   })
