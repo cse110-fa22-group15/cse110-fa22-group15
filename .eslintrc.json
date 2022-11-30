@@ -4,9 +4,8 @@
   },
   "parserOptions": {
     "ecmaVersion": "latest"
-},
-
-"env": {
+  },
+  "env": {
     "es6": true
-}
+  }
 }
