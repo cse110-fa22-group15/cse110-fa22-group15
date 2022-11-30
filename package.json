@@ -1,11 +1,13 @@
 {
   "scripts": {
     "test": "jest"
-
-
   },
   "jest": {
-      "roots" : ["<rootDir>/calorieTracker/tests"]
+    "roots": [
+      "<rootDir>/calorieTracker/tests"
+    ]
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1"
   }
-  
 }
