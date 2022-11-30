@@ -355,7 +355,7 @@ svg {
 }
 
 #meal-type {
- 10%;
+  margin-bottom: 10%;
   width: 170px;
   height: 20px;
 }
