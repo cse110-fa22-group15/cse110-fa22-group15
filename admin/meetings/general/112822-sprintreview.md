@@ -1,5 +1,5 @@
 # Team 15 / ErrorByNight
-## Team Meeting 
+## Team Meeting
 ### Attendance
 - Richard Heriawan
 - Ben Zhang
@@ -11,7 +11,7 @@
   
 ### 11/09, 6:00 pm, in person CSE 4th Floor Common Area
   
-####
+#### What people did
 Eric Chen(Front Guy): Did css for profile and settings.
 Richard H: Changed css for logo
 Zach Yuen: Worked on add and delete local Storage, updated roadmaps and ADR, linking user profile data to local storage.
