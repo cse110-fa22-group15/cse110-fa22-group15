@@ -1,6 +1,5 @@
-/* HTMLElement, customElements */
+/* HTMLElement, customElements, document */
 /* eslint no-undef: "error" */
-// RecipeCard.js
 
 class EntryCard extends HTMLElement {
   // Called once when document.createElement('recipe-card') is called, or
