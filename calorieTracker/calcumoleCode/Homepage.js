@@ -1,3 +1,7 @@
+/*global localStorage, a*/
+/*global location, a*/
+/*eslint no-undef: "error"*/
+
 window.addEventListener('DOMContentLoaded', init)
 
 function init () {

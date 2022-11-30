@@ -1,3 +1,6 @@
+/*global localStorage, a*/
+/*eslint no-undef: "error"*/
+
 window.addEventListener('DOMContentLoaded', init)
 function inputValidation (input) {
   if (input == '' || input == undefined || input == null) {
