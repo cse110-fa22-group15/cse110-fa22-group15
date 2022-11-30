@@ -25,7 +25,7 @@
   - How to fix the daily goal bar
 
 - **Anything that was on the agenda but was not discussed (save for next meeting's old business**
-  - Making our website functional
+  - Making our site functional
   - Fixing all problems with the local storage
 
 - **Any decisions made & their reasoning (if there were dissenting opinions include them, then write why the group decided to make that decision anyways)**
