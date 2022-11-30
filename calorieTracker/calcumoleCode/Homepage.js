@@ -160,4 +160,5 @@ function initFormHandler () {
       localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner)
     }
   })
+
 }

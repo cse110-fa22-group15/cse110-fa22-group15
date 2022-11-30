@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="newUserCss.css">
     <title>NewUser create</title>
+    <script src="./NewUser.js" type="module"></script>
     <style>
         * {
           box-sizing: border-box;
@@ -24,16 +25,15 @@
   <article>
     <h2>Let's build your profile!</h2>
       <label for="name">User name:</label><br>
-      <input type="text" id="name" name="name" placeholder="Mike"><br>
+      <input type="text" id="name" name="name" placeholder="John"><br>
       <label for="sex">Sex</label><br>
-    
       <select id="sex" name="sex">
           <option value="Female">Female</option>
           <option value="Male">Male</option>
       </select><br>
       <label for="Age">Age:</label><br>
       <input type="number" id="age" name="age" placeholder=32><br>
-      <input type="submit" id="continue" value = "Continue"  onClick="NewUser()"><br>
+      <input type="submit" id="continue" value = "Continue"  onclick="NewUser()"><br>
   </article>
   <script>
     function NewUser() {

@@ -25,7 +25,13 @@ article {
     padding: 10px;
   }
   
-  #weight{
+  #weight1{
+    margin-bottom:10px;
+    width: 160px;
+    height: 20px;
+  }
+
+  #weight2{
     margin-bottom:10px;
     width: 160px;
     height: 20px;
