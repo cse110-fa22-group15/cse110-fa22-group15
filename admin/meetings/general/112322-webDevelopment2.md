@@ -25,7 +25,7 @@
     - Create unit testing
     - Build up CI/CD pipeline
     - How we work with the front end and back end
-    - Need work on issues in repo and road map
+    - Need work on issues in repository and road map
 
 - **Anything that was on the agenda but was not discussed (save for next meeting's old business**
     - Finalizing CI/CD pipeline
