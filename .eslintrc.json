@@ -3,7 +3,7 @@
     "setWithoutGet": 0
   },
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 2020,
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true
     }
