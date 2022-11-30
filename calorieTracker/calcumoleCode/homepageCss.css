@@ -54,6 +54,7 @@ button[class="mode"]:hover,
 #pop-button4,
 #pop-button3,
 #pop-button2,
+#pop-button1,
 button[onclick="move()"] {
   margin-top: 10px;
   margin-left: 10px;
@@ -314,31 +315,6 @@ svg {
   margin-bottom: 10%;
   width: 170px;
   height: 20px;
-}
-
-#pop-button1 {
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all 0.14s ease-out;
-  white-space: nowrap;
 }
 
 #pop-button1:hover {
