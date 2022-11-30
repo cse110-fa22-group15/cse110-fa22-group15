@@ -6,8 +6,5 @@
     "roots": [
       "<rootDir>/calorieTracker/tests"
     ]
-  },
-  "devDependencies": {
-    "@babel/eslint-parser": "^7.19.1"
   }
 }
