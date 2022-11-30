@@ -218,6 +218,7 @@ h2[id="pick"] {
   border-radius: 25px;
   border-color: #000;
 }
+
 .column {
   border-radius: 25px;
   float: left;
@@ -323,6 +324,7 @@ svg {
   border-color: black;
   text-decoration-style: dashed;
 }
+
 /* Hide and show Pop up */
 .pop-up .show {
   visibility: visible;
@@ -425,7 +427,7 @@ svg {
   outline-offset: 1px;
 }
 
-#pop-button3{
+#pop-button3 {
   margin-top: 10px;
   margin-left: 10px;
   outline: 0;
@@ -455,11 +457,11 @@ svg {
   transform: translate(-4px,-4px);
 }
 
-#pop-button3:focus-visible{
+#pop-button3:focus-visible {
   outline-offset: 1px;
 }
 
-#pop-button4{
+#pop-button4 {
   margin-top: 10px;
   margin-left: 10px;
   outline: 0;
@@ -480,8 +482,8 @@ svg {
   padding: 12px 16px;
   text-decoration: none;
   text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
+  transition: all 0.14s ease-out;
+  white-space: nowrap;
 }
 
 #pop-button4:hover {
@@ -489,7 +491,7 @@ svg {
   transform: translate(-4px,-4px);
 }
 
-#pop-button4:focus-visible{
+#pop-button4:focus-visible {
   outline-offset: 1px;
 }
 
