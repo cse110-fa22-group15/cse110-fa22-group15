@@ -50,7 +50,8 @@ class EntryCard extends HTMLElement {
   }
 
   get data () {
-    return this.data;
+    if (!data) return
+    return this.data
   }
 }
 
