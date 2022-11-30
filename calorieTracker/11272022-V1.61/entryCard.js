@@ -49,5 +49,5 @@ class EntryCard extends HTMLElement {
 }
 
 // A8. TODO - Define the Class as a customElement so that you can create
-//           'recipe-card' elements
+//           'recipe-card'  elements
 customElements.define('entry-card', EntryCard)
