@@ -1,6 +1,6 @@
 {
   "rules": {
-    "setWithoutGet": 0
+    "accessor-pairs": ["warn", { "getWithoutSet": false, "setWithoutGet": false }]
   },
   "parserOptions": {
     "ecmaVersion": 2020,
