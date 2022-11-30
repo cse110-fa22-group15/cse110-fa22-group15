@@ -56,10 +56,21 @@ function saveFoodToDiary(breakfastDiary, lunchDiary, dinnerDiary) {
     localStorage.dinnerDiary = JSON.stringify(dinnerDiary);
 }
 
-
-
-
 function initFormHandler() {
+    var username = localStorage.getItem('username');
+    document.getElementsByName("name")[0].placeholder = username;
+
+    // var sex = localStorage.getItem('sex');
+    // document.getElementsByID("sex")= sex;
+
+    var age = localStorage.getItem('age');
+    document.getElementsByName("age")[0].placeholder = age;
+
+    var currentWeight = localStorage.getItem('currentWeight');
+    document.getElementsByName("weight1")[0].placeholder = currentWeight;
+
+    var goalWeight = localStorage.getItem('goalWeight');
+    document.getElementsByName("weight2")[0].placeholder = goalWeight;
 
     // Set default date to today
     var datePicker = document.getElementById('datepicker');
@@ -138,31 +149,32 @@ function initFormHandler() {
         event.preventDefault();
 
         // Create two variables that grab the values from the form
-        var foodType = JSON.stringify(document.getElementById("foodType").value);
-        var mealType = JSON.stringify(document.getElementById("mealType").value);
+        var foodType = document.getElementById("foodType").value; 
+        var mealType = document.getElementById("mealType").value;
+        var calories = document.getElementById("calories1").value;
         
         // Create the foodEntry data which will be set to the entry card's data
         var foodEntry = {};
-        foodEntry['id'] = 'apple1';
         foodEntry['foodName'] = foodType;
         foodEntry['mealType'] = mealType;
+        foodEntry['calories'] = calories;
         var foodEntryCard = document.createElement('entry-card');
         foodEntryCard.data = foodEntry;
 
         // Checks which meal to append the card to based on what the user chooses
-        if (mealType == JSON.stringify("breakfast")) {
+        if (mealType == "breakfast") {
             var alreadyAddedToBreakfast = getFoodFromStorage()[0];
             alreadyAddedToBreakfast.push(foodEntry);
             localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast);
         }
 
-        if (mealType == JSON.stringify("lunch")) {
+        if (mealType == "lunch") {
             var alreadyAddedToLunch = getFoodFromStorage()[1];
             alreadyAddedToLunch.push(foodEntry);
             localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch);
         }
         
-        if (mealType == JSON.stringify("dinner")) {
+        if (mealType == "dinner") {
             var alreadyAddedToDinner = getFoodFromStorage()[2];
             alreadyAddedToDinner.push(foodEntry);
             localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner);
