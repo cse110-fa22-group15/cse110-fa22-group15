@@ -4,8 +4,8 @@
 - Richard Heriawan
 - Ben Zhang
 - Muhan He
-- Eric Chen(1)
-- Eric Chen(2)
+- Eric Chen (1)
+- Eric Chen (2)
 - Bruce Zhou
 - Alex Levine
 - Alex Towigh
@@ -31,7 +31,6 @@
     - Finalizing CI/CD pipeline
     - Integrating different functions into one web program.
    
- 
 - **Any decisions made & their reasoning (if there were dissenting opinions include them, then write why the group decided to make that decision anyways)**
     - People are assigned with smaller task to work on
     - Having a clear knowledge on what should do for this week
