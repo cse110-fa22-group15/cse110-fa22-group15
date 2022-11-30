@@ -3,11 +3,11 @@
 
 describe('Test Add/Delete Button on Home Page.', () => {
 
-    // Change this constant value before testing!
-    const homeUrl = 'http://127.0.0.1:5501/calorieTracker/calcumoleCode/Homepage.html';
-    beforeAll(async () => {
-      await page.goto(homeUrl)
-    });
+  // Change this constant value before testing!
+  const homeUrl = 'http://127.0.0.1:5501/calorieTracker/calcumoleCode/Homepage.html';
+  beforeAll(async () => {
+    await page.goto(homeUrl)
+  });
 
 
   it('Add milk to breakfast', async () => {
@@ -23,7 +23,7 @@ describe('Test Add/Delete Button on Home Page.', () => {
     ])
 
 
-    it('Add milk to breakfast', async() => {
+    it('Add milk to breakfast', async () => {
       await page.click('#add_food')
       await page.focus('#foodType')
       await page.keyboard.type('milk')
@@ -35,11 +35,11 @@ describe('Test Add/Delete Button on Home Page.', () => {
         page.waitForNavigation(),
       ]);
 
-      let localStorage = await page.evaluate(() =>  Object.assign({}, window.localStorage))
+      let localStorage = await page.evaluate(() => Object.assign({}, window.localStorage))
       expect(localStorage.breakfastDiary).toBe("[{\"foodName\":\"milk\",\"mealType\":\"breakfast\",\"calories\":\"50\"}]")
     })
-    
-    it('Add burger to lunch and steak to dinner', async() => {
+
+    it('Add burger to lunch and steak to dinner', async () => {
       await page.click('#add_food')
       await page.focus('#foodType')
       await page.keyboard.type('burger')
@@ -62,45 +62,46 @@ describe('Test Add/Delete Button on Home Page.', () => {
         page.waitForNavigation(),
       ]);
 
-      let localStorage = await page.evaluate(() =>  Object.assign({}, window.localStorage))
+      let localStorage = await page.evaluate(() => Object.assign({}, window.localStorage))
       expect(localStorage.lunchDiary).toBe("[{\"foodName\":\"burger\",\"mealType\":\"lunch\",\"calories\":\"800\"}]")
       expect(localStorage.dinnerDiary).toBe("[{\"foodName\":\"steak\",\"mealType\":\"dinner\",\"calories\":\"1000\"}]")
     })
 
 
-  it('Check the number of entries on screen after adding 3 foods', async () => {
-    const entries = await page.$$('entry-card')
-    expect(entries.length).toBe(3)
-  })
+    it('Check the number of entries on screen after adding 3 foods', async () => {
+      const entries = await page.$$('entry-card')
+      expect(entries.length).toBe(3)
+    })
 
-  it('Delete the entries in breakfast and dinner', async () => {
-    const entries = await page.$$('entry-card')
-    const sdRoot1 = await entries[0].getProperty('shadowRoot')
-    const checkBox1 = await sdRoot1.$('input[type="checkbox"]')
-    await checkBox1.click()
+    it('Delete the entries in breakfast and dinner', async () => {
+      const entries = await page.$$('entry-card')
+      const sdRoot1 = await entries[0].getProperty('shadowRoot')
+      const checkBox1 = await sdRoot1.$('input[type="checkbox"]')
+      await checkBox1.click()
 
-    const sdRoot2 = await entries[2].getProperty('shadowRoot')
-    const checkBox2 = await sdRoot2.$('input[type="checkbox"]')
-    await checkBox2.click()
-    await Promise.all([
-      page.click('#deletefood'),
-      page.waitForNavigation()
-    ])
+      const sdRoot2 = await entries[2].getProperty('shadowRoot')
+      const checkBox2 = await sdRoot2.$('input[type="checkbox"]')
+      await checkBox2.click()
+      await Promise.all([
+        page.click('#deletefood'),
+        page.waitForNavigation()
+      ])
 
-      let localStorage = await page.evaluate(() =>  Object.assign({}, window.localStorage))
+      let localStorage = await page.evaluate(() => Object.assign({}, window.localStorage))
       expect(localStorage.breakfastDiary).toBe('[]')
       expect(localStorage.lunchDiary).toBe("[{\"foodName\":\"burger\",\"mealType\":\"lunch\",\"calories\":\"800\"}]")
       expect(localStorage.dinnerDiary).toBe('[]')
     })
 
-    it('Check the number of entries on screen after deleting 2 foods', async() => {
+    it('Check the number of entries on screen after deleting 2 foods', async () => {
       let entries = await page.$$('entry-card');
       expect(entries.length).toBe(1);
     })
 
     it('Clear all local storage after test', async () => {
       await page.evaluate(() => localStorage.clear())
-      let localStorage = await page.evaluate(() =>  Object.assign({}, window.localStorage))
+      let localStorage = await page.evaluate(() => Object.assign({}, window.localStorage))
       expect(JSON.stringify(localStorage)).toBe("{}")
     });
-});
+  })
+})

@@ -1,4 +1,4 @@
-/* global page, describe, beforeAll, */
+/* global page, describe, beforeAll, it, expect */
 /* eslint no-undef: "error" */
 
 describe('Basic Pageflow Tests for Website', () => {
