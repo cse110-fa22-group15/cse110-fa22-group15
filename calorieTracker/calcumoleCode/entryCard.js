@@ -1,3 +1,5 @@
+/* HTMLElement, customElements */
+/* eslint no-undef: "error" */
 // RecipeCard.js
 
 class EntryCard extends HTMLElement {

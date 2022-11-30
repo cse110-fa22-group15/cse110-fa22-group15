@@ -1,3 +1,5 @@
+/* global page, window, expect, it, describe, beforeAll, error, console */
+/* eslint no-undef: "error" */
 
 describe('Basic Pageflow Tests for Website', () => {
   // Change this constant value before testing!
