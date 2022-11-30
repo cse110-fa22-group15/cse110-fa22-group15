@@ -1,4 +1,4 @@
-/* HTMLElement, customElements, document */
+/* global HTMLElement, customElements, document */
 /* eslint no-undef: "error" */
 
 class EntryCard extends HTMLElement {
