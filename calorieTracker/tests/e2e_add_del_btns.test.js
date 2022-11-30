@@ -1,4 +1,9 @@
 /*global page, a*/
+/*global window, a*/
+/*global expect, a*/
+/*global it, a*/
+/*global describe, a*/
+/*global beforeAll, a*/
 /*eslint no-undef: "error"*/
 
 describe('Test Add/Delete Button on Home Page.', () => {
