@@ -1,5 +1,5 @@
-/*global page, window, expect, it, describe, beforeAll, error, console*/
-/*eslint no-undef: "error"*/
+/* global page, window, expect, it, describe, beforeAll, error, console */
+/* eslint no-undef: "error" */
 
 describe('Test Add/Delete Button on Home Page.', () => {
   // Change this constant value before testing!
