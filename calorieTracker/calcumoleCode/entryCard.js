@@ -49,9 +49,7 @@ class EntryCard extends HTMLElement {
         <label for="${data.id}">${data.foodName}</label>`
   }
 
-  get data () {
-    console.log("a");
-  }
+  get data () {}
 }
 
 // A8. TODO - Define the Class as a customElement so that you can create
