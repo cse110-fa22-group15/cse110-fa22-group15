@@ -1,6 +1,6 @@
 /* global HTMLElement, customElements, document */
 /* eslint no-undef: "error" */
-/*eslint accessor-pairs: "error"*/
+/* eslint accessor-pairs: "error" */
 
 class EntryCard extends HTMLElement {
   // Called once when document.createElement('recipe-card') is called, or
