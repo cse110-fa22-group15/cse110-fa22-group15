@@ -18,6 +18,5 @@
     "puppeteer": "^19.3.0"
   },
   "dependencies": {
-    "jest-puppeteer-preset": "^6.1.1"
   }
 }
