@@ -21,7 +21,7 @@
   <body>
     <header>
       <!-- upload logo as background in header -->
-      <img src="logo.PNG" alt="" id = "pc">
+      <img src="./logo.PNG" alt="" id = "pc">
       <div class="content">
       <h2 class="text_shadows">Welcome to Calcumole!</h2>
       </div>
@@ -115,7 +115,6 @@
       <input type="number" id="weight1" name="weight1" placeholder="190 lb"><br>
       <label for="weight2">Goal Weight</label><br>
       <input type="number" id="weight2" name="weight2" placeholder="195 lb"><br>
-      <input class="reset" type="reset" value = "Reset">
       <input type="submit" value = "Save" onClick="User()" id = "popButton7"><br>
       </div>
     </div>
@@ -123,11 +122,6 @@
     <div id="Settings" class="tabcontent">
       <h2 class="changeSet">Change Your Settings</h2>
       <div id="SettingBox">
-      <label for="unit">Weight Unit:</label>
-      <select id="unit" name="unit">
-        <option value="lb">lb</option>
-        <option value="kg">kg</option>
-      </select><br>
       <label for="mode">Change mode:</label>
       <button class="mode" id="mode" onclick="light()">Light mode</button>
       <button class="mode" onclick="dark()">Dark mode</button>
