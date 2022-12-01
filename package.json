@@ -6,9 +6,7 @@
     "roots": [
       "<rootDir>/calorieTracker/tests"
     ],
-    "verbose": true,
-    "preset": "jest-puppeteer"
-  },
+    "verbose": true  },
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
