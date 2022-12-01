@@ -33,7 +33,7 @@ jobs:
         run: |
 
           git config Charlieglider.name github-actions
-          git config arbeit19@gmail.com github-actions@github.com
+          git config user.email github-actions@github.com
 
           git add ./out/*
           git commit -m "GitHub Documentations" --allow-empty
