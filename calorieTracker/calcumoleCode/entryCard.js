@@ -46,7 +46,7 @@ class EntryCard extends HTMLElement {
       article_select.innerHTML = `
       <input type="checkbox" id="${data['id']}">
         <label for="${data['id']}">${data['foodName']}</label>
-        <button type="submit" id="edit-button" onclick = click_Pop_Edit(${data['foodName']})>Edit</button>`
+        <button type="submit" id="edit-button" onclick = click_Pop_Edit(${data['foodName']},${data['mealType']})>Edit</button>`
     }
     
   }
