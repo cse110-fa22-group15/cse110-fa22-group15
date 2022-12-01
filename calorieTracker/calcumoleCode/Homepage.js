@@ -189,18 +189,19 @@ function initFormHandler() {
 
         // Create two variables that grab the values from the form
         var foodType = JSON.stringify(document.getElementById("foodTyped2").value);
-        var mealType = JSON.stringify(document.getElementById("mealTyped2").value);
+        //var calories = JSON.stringify(document.getElementById("calories2").value);
         //document.thescript.getAttribute('foodname');
         // Create the foodEntry data which will be set to the entry card's data
+        let mealType = JSON.parse(window.localStorage.getItem('mealType'));
+        let foodname = JSON.parse(window.localStorage.getItem('foodedit'));
         var foodEntry = {};
         foodEntry['id'] = foodType;
         foodEntry['foodName'] = foodType;
         foodEntry['mealType'] = mealType;
         var foodEntryCard = document.createElement('entry-card');
         foodEntryCard.data = foodEntry;
-        let foodname = JSON.parse(window.localStorage.getItem('foodedit'));
         // Checks which meal to append the card to based on what the user chooses
-        if (mealType == JSON.stringify("breakfast")) {
+        if (mealType == "breakfast") {
             var alreadyAddedToBreakfast = getFoodFromStorage()[0];
             for (var i = 0; i < alreadyAddedToBreakfast.length; i++) {
                 if (alreadyAddedToBreakfast[i].foodName == JSON.stringify(foodname)){
@@ -210,7 +211,7 @@ function initFormHandler() {
             }
         }
 
-        if (mealType == JSON.stringify("lunch")) {
+        if (mealType == "lunch") {
             var alreadyAddedToLunch = getFoodFromStorage()[1];
             for (var i = 0; i < alreadyAddedToLunch.length; i++) {
                 if (alreadyAddedToLunch[i].foodName == JSON.stringify(foodname)){
@@ -219,7 +220,7 @@ function initFormHandler() {
                 }
             }   
         }
-        if (mealType == JSON.stringify("dinner")) {
+        if (mealType == "dinner") {
             var alreadyAddedToDinner = getFoodFromStorage()[2];
             for (var i = 0; i < alreadyAddedToDinner.length; i++) {
 

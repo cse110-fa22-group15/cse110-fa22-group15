@@ -65,12 +65,6 @@
           <form class="pop_Up_Text" id="edit">
             <label for="foodTyped2">Food Name</label><br>
             <input type="search" id="foodTyped2" name="foodTyped2" placeholder='Enter food'><br>
-            <label for="mealTyped2">Meal Type</label><br>
-            <select name="mealTyped2" id="mealTyped2">
-              <option value="breakfast">BREAKFAST</option>
-              <option value="lunch">LUNCH</option>
-              <option value="dinner">DINNER</option>
-            </select><br>
             <label for="calories2">Calories:</label><br>
             <input type="number" id="calories2" name="calories2" value=""><br>
             <input type="submit" value="Submit" onclick=reset_Check() id = "popButton3">
@@ -283,9 +277,11 @@
         pop_Up.classList.toggle("show");
       }
 
-      function click_Pop_Edit(foodname){
+      function click_Pop_Edit(foodname,mealType){
           var foodname = foodname;
+          var mealType = mealType;
           localStorage.foodedit = JSON.stringify(foodname);
+          localStorage.mealType = JSON.stringify(mealType);
           
           if(check == false){
             var pop_Up = document.getElementById("edit");
