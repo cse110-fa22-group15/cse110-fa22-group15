@@ -1,0 +1,40 @@
+name: GitHub pages
+
+
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+          
+      - name: Build
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ./
+          recurse: true
+          output_dir: ./out
+          
+          
+      - name: Pushing
+        run: |
+          //git config user.name github-actions
+          git config Charlieglider github-actions
+          git config arbeit19@gmail.com github-actions@github.com
+          //git config user.email github-actions@github.com
+          git add ./out/*
+          git commit -m "GitHub Documentations" --allow-empty
+          git push
