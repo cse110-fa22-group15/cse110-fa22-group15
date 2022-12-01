@@ -673,45 +673,49 @@ button[class="mode"]:focus-visible{
   margin-right: auto;
   background-color: #B6CEC7;
   width: 50%;
-  height: 30%;
+  height: 50%;
   border-radius: 3%;
   padding-top: 50px;
 }
 #name{
-  width: 95.6%;
+  width: 50%; 
   padding: 15px;  
-  margin-right: 300px;
+  margin-right: auto;
+  margin-left: auto;
   display: inline-block;  
   border: none;  
   background: #f1f1f1; 
-  font-size: 18px;
+  font-size: 18px; 
 }
 #age{
-  width: 95.6%;
+  width: 50%; 
   padding: 15px;  
-  margin-right: 300px;
+  margin-right: auto;
+  margin-left: auto;
   display: inline-block;  
   border: none;  
   background: #f1f1f1; 
-  font-size: 18px;
+  font-size: 18px; 
 }
 #weight1{
-  width: 95.6%;
+  width: 50%; 
   padding: 15px;  
-  margin-right: 300px;
+  margin-right: auto;
+  margin-left: auto;
   display: inline-block;  
   border: none;  
   background: #f1f1f1; 
-  font-size: 18px;
+  font-size: 18px; 
 }
 #weight2{
-  width: 95.6%;
+  width: 50%; 
   padding: 15px;  
-  margin-right: 300px;
+  margin-right: auto;
+  margin-left: auto;
   display: inline-block;  
   border: none;  
   background: #f1f1f1; 
-  font-size: 18px;
+  font-size: 18px; 
 }
 input[type=number]:focus, input[type=name]:focus {  
 background-color: rgb(211, 240, 225);  
