@@ -27,3 +27,12 @@ jobs:
           source_dir: ./
           recurse: true
           output_dir: ./out
+          
+          
+      - name: Pushing
+        run:
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add out/*
+          git commit -m “GitHub Documentations” --allow-empty
+          git push
