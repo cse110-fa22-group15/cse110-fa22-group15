@@ -10,19 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Build
         uses: andstor/jsdoc-action@v1
         with:
           source_dir: ./calorieTracker
           output_dir: ./out
-          template: minami
-          front_page: README.md
 
           
       - name: Push JSDocs
         run: |
+          ls
           git config --global user.name 'shubham-kumar1410'
           git config --global user.email 'shubhamkmr1410@gmail.com'
           git add ./out/*
