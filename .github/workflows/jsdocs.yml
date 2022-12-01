@@ -32,8 +32,8 @@ jobs:
       - name: Pushing
         run: |
 
-          git config Charlieglider.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name "Charlieglider" github-actions
+          git config user.email "arbeit19@gmail.com" github-actions@github.com
 
           git add ./out/*
           git commit -m "GitHub Documentations" --allow-empty
