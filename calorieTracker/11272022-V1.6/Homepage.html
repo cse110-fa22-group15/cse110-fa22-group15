@@ -1,86 +1,60 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset = "UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="homepageCss.css">
-  <script src="./entryCard.js" type="module"></script>
-  <script src="./Homepage.js" type="module"></script>
-  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-  <script src="./calorieCalculations.js" type="module"></script>		
-  <script src="./ProfileTab.js" type="module"></script>
-  <script>
-    window.TrackJS && TrackJS.install({ 
-      token: "7a1415d608764917aad585c8bcc275fa"
-      // for more configuration options, see https://docs.trackjs.com
-    });
-  </script>
-  <title>Homepage</title>           
-</head>
+  <head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="homepageCss.css">
+    <script src="./entryCard.js" type="module"></script>
+    <script src="./Homepage.js" type="module"></script>
+
+    
+  </head>
+
   <body>
+    
+
     <header>
       <!-- upload logo as background in header -->
       <img src="logo.PNG" alt="" id = "pc">
       <div class="content">
       <h2 class="text_shadows">Welcome to Calcumole!</h2>
       </div>
+      
     </header>
     <button class="tablink" onclick="openTab('Home', this, '#DFDCE5FF')" id="defaultOpen">Home</button>
     <button class="tablink" onclick="openTab('Profile', this, '#DFDCE5FF')">Profile</button>
     <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
 
     <div id="Home" class="tabcontent">
-      <div class="row" style="background-color: #d1dfcb;">
-        <button type="button" onclick="check_Pop_Food()" id="add_food">Add Food (+)</button>
+      <div class="row" style="background-color: #cbdfda;">
+        <button type="button" onclick="check_Pop_Food()">Add Food (+)</button>
         <!-- The pop_up div integrated-->
         <div class="pop_Up">
-          <form class="pop_Up_Text" id="food">
-            <label for="foodTyped1">Food Name</label><br>
-            <input type="search" id="foodTyped1" name="foodTyped1" value='Enter food'><br>
-            <label for="mealTyped1">Meal Type</label><br>
-            <select name="mealTyped1" id="mealTyped1">
+          <form action="" class="pop_Up_Text" id="food">
+            <label for="foodType">Food Name</label><br>
+            <input type="search" id="foodType" name="foodType" value='Enter food'><br>
+            <label for="mealType">Meal Type</label><br>
+            <select name="mealType" id="mealType">
               <option value="breakfast">BREAKFAST</option>
               <option value="lunch">LUNCH</option>
               <option value="dinner">DINNER</option>
             </select><br>
-            <label for="calories1">Calories:</label><br>
-            <input type="number" id="calories1" name="calories1" value=""><br>
+            <label for="calories">Calories:</label><br>
+            <input type="number" id="calories" name="calories" value=""><br>
             <input type="submit" value="Submit" onclick=reset_Check() id = "popButton1">
             <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton2">
           </form> 
         </div>
-        <button type="button" onclick="click_Pop_newDay()" id="newday">New Day</button>
-        <!-- The pop_up div integrated-->
-        <div class="pop_Up">
-          <form class="pop_Up_Text" id="new_day">
-            <h4>Do you want to switch to a new Day?</h4>
-            <input type="submit" value="Submit" onclick="cleanHomepage()" id = "popButton5">
-            <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton6">
-          </form>
-        </div>
+        <h2 id = "pick">Pick a date
+          <input type="date" id="datepicker">
+        </h2>
         <div id="test">
-        <!-- Added edit feature 55-71-->
-        <div class="pop_Up">
-          <form class="pop_Up_Text" id="edit">
-            <label for="foodTyped2">Food Name</label><br>
-            <input type="search" id="foodTyped2" name="foodTyped2" placeholder='Enter food'><br>
-            <label for="mealTyped2">Meal Type</label><br>
-            <select name="mealTyped2" id="mealTyped2">
-              <option value="breakfast">BREAKFAST</option>
-              <option value="lunch">LUNCH</option>
-              <option value="dinner">DINNER</option>
-            </select><br>
-            <label for="calories2">Calories:</label><br>
-            <input type="number" id="calories2" name="calories2" value=""><br>
-            <input type="submit" value="Submit" onclick=reset_Check() id = "popButton3">
-            <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton4">
-          </form> 
-        </div>
-
+        
         <div class="column" id = "column1" style="background-color:#D8E0BB;">
           <h3 id = "bf">BREAKFAST</h3>
           <table id="breakfastTable">
+            
           </table>
           <h3 id = "lnh">LUNCH</h3>
           <table id="lunchTable">
@@ -105,39 +79,42 @@
     </div>
 
     <div id="Profile" class="tabcontent">
-      <h2 class="info">Edit Your Profile</h2>
+      <h2 class="info">EDIT PROFILE</h2>
       <div id = "ProfileBox">
-      <label id="profName" for="name">Name</label><br>
-      <input type="text" id="name" name="name" placeholder="Tony Stark"><br>
+
+      <label for="name">Name:</label><br>
+      <input type="name" id="name" name="name" placeholder="Tony Stark"><br>
+
       <label for="sex">Sex</label><br>
       <select id="sex" name="sex">
         <!-- backend - should show user's sex in default -->
-        <option value="Female">Female</option>
-        <option value="Male">Male</option>
+        <option value="Female">Male</option>
+        <option value="Male">Female</option>
       </select><br>
-      <label for="age">Age</label><br>
+
+      <label for="Age">Age:</label><br>
       <input type="number" id="age" name="age" placeholder=27><br>
-      <label for="weight1">Current Weight</label><br>
-      <input type="number" id="weight1" name="weight1" placeholder="190 lb"><br>
-      <label for="weight2">Goal Weight</label><br>
-      <input type="number" id="weight2" name="weight2" placeholder="195 lb"><br>
+
+      <label for="weight">Current Weight:</label><br>
+      <input type="number" id="weight" name="weight" placeholder="190 lb"><br>
+      <label for="weight">Goal Weight:</label><br>
+      <input type="number" id="weight" name="weight" placeholder="195 lb"><br>
       <input class="reset" type="reset" value = "Reset">
-      <input type="submit" value = "Save" onClick="User()" id = "popButton7"><br>
-      </div>
+      <input type="submit" value = "Save" onClick="User()"><br>
+    </div>
     </div>
 
     <div id="Settings" class="tabcontent">
-      <h2 class="changeSet">Change Your Settings</h2>
       <div id="SettingBox">
       <label for="unit">Weight Unit:</label>
       <select id="unit" name="unit">
         <option value="lb">lb</option>
         <option value="kg">kg</option>
       </select><br>
-      <label for="mode">Change mode:</label>
-      <button class="mode" id="mode" onclick="light()">Light mode</button>
+      <label for="mode_c">Change mode:</label>
+      <button class="mode" onclick="light()">Light mode</button>
       <button class="mode" onclick="dark()">Dark mode</button>
-      </div>
+    </div>
     </div>
 
 
@@ -148,11 +125,7 @@
       }
       function dark() {
         var element = document.body;
-        // document.getElementById("SettingBox").style.backgroundColor = "#000";
         element.classList.toggle("dark-mode");
-        document.getElementById("Settings").style.backgroundColor = "Grey";
-        document.getElementById("SettingBox").style.backgroundColor = "Grey";
-        document.getElementsByClassName("tablink").style.backgroundColor = "Grey";
       }
       function User() {
         window.location.href="Homepage.html";  
@@ -170,11 +143,6 @@
         document.getElementById(tabName).style.display = "block";
         elmnt.style.backgroundColor = color;
 
-      }
-      function cleanHomepage(){
-        localStorage.breakfastDiary = JSON.stringify([]);
-        localStorage.lunchDiary = JSON.stringify([]);
-        localStorage.dinnerDiary = JSON.stringify([]);
       }
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
@@ -280,21 +248,6 @@
           var pop_Up = document.getElementById("new_User");
         }
 
-        pop_Up.classList.toggle("show");
-      }
-
-      function click_Pop_Edit(foodname){
-          var foodname = foodname;
-          localStorage.foodedit = JSON.stringify(foodname);
-          
-          if(check == false){
-            var pop_Up = document.getElementById("edit");
-            pop_Up.classList.toggle("show");
-            check = true;
-          }
-      }
-      function click_Pop_newDay(){
-        var pop_Up = document.getElementById("new_day");
         pop_Up.classList.toggle("show");
       }
     </script>
