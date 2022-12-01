@@ -22,9 +22,8 @@ jobs:
           
       - name: Push JSDocs
         run: |
-          ls
-          git config --global user.name 'shubham-kumar1410'
-          git config --global user.email 'shubhamkmr1410@gmail.com'
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add ./out/*
           git commit -am "Automated docs"
           git push   
