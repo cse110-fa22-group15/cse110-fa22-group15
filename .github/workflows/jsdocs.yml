@@ -26,4 +26,5 @@ jobs:
           git config user.email github-actions@github.com
           git add ./out/*
           git commit -am "Automated docs"
+          git checkout -b jsdocs-branch
           git push   
