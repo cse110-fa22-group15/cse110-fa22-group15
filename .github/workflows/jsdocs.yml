@@ -27,4 +27,4 @@ jobs:
           git add ./out/*
           git commit -am "Automated docs"
           git checkout -b jsdocs-branch
-          git push   
+          git push --set-upstream origin jsdocs-branch  
