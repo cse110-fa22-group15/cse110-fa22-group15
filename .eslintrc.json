@@ -1,7 +1,7 @@
 {
   "rules": {
     "accessor-pairs": "off",
-    "@typescript-superlint/kebabcase": "off"
+    "@typescript-eslint/kebabcase": "off"
   },
   "parserOptions": {
     "ecmaVersion": 2020,
