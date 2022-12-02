@@ -151,8 +151,14 @@ function initFormHandler() {
         // Create two variables that grab the values from the form
         var foodType = JSON.stringify(document.getElementById("foodTyped1").value);
         var mealType = JSON.stringify(document.getElementById("mealTyped1").value);
-        var calories = JSON.stringify(document.getElementById("calories1").value);
-        
+        var calories = JSON.parse(document.getElementById("calories1").value);
+        // check min value for calorie
+        // if (foodType.length == 0 || calories < 0)
+        // { 
+        //   alert("You need to enter food or caloires correctly");  	
+        //   return; 
+        // }  	 
+
         // Create the foodEntry data which will be set to the entry card's data
         var foodEntry = {};
         foodEntry['foodName'] = foodType;
@@ -189,43 +195,51 @@ function initFormHandler() {
 
         // Create two variables that grab the values from the form
         var foodType = JSON.stringify(document.getElementById("foodTyped2").value);
-        //var calories = JSON.stringify(document.getElementById("calories2").value);
+        var calories = JSON.parse(document.getElementById("calories2").value);
         //document.thescript.getAttribute('foodname');
         // Create the foodEntry data which will be set to the entry card's data
-        let mealType = JSON.parse(window.localStorage.getItem('mealType'));
-        let foodname = JSON.parse(window.localStorage.getItem('foodedit'));
+        let mealType = window.localStorage.getItem('mealType');
+        let foodname = window.localStorage.getItem('foodedit');
+        if (foodType == "" || parseInt(calories) < 0)
+        { 
+          alert("You need to enter food or caloires correctly");  	
+          return; 
+        } 
         var foodEntry = {};
-        foodEntry['id'] = foodType;
+        foodEntry['id'] = calories;
         foodEntry['foodName'] = foodType;
         foodEntry['mealType'] = mealType;
         var foodEntryCard = document.createElement('entry-card');
         foodEntryCard.data = foodEntry;
         // Checks which meal to append the card to based on what the user chooses
-        if (mealType == "breakfast") {
+        if (mealType == JSON.stringify("breakfast")) {
             var alreadyAddedToBreakfast = getFoodFromStorage()[0];
             for (var i = 0; i < alreadyAddedToBreakfast.length; i++) {
-                if (alreadyAddedToBreakfast[i].foodName == JSON.stringify(foodname)){
+                if (alreadyAddedToBreakfast[i].foodName == foodname){
+                    alreadyAddedToBreakfast[i].id = calories;
                     alreadyAddedToBreakfast[i].foodName = foodType;
                     localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast);
                 }
             }
         }
 
-        if (mealType == "lunch") {
+        if (mealType == JSON.stringify("lunch")) {
             var alreadyAddedToLunch = getFoodFromStorage()[1];
             for (var i = 0; i < alreadyAddedToLunch.length; i++) {
-                if (alreadyAddedToLunch[i].foodName == JSON.stringify(foodname)){
+                if (alreadyAddedToLunch[i].foodName == foodname){
                     alreadyAddedToLunch[i].foodName = foodType;
+                    alreadyAddedToLunch[i].id = calories;
                     localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch);
                 }
             }   
         }
-        if (mealType == "dinner") {
+        if (mealType == JSON.stringify("dinner")) {
             var alreadyAddedToDinner = getFoodFromStorage()[2];
             for (var i = 0; i < alreadyAddedToDinner.length; i++) {
 
-                if (alreadyAddedToDinner[i].foodName == JSON.stringify(foodname)){
+                if (alreadyAddedToDinner[i].foodName == foodname){
                     alreadyAddedToDinner[i].foodName = foodType;
+                    alreadyAddedToDinner[i].id = calories;
                     localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner);
                 }
             }

@@ -32,7 +32,7 @@
     <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
 
     <div id="Home" class="tabcontent">
-      <div class="row" style="background-color: #d1dfcb;">
+      <div class="row" id="row" style="background-color: #d1dfcb;">
         <button type="button" onclick="check_Pop_Food()" id="add_food">Add Food (+)</button>
         <!-- The pop_up div integrated-->
         <div class="pop_Up">
@@ -64,10 +64,10 @@
         <!-- Added edit feature 55-71-->
         <div class="pop_Up">
           <form class="pop_Up_Text" id="edit">
-            <label for="foodTyped2">Food Name</label><br>
-            <input type="search" id="foodTyped2" name="foodTyped2" placeholder='Enter food'><br>
+            <label for="foodTyped2" maxlength="10">Food Name</label><br>
+            <input type="search" id="foodTyped2" name="foodTyped2" placeholder='Enter food' maxlength="10"><br>
             <label for="calories2">Calories:</label><br>
-            <input type="number" id="calories2" name="calories2" value=""><br>
+            <input type="number" id="calories2" name="calories2" placeholder=0><br>
             <input type="submit" value="Submit" onclick=reset_Check() id = "popButton3">
             <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton4">
           </form> 
@@ -107,6 +107,7 @@
       <label for="sex">Sex</label><br>
       <select id="sex" name="sex">
         <!-- backend - should show user's sex in default -->
+        <option value=""></option>
         <option value="Female">Female</option>
         <option value="Male">Male</option>
       </select><br>
@@ -124,25 +125,69 @@
       <h2 class="changeSet">Change Your Settings</h2>
       <div id="SettingBox">
       <label for="mode">Change mode:</label>
-      <button class="mode" id="mode" onclick="light()">Light mode</button>
-      <button class="mode" onclick="dark()">Dark mode</button>
+      <button class="mode" id="mode">Dark Mode</button>
       </div>
     </div>
 
 
     <script>
-      function light() {
-        var element = document.body;
-        element.classList.toggle("light-mode");
-      }
-      function dark() {
-        var element = document.body;
-        // document.getElementById("SettingBox").style.backgroundColor = "#000";
+      // Dark Mode feature
+      const button = document.getElementById('mode');
+      var element = document.body;
+      button.addEventListener('click', function handleClick() {
         element.classList.toggle("dark-mode");
-        document.getElementById("Settings").style.backgroundColor = "Grey";
-        document.getElementById("SettingBox").style.backgroundColor = "Grey";
-        document.getElementsByClassName("tablink").style.backgroundColor = "Grey";
-      }
+        const initialText = 'Dark Mode';
+        if (button.textContent.toLowerCase().includes(initialText.toLowerCase())) {
+          button.textContent = 'Light Mode';
+          document.getElementById("Settings").style.backgroundColor = "#467876";
+          document.getElementById("Profile").style.backgroundColor = "#496c59";
+          document.getElementById("Home").style.backgroundColor = "#375837";
+          document.getElementById("SettingBox").style.backgroundColor = "#6d968a";
+          document.getElementById("ProfileBox").style.backgroundColor = "#6d968a";
+          document.getElementById("row").style.backgroundColor = "#9db892";
+          document.getElementById("column1").style.backgroundColor = "#a1af71";
+          document.getElementById("column2").style.backgroundColor = "#81a499";
+        } else {
+          button.textContent = initialText;
+          document.getElementById("Settings").style.backgroundColor = "#80b0ae";
+          document.getElementById("Profile").style.backgroundColor = "#708f7e";
+          document.getElementById("Home").style.backgroundColor = "#597a59";
+          document.getElementById("SettingBox").style.backgroundColor = "#b6cec7";
+          document.getElementById("ProfileBox").style.backgroundColor = "#b6cec7";
+          document.getElementById("row").style.backgroundColor = "#d1dfcb";
+          document.getElementById("column1").style.backgroundColor = "#D8E0BB";
+          document.getElementById("column2").style.backgroundColor = "#B6CEC7";
+        }
+        const last_mode = button.textContent;
+      });
+
+      // // mode after reload
+      // if (sessionStorage.getItem("is_reloaded")){
+      //   console.log(last_mode);
+      //   if (last_mode == "Light Mode"){
+      //     button.onclick();
+      //     document.getElementById("Settings").style.backgroundColor = "#467876";
+      //     document.getElementById("Profile").style.backgroundColor = "#496c59";
+      //     document.getElementById("Home").style.backgroundColor = "#375837";
+      //     document.getElementById("SettingBox").style.backgroundColor = "#6d968a";
+      //     document.getElementById("ProfileBox").style.backgroundColor = "#6d968a";
+      //     document.getElementById("row").style.backgroundColor = "#9db892";
+      //     document.getElementById("column1").style.backgroundColor = "#a1af71";
+      //     document.getElementById("column2").style.backgroundColor = "#81a499";
+      //   }
+      //   if (last_mode == "Dark Mode"){
+      //     document.getElementById("Settings").style.backgroundColor = "#80b0ae";
+      //     document.getElementById("Profile").style.backgroundColor = "#708f7e";
+      //     document.getElementById("Home").style.backgroundColor = "#597a59";
+      //     document.getElementById("SettingBox").style.backgroundColor = "#b6cec7";
+      //     document.getElementById("ProfileBox").style.backgroundColor = "#b6cec7";
+      //     document.getElementById("row").style.backgroundColor = "#d1dfcb";
+      //     document.getElementById("column1").style.backgroundColor = "#D8E0BB";
+      //     document.getElementById("column2").style.backgroundColor = "#B6CEC7";
+      //   }
+
+      // }
+
       function User() {
         window.location.href="Homepage.html";  
       }

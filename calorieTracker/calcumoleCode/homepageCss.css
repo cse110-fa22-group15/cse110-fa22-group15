@@ -298,7 +298,7 @@ button[class="mode"]:focus-visible {
 }
 
 .dark-mode {
-  background-color: black;
+  background-color: rgb(122, 131, 75);
   color: white;
 }
 
