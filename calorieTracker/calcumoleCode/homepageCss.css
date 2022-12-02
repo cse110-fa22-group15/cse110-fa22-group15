@@ -102,7 +102,7 @@ button[onclick="move()"]:hover,
 button[type="button"]:focus-visible,
 #deletefood:focus-visible,
 button[onclick="move()"]:focus-visible,
-.tablink:focus-visible  {
+.tablink:focus-visible {
   outline-offset: 1px;
 }
 
@@ -191,14 +191,14 @@ div[id="test"] {
   width: 160px;
   border-radius: 50%;
   box-shadow:
-    6px 6px 10px -1px rgba(0 0 0 15%), 
+    6px 6px 10px -1px rgba(0 0 0 15%),
     -6px -6px 10px -1px rgba(70 163 58 70%);
   margin-left: 150px;
 }
 
 #number {
   font-weight: 600px;
-  color: #555; 
+  color: #555;
   padding-top: 68px;
   padding-left: 63.5px;
 }
