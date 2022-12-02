@@ -19,8 +19,5 @@
   },
   "dependencies": {
     "jest-puppeteer-preset": "^6.1.1"
-  },
-  "rules": {
-    "@typescript-superlint/kebabcase": "off"
   }
 }
