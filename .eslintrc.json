@@ -2,8 +2,7 @@
   "rules": {
     "accessor-pairs": "off",
     "kebab-case": "off",
-    "selector-id-pattern": "off",
-    "selector-class-pattern" : "off"
+    "dot-notation": [2, {"allowPattern": "^[a-z][a-zA-Z0-9]+$"}]
   },
   "parserOptions": {
     "ecmaVersion": 2020,
