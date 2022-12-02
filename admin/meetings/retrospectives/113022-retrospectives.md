@@ -1,5 +1,5 @@
 ## Retrospective 4
-### Date: Nov 28 2022
+### Date: Nov 30 2022
 ### What went well?
 - We were able to divide tasks and pairing up
 - We have strong programming skills that finish all the functions
