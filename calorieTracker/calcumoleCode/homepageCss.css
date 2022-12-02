@@ -204,7 +204,7 @@ div[id="test"] {
 }
 
 circle {
-  fill:none;
+  fill: none;
   stroke: url("#GradientColor");
   stroke-width: 20px;
   stroke-dasharray: 472;
@@ -214,14 +214,14 @@ circle {
 }
 
 svg {
-  position:absolute;
+  position: absolute;
   margin-left: 150px;
   top: 0;
   left: 0;
 }
 
 @keyframes anim {
-  100%{
+  100% {
     stroke-dashoffset: 0;
   }
 }
@@ -238,7 +238,7 @@ svg {
   color: #000;
   text-align: center;
   border-radius: 20%;
-  padding: 10% 10% 10% 10%;
+  padding: 10%;
   position:fixed;
   top:25%;
   left:35%;
@@ -257,7 +257,8 @@ svg {
 @keyframes fade_in {
   from {
     opacity: 0;
-  } 
+  }
+
   to {
     opacity: 1;
   }
@@ -270,8 +271,8 @@ svg {
 #calories1,
 #calories2 {
   margin-bottom: 10%;
-  width:170px;
-  height:20px;
+  width: 170px;
+  height: 20px;
 }
 
 #popButton1:hover,
@@ -283,7 +284,7 @@ svg {
 #popButton7:hover,
 button[class="mode"]:hover {
   box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px,-4px);
+  transform: translate(-4px -4px);
 }
 
 #popButton1:focus-visible,
@@ -311,7 +312,7 @@ button[class="mode"]:focus-visible {
   padding: 20px;
   width: 100%;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
 }
 
 .changeSet {
@@ -326,11 +327,7 @@ button[class="mode"]:focus-visible {
 }
 
 .progress {
-  padding: 10px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  margin-right: 20px;
+  padding: 10px 10px 20px 20px;
   position:relative;
   background: white;
   border: 1px solid #000;
@@ -346,14 +343,14 @@ button[class="mode"]:focus-visible {
   background-image: linear-gradient(45deg, red, green);
   transition: 0.3s;
 }
-    
+
 #dailyCal {
   color: rgb(0, 0, 0);
   margin-left: 10px;
   font-size: 16px;
 }
 
-#input, 
+#input,
 #submit {
   box-sizing: border-box;
   width: 80px;
@@ -375,7 +372,7 @@ button[class="mode"]:focus-visible {
 
 #name,
 #age,
-#weight1, 
+#weight1,
 #weight2 {
   position:relative;
   padding: 15px;
@@ -387,7 +384,7 @@ button[class="mode"]:focus-visible {
   font-size: 18px;
 }
 
-input[type=number]:focus, input[type=name]:focus {  
+input[type=number]:focus, input[type=name]:focus {
   background-color: rgb(211 240 225);
   outline: invert;
-}  
+}
