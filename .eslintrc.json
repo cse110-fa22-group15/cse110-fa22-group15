@@ -1,7 +1,8 @@
 {
   "rules": {
     "accessor-pairs": "off",
-    "kebab-case": "off"
+    "kebab-case": "off",
+    "selector-class-id": "^[a-z][a-zA-Z0-9]+$"
   },
   "parserOptions": {
     "ecmaVersion": 2020,
