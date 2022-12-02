@@ -1,7 +1,7 @@
 {
   "rules": {
     "accessor-pairs": "off",
-    "kebabcase": "off"
+    "kebab-case": "off"
   },
   "parserOptions": {
     "ecmaVersion": 2020,
