@@ -491,13 +491,16 @@ svg{
   transition: all .14s ease-out;
   white-space: nowrap
 }
+
 #popButton5:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px,-4px);
 }
+
 #popButton5:focus-visible{
   outline-offset: 1px;
 }
+
 #popButton6{
   margin-top: 10px;
   margin-left: 10px;
@@ -552,7 +555,8 @@ svg{
   text-decoration: none;
   text-overflow: ellipsis;
   transition: all .14s ease-out;
-  white-space: nowrap
+  white-space: nowrap; 
+  position: relative; 
 }
 #popButton7:hover {
   box-shadow: 4px 4px 0 #000;
@@ -590,8 +594,8 @@ svg{
   margin-top: 10px;
   margin-left: 10px;
   margin-bottom: 20px;
-  width: 100%;
-  max-width: 500px;
+  margin-right: 20px;
+  position:relative;
   background: white;
   border: 1px solid #000;
   border-radius: 5px;
@@ -678,7 +682,7 @@ button[class="mode"]:focus-visible{
   padding-top: 50px;
 }
 #name{
-  width: 50%; 
+  position:relative; 
   padding: 15px;  
   margin-right: auto;
   margin-left: auto;
@@ -688,7 +692,7 @@ button[class="mode"]:focus-visible{
   font-size: 18px; 
 }
 #age{
-  width: 50%; 
+  position:relative;
   padding: 15px;  
   margin-right: auto;
   margin-left: auto;
@@ -698,17 +702,15 @@ button[class="mode"]:focus-visible{
   font-size: 18px; 
 }
 #weight1{
-  width: 50%; 
+  position:relative;
   padding: 15px;  
-  margin-right: auto;
-  margin-left: auto;
   display: inline-block;  
   border: none;  
   background: #f1f1f1; 
   font-size: 18px; 
 }
 #weight2{
-  width: 50%; 
+  position:relative;
   padding: 15px;  
   margin-right: auto;
   margin-left: auto;
