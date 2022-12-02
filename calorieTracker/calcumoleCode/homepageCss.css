@@ -210,14 +210,14 @@ circle {
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
   animation: anim 2s linear forwards;
-  margin-left: 20px; 
+  margin-left: 20px;
 }
 
 svg {
-  position:absolute; 
+  position:absolute;
   margin-left: 150px;
-  top: 0; 
-  left: 0; 
+  top: 0;
+  left: 0;
 }
 
 @keyframes anim {
@@ -226,7 +226,7 @@ svg {
   }
 }
 
-#dailyGoal{
+#dailyGoal {
   font-size: 20px;
   margin-top: 40px;
   margin-left: 10px;
@@ -254,7 +254,7 @@ svg {
   z-index: 99;
 }
 
-@keyframes fade_In {
+@keyframes fade_in {
   from {
     opacity: 0;
   } 
@@ -268,7 +268,7 @@ svg {
 #mealTyped1,
 #mealTyped2,
 #calories1,
-#calories2  {
+#calories2 {
   margin-bottom: 10%;
   width:170px;
   height:20px;
@@ -281,7 +281,7 @@ svg {
 #popButton5:hover,
 #popButton6:hover,
 #popButton7:hover,
-button[class="mode"]:hover  {
+button[class="mode"]:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px,-4px);
 }
@@ -377,17 +377,17 @@ button[class="mode"]:focus-visible {
 #age,
 #weight1, 
 #weight2 {
-  position:relative; 
-  padding: 15px;  
+  position:relative;
+  padding: 15px;
   margin-right: auto;
   margin-left: auto;
-  display: inline-block;  
-  border: none;  
-  background: #f1f1f1; 
-  font-size: 18px; 
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size: 18px;
 }
 
 input[type=number]:focus, input[type=name]:focus {  
-  background-color: rgb(211 240 225);  
+  background-color: rgb(211 240 225);
   outline: invert;
 }  
