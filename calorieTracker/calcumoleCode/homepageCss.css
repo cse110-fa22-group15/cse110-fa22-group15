@@ -37,7 +37,7 @@ header:first-of-type {
   margin-right: 70px;
   text-align: center;
   margin-top: 20px;
-  color: rgb(96, 71, 0);
+  color: rgb(96 71 0);
   text-shadow: 
     0 3px 0 #b2a98f,
     0 14px 10px rgba(0 0 0 15%),
@@ -49,12 +49,23 @@ header:first-of-type {
 #pc {
   margin-top: -50px;
   margin-right: 50px;
-  height:200px;
-  width:200px;
-  float:right;
+  height: 200px;
+  width: 200px;
+  float: right;
 }
 
-button[type="button"]{
+button[type="button"],
+button[onclick="move()"],
+button[class="mode"], 
+#popButton1,
+#popButton2,
+#popButton3,
+#popButton4,
+#popButton5,
+#popButton6,
+#popButton7,
+#deletefood, 
+.tablink {
   margin-top: 10px;
   margin-left: 10px;
   outline: 0;
@@ -76,7 +87,7 @@ button[type="button"]{
   text-decoration: none;
   text-overflow: ellipsis;
   transition: all .14s ease-out;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 button[type="button"]:hover {
@@ -88,31 +99,6 @@ button[type="button"]:focus-visible {
   outline-offset: 1px;
 }
 
-#deletefood {
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
-}
-
 #deletefood:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px, -4px);
@@ -120,31 +106,6 @@ button[type="button"]:focus-visible {
 
 #deletefood:focus-visible {
   outline-offset: 1px;
-}
-
-button[onclick="move()"] {
-  margin-left:2px;
-  margin-top:5px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
 }
 
 button[onclick="move()"]:hover {
@@ -160,29 +121,6 @@ h2[id="pick"]{
   margin-left: 10px;
   font-weight: bold;
   color:black;
-}
-
-.tablink {
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  background-color: #9ec9bc;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 16px;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap;
 }
 
 .tablink:hover {
@@ -379,31 +317,6 @@ svg {
   height:20px;
 }
 
-#popButton1 {
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
-}
-
 #popButton1:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px,-4px);
@@ -411,31 +324,6 @@ svg {
 
 #popButton1:focus-visible {
   outline-offset: 1px;
-}
-
-#popButton2 {
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
 }
 
 #popButton2:hover {
@@ -447,31 +335,6 @@ svg {
   outline-offset: 1px;
 }
 
-#popButton3{
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
-}
-
 #popButton3:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px,-4px);
@@ -479,31 +342,6 @@ svg {
 
 #popButton3:focus-visible {
   outline-offset: 1px;
-}
-
-#popButton4 {
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
 }
 
 #popButton4:hover {
@@ -515,31 +353,6 @@ svg {
   outline-offset: 1px;
 }
 
-#popButton5 {
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
-}
-
 #popButton5:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px,-4px);
@@ -549,31 +362,6 @@ svg {
   outline-offset: 1px;
 }
 
-#popButton6{
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
-}
-
 #popButton6:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px,-4px);
@@ -581,32 +369,6 @@ svg {
 
 #popButton6:focus-visible {
   outline-offset: 1px;
-}
-
-#popButton7{
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap; 
-  position: relative; 
 }
 
 #popButton7:hover {
@@ -624,7 +386,7 @@ svg {
 }
     
 .light-mode {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255 255 255);
   color: black;
 }
 
@@ -672,45 +434,13 @@ svg {
   font-size: 16px;
 }
 
-#input {
-  box-sizing: border-box;
-  width: 80px;
-  border-radius: 5px;
-  height: 25px;
-  margin-right: 5px;
-}
-
+#input, 
 #submit {
   box-sizing: border-box;
   width: 80px;
   border-radius: 5px;
   height: 25px;
   margin-right: 5px;
-}
-
-button[class="mode"]{
-  margin-top: 10px;
-  margin-left: 10px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: bold;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
 }
 
 button[class="mode"]:hover {
@@ -722,7 +452,7 @@ button[class="mode"]:focus-visible {
   outline-offset: 1px;
 }
 
-#ProfileBox {
+#ProfileBox, #SettingBox {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -733,49 +463,11 @@ button[class="mode"]:focus-visible {
   padding-top: 50px;
 }
 
-#SettingBox {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #B6CEC7;
-  width: 50%;
-  height: 50%;
-  border-radius: 3%;
-  padding-top: 50px;
-}
-
-#name {
-  position:relative; 
-  padding: 15px;  
-  margin-right: auto;
-  margin-left: auto;
-  display: inline-block;  
-  border: none;  
-  background: #f1f1f1; 
-  font-size: 18px; 
-}
-
-#age {
-  position:relative;
-  padding: 15px;  
-  margin-right: auto;
-  margin-left: auto;
-  display: inline-block;  
-  border: none;  
-  background: #f1f1f1; 
-  font-size: 18px; 
-}
-#weight1 {
-  position:relative;
-  padding: 15px;  
-  display: inline-block;  
-  border: none;  
-  background: #f1f1f1; 
-  font-size: 18px; 
-}
-
+#name,
+#age,
+#weight1, 
 #weight2 {
-  position:relative;
+  position:relative; 
   padding: 15px;  
   margin-right: auto;
   margin-left: auto;
