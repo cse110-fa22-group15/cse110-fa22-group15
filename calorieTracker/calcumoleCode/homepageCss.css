@@ -302,6 +302,11 @@ button[class="mode"]:focus-visible {
   color: white;
 }
 
+.light-mode {
+  background-color: rgb(255 255 255);
+  color: black;
+}
+
 .info {
   padding: 20px;
   width: 100%;

@@ -2,10 +2,11 @@ header {
     text-align: center;
   }
 
-#pc{
+#logo{
 	height:200px;
 	width:200px;
 	margin-top: 12px;
+	animation: wiggle 2s linear infinite;
 }
 
 article {
