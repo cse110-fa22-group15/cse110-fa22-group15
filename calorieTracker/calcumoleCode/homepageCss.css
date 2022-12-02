@@ -99,17 +99,17 @@ button[onclick="move()"]:hover,
   transform: translate(-4px -4px);
 }
 
-button[type="button"]:focus-visible, 
+button[type="button"]:focus-visible,
 #deletefood:focus-visible,
 button[onclick="move()"]:focus-visible,
 .tablink:focus-visible  {
   outline-offset: 1px;
 }
 
-h2[id="pick"]{
+h2[id="pick"] {
   margin-left: 10px;
   font-weight: bold;
-  color:black;
+  color: black;
 }
 
 .tabcontent {
@@ -124,17 +124,17 @@ h2[id="pick"]{
 
 #bf {
   padding: 20px;
-  color:#1f1f4c;
+  color: #1f1f4c;
 }
 
 #lnh {
   padding: 20px;
-  color:#1f1f4c;
+  color: #1f1f4c;
 }
 
 #din {
   padding: 20px;
-  color:#1b1b5c;
+  color: #1b1b5c;
 }
 
 #column1 {
@@ -147,15 +147,15 @@ h2[id="pick"]{
   float: left;
   width: 45%;
   min-height: 100%;
-  color:rgb(0 0 0);
+  color: rgb(0 0 0);
 }
 
-div[id='test'] {
+div[id="test"] {
   display: flex;
   align-items: stretch;
 }
 
-.row:after {
+.row::after {
   content: "";
   display: table;
   display: flex;
@@ -190,7 +190,7 @@ div[id='test'] {
   height: 160px;
   width: 160px;
   border-radius: 50%;
-  box-shadow: 
+  box-shadow:
     6px 6px 10px -1px rgba(0 0 0 15%), 
     -6px -6px 10px -1px rgba(70 163 58 70%);
   margin-left: 150px;
