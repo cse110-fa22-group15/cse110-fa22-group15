@@ -384,5 +384,7 @@ button[class="mode"]:focus-visible {
   font-size: 18px;
 }
 
-input[type=number]:fo
+input[type=number]:focus, input[type=name]:focus {
+  background-color: rgb(211 240 224);
+  outline: invert;
 }
