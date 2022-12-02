@@ -2,30 +2,31 @@
 <html>
 
 <head>
-  <meta charset = "UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="homepageCss.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <title>Calcumole Homepage</title>
+</head>
+
+<body>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script src="./entryCard.js" type="module"></script>
   <script src="./Homepage.js" type="module"></script>
-  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-  <script src="./calorieCalculations.js" type="module"></script>		
-  <script src="./ProfileTab.js" type="module"></script>
   <script>
-    window.TrackJS && TrackJS.install({ 
+    window.TrackJS && TrackJS.install({
       token: "7a1415d608764917aad585c8bcc275fa"
       // for more configuration options, see https://docs.trackjs.com
     });
   </script>
-  <title>Homepage</title>           
-</head>
-  <body>
-    <header>
+  <header>
       <!-- upload logo as background in header -->
       <img src="./logo.png" alt="" id = "pc">
       <div class="content">
-      <h2 class="text_shadows">Welcome to Calcumole!</h2>
+        <h2 class="text_shadows">Welcome to Calcumole!</h2>
       </div>
-    </header>
+  </header>
+  
     <button class="tablink" onclick="openTab('Home', this, '#DFDCE5FF')" id="defaultOpen">Home</button>
     <button class="tablink" onclick="openTab('Profile', this, '#DFDCE5FF')">Profile</button>
     <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
