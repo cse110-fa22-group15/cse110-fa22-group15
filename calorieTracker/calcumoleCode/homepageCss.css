@@ -239,9 +239,9 @@ svg {
   text-align: center;
   border-radius: 20%;
   padding: 10%;
-  position:fixed;
-  top:25%;
-  left:35%;
+  position: fixed;
+  top: 25%;
+  left: 35%;
   border-style: groove;
   border-width: 2px;
   border-color: black;
@@ -302,7 +302,7 @@ button[class="mode"]:focus-visible {
   background-color: black;
   color: white;
 }
-    
+
 .light-mode {
   background-color: rgb(255 255 255);
   color: black;
@@ -328,14 +328,14 @@ button[class="mode"]:focus-visible {
 
 .progress {
   padding: 10px 10px 20px 20px;
-  position:relative;
+  position: relative;
   background: white;
   border: 1px solid #000;
   border-radius: 5px;
   height: 10px;
   overflow: hidden;
 }
-    
+
 .progress .progress__bar {
   height: 10px;
   width: 0;
@@ -345,7 +345,7 @@ button[class="mode"]:focus-visible {
 }
 
 #dailyCal {
-  color: rgb(0, 0, 0);
+  color: rgb(0 0 0);
   margin-left: 10px;
   font-size: 16px;
 }
@@ -359,11 +359,12 @@ button[class="mode"]:focus-visible {
   margin-right: 5px;
 }
 
-#ProfileBox, #SettingBox {
+#ProfileBox, 
+#SettingBox {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  background-color: #B6CEC7;
+  background-color: #b6cec7;
   width: 50%;
   height: 50%;
   border-radius: 3%;
@@ -374,7 +375,7 @@ button[class="mode"]:focus-visible {
 #age,
 #weight1,
 #weight2 {
-  position:relative;
+  position: relative;
   padding: 15px;
   margin-right: auto;
   margin-left: auto;
@@ -384,7 +385,8 @@ button[class="mode"]:focus-visible {
   font-size: 18px;
 }
 
-input[type=number]:focus, input[type=name]:focus {
+input[type="number"]:focus, 
+input[type="name"]:focus {
   background-color: rgb(211 240 224);
   outline: invert;
 }
