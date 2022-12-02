@@ -359,7 +359,7 @@ button[class="mode"]:focus-visible {
   margin-right: 5px;
 }
 
-#ProfileBox, 
+#ProfileBox,
 #SettingBox {
   text-align: center;
   margin-left: auto;
@@ -385,8 +385,40 @@ button[class="mode"]:focus-visible {
   font-size: 18px;
 }
 
-input[type="number"]:focus, 
+input[type="number"]:focus,
 input[type="name"]:focus {
   background-color: rgb(211 240 224);
   outline: invert;
+}
+
+#foodTyped1 {
+  position: relative;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size: 18px;
+}
+
+#calories1 {
+  position: relative;
+  padding: 9px;
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size: 18px;
+}
+
+#mealTyped1 {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size: 20px;
 }
