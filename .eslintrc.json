@@ -1,7 +1,6 @@
 {
   "rules": {
-    "accessor-pairs": "off",
-    "dot-notation": [0, {"allowPattern": "^[a-z][a-zA-Z0-9]+$"}]
+    "accessor-pairs": "off"
   },
   "parserOptions": {
     "ecmaVersion": 2020,
