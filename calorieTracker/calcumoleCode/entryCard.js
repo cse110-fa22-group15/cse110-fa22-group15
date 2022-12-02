@@ -15,6 +15,7 @@ class EntryCard extends HTMLElement {
         font-family: sans-serif;
         margin: 0;
         padding: 0;
+        text-overflow: ellipsis;
       }
       article {
         align-items: center;
