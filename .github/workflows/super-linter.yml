@@ -30,3 +30,16 @@ jobs:
           VALIDATE_GITLEAKS: false
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        tagliatelle:
+        # check the struck tag name case
+          case:
+            # use the struct field name to check the name of the struct tag
+            use-field-name: true
+            rules:
+            # any struct tag type can be used.
+            # support string case: `camel`, `pascal`, `kebab`, `snake`, `goCamel`, `goPascal`, `goKebab`, `goSnake`, `upper`, `lower`
+              json: camel
+              css: camel;
+
+      
+      
