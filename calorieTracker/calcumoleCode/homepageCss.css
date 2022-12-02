@@ -38,7 +38,8 @@ header:first-of-type {
   text-align: center;
   margin-top: 20px;
   color: rgb(96 71 0);
-  text-shadow: 
+  text-shadow:
+
     0 3px 0 #b2a98f,
     0 14px 10px rgba(0 0 0 15%),
     0 24px 2px rgba(0 0 0 10%),
@@ -56,7 +57,7 @@ header:first-of-type {
 
 button[type="button"],
 button[onclick="move()"],
-button[class="mode"], 
+button[class="mode"],
 #popButton1,
 #popButton2,
 #popButton3,
@@ -388,5 +389,5 @@ button[class="mode"]:focus-visible {
 
 input[type=number]:focus, input[type=name]:focus {  
   background-color: rgb(211 240 225);  
-  outline:invert;
+  outline: invert;
 }  
