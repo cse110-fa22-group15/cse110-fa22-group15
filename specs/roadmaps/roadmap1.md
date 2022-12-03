@@ -5,7 +5,7 @@
     <p>This app will be used to track the input of calories.
         //ADD more here with the development of project
     </p>
-    <h2>Status History(current version: 1.0):</h2>
+    <h2>Status History(current version: 1.2):</h2>
     <h3>Version 1.0: </h3>
     <ul>
         <li>Pop-Up Box: Rough Draft In Progress </li>
