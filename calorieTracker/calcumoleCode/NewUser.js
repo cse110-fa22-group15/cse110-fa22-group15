@@ -1,19 +1,40 @@
-/* global localStorage, window, document */
-/* eslint no-undef: "error" */
+window.addEventListener('DOMContentLoaded', init);
 
-window.addEventListener('DOMContentLoaded', init)
-
-function init () {
-  const continueButton = document.getElementById('continue')
-  continueButton.addEventListener('click', (event) => {
-    // Stores info taken in on NewUser.html
-    let input = document.getElementById('name').value
-    localStorage.setItem('username', input)
-
-    input = document.getElementById('sex').value
-    localStorage.setItem('sex', input)
-
-    input = document.getElementById('age').value
-    localStorage.setItem('age', input)
-  })
+function inputValidation(input) {
+  if (input == "" || input == undefined || input == null) {
+      return false;
+  } else {
+      return true;
+  }
 }
+
+function NewUser() {
+  window.location.href="GoalWeight.html";
+}
+
+function init() {
+    var continueButton = document.getElementById('continue');
+    continueButton.addEventListener('click', (event) => {
+      // Stores info taken in on NewUser.html
+      var input1 = document.getElementById("name").value;
+      if (inputValidation(input1)) {
+        localStorage.setItem("username", input1);
+      }
+
+      var input2 = document.getElementById("sex").value;
+      if (inputValidation(input2)) {
+        localStorage.setItem("sex", input2);
+      }
+      
+      var input3 = document.getElementById("age").value;
+      if (inputValidation(input3)) {
+        localStorage.setItem("age", input3);
+      }
+
+      if (inputValidation(input1) && inputValidation(input2) && inputValidation(input3)) {
+        NewUser();
+      } else {
+        alert("Please fill out all fields");
+      }
+    });
+} 

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="goalWeightCss.css">
     <title>User's goal</title>
-    <script src="./GoalWeight.js" type="module"></script>
     <style>
         * {
           box-sizing: border-box;
@@ -21,15 +20,22 @@
 </head>
 <body>
   <header>
-    <h2><img src="./logo.png" alt="" id = "logo"></h2>
+    <h2><img src="logo.PNG" alt="" id = "pc"></h2>
   </header>
   <article>
     <h2>Your Goal</h2>
+    
         <label for="weight">Current Weight:</label><br>
-        <input type="number" id="weight1" name="weight" placeholder="150 lb"><br>
+        <input type="number" id="weight" name="weight" placeholder="160 lb"><br>
         <label for="weight">Goal Weight:</label><br>
-        <input type="number" id="weight2" name="weight" placeholder="145 lb"><br>
-        <input type="submit" id="save" value = "Save"><br>
+        <input type="number" id="weight" name="weight" placeholder="180 lb"><br>
+      <input type="submit" id="save" value = "Save" onClick="NewUser()"><br>
   </article>
+  <script>
+    function NewUser() {
+      window.location.href="Homepage.html";
+    }
+  </script>
+
 </body>
 </html>

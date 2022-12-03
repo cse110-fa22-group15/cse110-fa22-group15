@@ -1,5 +1,4 @@
-html,
-body {
+html {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -10,6 +9,11 @@ body {
 body {
   font-family: Montserrat, sans-serif;
   background-color: rgb(175 182 127);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 header:first-of-type {
@@ -23,7 +27,7 @@ header:first-of-type {
   margin-left: 300px;
 }
 
-.text-shadows {
+.text_shadows {
   font-family: bungee, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -35,27 +39,32 @@ header:first-of-type {
   text-shadow:
     0 3px 0 #b2a98f,
     0 14px 10px rgba(0 0 0 15%),
-    0 24px 2px rgba(0 0 0 15%),
+    0 24px 2px rgba(0 0 0 10%),
     0 34px 30px rgba(0 0 0 10%);
   letter-spacing: 0.4rem;
 }
 
-#pc {
+#logo {
   margin-top: -50px;
   margin-right: 50px;
   height: 200px;
   width: 200px;
   float: right;
+  animation: wiggle 2s linear infinite;
 }
 
 button[type="button"],
+button[onclick="move()"],
+button[class="mode"],
+#popButton1,
+#popButton2,
+#popButton3,
+#popButton4,
+#popButton5,
+#popButton6,
+#popButton7,
 #deletefood,
-button[class="mode"]:hover,
-#pop-button4,
-#pop-button3,
-#pop-button2,
-#pop-button1,
-button[onclick="move()"] {
+.tablink {
   margin-top: 10px;
   margin-left: 10px;
   outline: 0;
@@ -80,30 +89,18 @@ button[onclick="move()"] {
   white-space: nowrap;
 }
 
-button[type="button"]:hover {
+button[type="button"]:hover,
+button[onclick="move()"]:hover,
+#deletefood:hover,
+.tablink:hover {
   box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px, -4px);
+  transform: translate(-4px -4px);
 }
 
-button[type="button"]:focus-visible {
-  outline-offset: 1px;
-}
-
-#deletefood:hover {
-  box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px, -4px);
-}
-
-#deletefood:focus-visible {
-  outline-offset: 1px;
-}
-
-button[onclick="move()"]:hover {
-  box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px, -4px);
-}
-
-button[onclick="move()"]:focus-visible {
+button[type="button"]:focus-visible,
+#deletefood:focus-visible,
+button[onclick="move()"]:focus-visible,
+.tablink:focus-visible {
   outline-offset: 1px;
 }
 
@@ -113,39 +110,6 @@ h2[id="pick"] {
   color: black;
 }
 
-.tablink {
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  background-color: #9ec9bc;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 16px;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all 0.14s ease-out;
-  white-space: nowrap;
-}
-
-.tablink:hover {
-  box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px, -4px);
-}
-
-.tablink:focus-visible {
-  outline-offset: 1px;
-}
-
-/* Style the tab content */
 .tabcontent {
   border: 2px solid;
   padding: 10px;
@@ -171,11 +135,6 @@ h2[id="pick"] {
   color: #1b1b5c;
 }
 
-#column1 {
-  border-radius: 25px;
-  border-color: #000;
-}
-
 .column {
   border-radius: 25px;
   float: left;
@@ -184,7 +143,12 @@ h2[id="pick"] {
   color: rgb(0 0 0);
 }
 
-div[id="test"] {
+#column1 {
+  border-radius: 25px;
+  border-color: #000;
+}
+
+div[id="box"] {
   display: flex;
   align-items: stretch;
 }
@@ -202,19 +166,19 @@ div[id="test"] {
   height: 100%;
 }
 
-#settings {
+#Settings {
   background-color: #80b0ae;
 }
 
-#profile {
+#Profile {
   background-color: #708f7e;
 }
 
-#home {
+#Home {
   background-color: #597a59;
 }
 
-.my-progress {
+.myProgress {
   width: 160px;
   height: 160px;
   position: relative;
@@ -237,36 +201,19 @@ div[id="test"] {
   padding-left: 63.5px;
 }
 
-circle {
-  fill: none;
-  stroke: url("#GradientColor");
-  stroke-width: 20px;
-  stroke-dasharray: 472;
-  stroke-dashoffset: 472;
-  animation: anim 2s linear forwards;
-  margin-left: 20px;
-}
-
-svg {
-  position: absolute;
-  margin-left: 150px;
-  top: 0;
-  left: 0;
-}
-
 @keyframes anim {
   100% {
     stroke-dashoffset: 0;
   }
 }
 
-#daily-goal {
+#dailyGoal {
   font-size: 20px;
   margin-top: 40px;
   margin-left: 10px;
 }
 
-.pop-up .pop-up-text {
+.pop_Up .pop_Up_Text {
   visibility: hidden;
   background-color: rgb(190 220 138);
   color: #000;
@@ -282,14 +229,13 @@ svg {
   text-decoration-style: dashed;
 }
 
-/* Hide and show Pop up */
-.pop-up .show {
+.pop_Up .show {
   visibility: visible;
-  animation: fade-in 1s;
+  animation: fade_in 1s;
   z-index: 99;
 }
 
-@keyframes fade-in {
+@keyframes fade_in {
   from {
     opacity: 0;
   }
@@ -299,62 +245,42 @@ svg {
   }
 }
 
-#food-type {
+#foodTyped1,
+#foodTyped2,
+#mealTyped1,
+#mealTyped2,
+#calories1,
+#calories2 {
   margin-bottom: 10%;
   width: 170px;
   height: 20px;
 }
 
-#meal-type {
-  margin-bottom: 10%;
-  width: 170px;
-  height: 20px;
-}
-
-#calories {
-  margin-bottom: 10%;
-  width: 170px;
-  height: 20px;
-}
-
-#pop-button1:hover {
+#popButton1:hover,
+#popButton2:hover,
+#popButton3:hover,
+#popButton4:hover,
+#popButton5:hover,
+#popButton6:hover,
+#popButton7:hover,
+button[class="mode"]:hover {
   box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px, -4px);
+  transform: translate(-4px -4px);
 }
 
-#pop-button1:focus-visible {
-  outline-offset: 1px;
-}
-
-#pop-button2:hover {
-  box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px, -4px);
-}
-
-#pop-button2:focus-visible {
-  outline-offset: 1px;
-}
-
-#pop-button3:hover {
-  box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px, -4px);
-}
-
-#pop-button3:focus-visible {
-  outline-offset: 1px;
-}
-
-#pop-button4:hover {
-  box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px, -4px);
-}
-
-#pop-button4:focus-visible {
+#popButton1:focus-visible,
+#popButton2:focus-visible,
+#popButton3:focus-visible,
+#popButton4:focus-visible,
+#popButton5:focus-visible,
+#popButton6:focus-visible,
+#popButton7:focus-visible,
+button[class="mode"]:focus-visible {
   outline-offset: 1px;
 }
 
 .dark-mode {
-  background-color: black;
+  background-color: rgb(122, 131, 75);
   color: white;
 }
 
@@ -370,7 +296,7 @@ svg {
   color: #fff;
 }
 
-.change-set {
+.changeSet {
   padding: 20px;
   width: 100%;
   font-weight: bold;
@@ -382,12 +308,9 @@ svg {
 }
 
 .progress {
-  padding: 10px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-  max-width: 500px;
+  padding: 10px 10px 20px 10px;
+  margin-right: 20px;
+  position: relative;
   background: white;
   border: 1px solid #000;
   border-radius: 5px;
@@ -395,28 +318,21 @@ svg {
   overflow: hidden;
 }
 
-.progress .progress-bar {
-  height: 10px;
-  width: 0;
+
+.progress__bar {
+  height: 20px;
   border-radius: 4px;
-  background-image: linear-gradient(45deg, red, green);
+  background-color: white;
   transition: 0.3s;
 }
 
-#daily-cal {
+#dailyCal {
   color: rgb(0 0 0);
   margin-left: 10px;
   font-size: 16px;
 }
 
-#input {
-  box-sizing: border-box;
-  width: 80px;
-  border-radius: 5px;
-  height: 25px;
-  margin-right: 5px;
-}
-
+#input,
 #submit {
   box-sizing: border-box;
   width: 80px;
@@ -425,16 +341,8 @@ svg {
   margin-right: 5px;
 }
 
-button[class="mode"]:hover {
-  box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px, -4px);
-}
-
-button[class="mode"]:focus-visible {
-  outline-offset: 1px;
-}
-
-#profile-box {
+#ProfileBox,
+#SettingBox {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -445,23 +353,14 @@ button[class="mode"]:focus-visible {
   padding-top: 50px;
 }
 
-#setting-box {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #b6cec7;
-  width: 50%;
-  height: 30%;
-  border-radius: 3%;
-  padding-top: 50px;
-}
-
-input[type="number"],
-input[type="name"],
-textarea {
-  width: 96.5%;
+#name,
+#age,
+#weight1,
+#weight2 {
+  position: relative;
   padding: 15px;
-  margin-right: 300px;
+  margin-right: auto;
+  margin-left: auto;
   display: inline-block;
   border: none;
   background: #f1f1f1;
@@ -470,6 +369,70 @@ textarea {
 
 input[type="number"]:focus,
 input[type="name"]:focus {
-  background-color: rgb(211 240 225);
+  background-color: rgb(211 240 224);
   outline: invert;
+}
+
+#foodTyped1 {
+  position: relative;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size: 18px;
+}
+
+#calories1 {
+  position: relative;
+  padding: 9px;
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size: 18px;
+}
+
+#mealTyped1 {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size: 20px;
+}
+
+@keyframes wiggle {
+	0%, 
+  7% {
+	transform: rotateZ(0);
+  }
+
+	15% {
+	transform: rotateZ(-15deg);
+  }
+
+	20% {
+	transform: rotateZ(10deg);
+  }
+
+	25% {
+	transform: rotateZ(-10deg);
+  }
+
+	30% {
+	transform: rotateZ(6deg);
+  }
+
+	35% {
+	transform: rotateZ(-4deg);
+  }
+
+	40%, 
+  100% {
+	transform: rotateZ(0);
+  }
 }

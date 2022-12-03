@@ -56,30 +56,10 @@ function saveFoodToDiary(breakfastDiary, lunchDiary, dinnerDiary) {
     localStorage.dinnerDiary = JSON.stringify(dinnerDiary);
 }
 
+
+
+
 function initFormHandler() {
-    // These make the profile tab display the user's stored info by default
-    var username = localStorage.getItem('username');
-    document.getElementsByName("name")[0].placeholder = username;
-
-    var sex = localStorage.getItem("sex");
-    if (sex == "Male") {
-        document.getElementById("sex").innerHTML = `
-        <option value="Male" selected>Male</option>
-        <option value="Female">Female</option>`
-    } else {
-        document.getElementById("sex").innerHTML = `
-        <option value="Female" selected>Female</option>
-        <option value="Male">Male</option>`
-    }
-    
-    var age = localStorage.getItem('age');
-    document.getElementsByName("age")[0].placeholder = age;
-
-    var currentWeight = localStorage.getItem('currentWeight');
-    document.getElementsByName("weight1")[0].placeholder = currentWeight;
-
-    var goalWeight = localStorage.getItem('goalWeight');
-    document.getElementsByName("weight2")[0].placeholder = goalWeight;
 
     // Deletion function relies on the delete button and checkmarks
     var deleteButton = document.getElementById('deletefood');
@@ -144,101 +124,36 @@ function initFormHandler() {
     submitButton.addEventListener('click', (event) => {
         event.preventDefault();
 
-        // Create variables that grab the values from the form
-        var foodType = document.getElementById("foodTyped1").value;
-        var mealType = document.getElementById("mealTyped1").value;
-        var calories = document.getElementById("calories1").value;
-        // check min value for calorie
-        // if (foodType.length == 0 || calories < 0)
-        // { 
-        //   alert("You need to enter food or caloires correctly");  	
-        //   return; 
-        // }  	 
-
+        // Create two variables that grab the values from the form
+        var foodType = JSON.stringify(document.getElementById("foodType").value);
+        var mealType = JSON.stringify(document.getElementById("mealType").value);
+        
         // Create the foodEntry data which will be set to the entry card's data
         var foodEntry = {};
+        foodEntry['id'] = 'apple1';
         foodEntry['foodName'] = foodType;
         foodEntry['mealType'] = mealType;
-        foodEntry['calories'] = calories;
         var foodEntryCard = document.createElement('entry-card');
         foodEntryCard.data = foodEntry;
 
         // Checks which meal to append the card to based on what the user chooses
-        if (mealType == "breakfast") {
+        if (mealType == JSON.stringify("breakfast")) {
             var alreadyAddedToBreakfast = getFoodFromStorage()[0];
             alreadyAddedToBreakfast.push(foodEntry);
             localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast);
         }
 
-        if (mealType == "lunch") {
+        if (mealType == JSON.stringify("lunch")) {
             var alreadyAddedToLunch = getFoodFromStorage()[1];
             alreadyAddedToLunch.push(foodEntry);
             localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch);
         }
         
-        if (mealType == "dinner") {
+        if (mealType == JSON.stringify("dinner")) {
             var alreadyAddedToDinner = getFoodFromStorage()[2];
             alreadyAddedToDinner.push(foodEntry);
             localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner);
         }
         
-    });
-
-    // edit feature
-    var submitButton = document.getElementById('popButton3');
-    submitButton.addEventListener('click', (event) => {
-        event.preventDefault();
-
-        // Create two variables that grab the values from the form
-        var foodType = document.getElementById("foodTyped2").value;
-        var calories = document.getElementById("calories2").value;
-        //document.thescript.getAttribute('foodname');
-        // Create the foodEntry data which will be set to the entry card's data
-        let mealType = window.localStorage.getItem('mealType');
-        let foodname = window.localStorage.getItem('foodedit');
-        if (foodType == "" || calories < 0)
-        { 
-          alert("You need to enter food or calories correctly");  	
-          return; 
-        } 
-        var foodEntry = {};
-        foodEntry['calories'] = calories;
-        foodEntry['foodName'] = foodType;
-        foodEntry['mealType'] = mealType;
-        var foodEntryCard = document.createElement('entry-card');
-        foodEntryCard.data = foodEntry;
-        // Checks which meal to append the card to based on what the user chooses
-        if (mealType == "breakfast") {
-            var alreadyAddedToBreakfast = getFoodFromStorage()[0];
-            for (var i = 0; i < alreadyAddedToBreakfast.length; i++) {
-                if (alreadyAddedToBreakfast[i].foodName == foodname){  
-                    alreadyAddedToBreakfast[i].foodName = foodType;
-                    alreadyAddedToBreakfast[i].calories = calories;
-                    localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast);
-                }
-            }
-        }
-
-        if (mealType == "lunch") {
-            var alreadyAddedToLunch = getFoodFromStorage()[1];
-            for (var i = 0; i < alreadyAddedToLunch.length; i++) {
-                if (alreadyAddedToLunch[i].foodName == foodname){
-                    alreadyAddedToLunch[i].foodName = foodType;
-                    alreadyAddedToLunch[i].calories = calories;
-                    localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch);
-                }
-            }   
-        }
-        if (mealType == "dinner") {
-            var alreadyAddedToDinner = getFoodFromStorage()[2];
-            for (var i = 0; i < alreadyAddedToDinner.length; i++) {
-
-                if (alreadyAddedToDinner[i].foodName == foodname){
-                    alreadyAddedToDinner[i].foodName = foodType;
-                    alreadyAddedToDinner[i].calories = calories;
-                    localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner);
-                }
-            }
-        }
-    });
+    })
 }
