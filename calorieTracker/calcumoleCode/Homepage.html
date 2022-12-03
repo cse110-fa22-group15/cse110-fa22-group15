@@ -62,31 +62,30 @@
             <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton6">
           </form>
         </div>
-        <!-- Added edit feature -->
+        <!-- Added edit feature-->
         <div class="pop_Up">
           <form class="pop_Up_Text" id="edit">
-            <label for="foodTyped2" maxlength="10">Food Name</label><br>
-            <input type="search" id="foodTyped2" name="foodTyped2" placeholder='Enter food' maxlength="10"><br>
+            <label for="foodTyped2">Food Name</label><br>
+            <input type="search" id="foodTyped2" name="foodTyped2" placeholder='Enter food'><br>
             <label for="calories2">Calories:</label><br>
-            <input type="number" id="calories2" name="calories2" placeholder=0><br>
+            <input type="number" id="calories2" name="calories2" value=""><br>
             <input type="submit" value="Submit" onclick=reset_Check() id = "popButton3">
             <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton4">
           </form> 
         </div>
 
-      <div id="box"> 
-        <div class="column" id = "column1" style="background-color:#D8E0BB;">
-          <h3 id = "bf">BREAKFAST</h3>
-          <table id="breakfastTable">
-          </table>
-          <h3 id = "lnh">LUNCH</h3>
-          <table id="lunchTable">
-          </table>
-          <h3 id = "din">DINNER</h3>
-          <table id="dinnerTable">
-          </table>
-          <button id = 'deletefood'>Delete Marked</button>
-        </div>
+          <div class="column" id = "column1" style="background-color:#D8E0BB;">
+            <h3 id = "bf">BREAKFAST</h3>
+            <table id="breakfastTable">
+            </table>
+            <h3 id = "lnh">LUNCH</h3>
+            <table id="lunchTable">
+            </table>
+            <h3 id = "din">DINNER</h3>
+            <table id="dinnerTable">
+            </table>
+            <button id = 'deletefood'>Delete Marked</button>
+          </div>
           <div class="column" id = "column2" style="background-color:#B6CEC7;">
             <div id="dailyGoal">Daily Goal:<br>
               <div class="progress"> 
@@ -97,7 +96,6 @@
         </div>
       </div>
     </div>
-
 
     <div id="Profile" class="tabcontent">
       <h2 class="info">Edit Your Profile</h2>
@@ -254,9 +252,7 @@
         pop_Up.classList.toggle("show");
       }
 
-      function click_Pop_Edit(foodname,mealType){
-          var foodname = foodname;
-          var mealType = mealType;
+      function click_Pop_Edit(foodname,mealType,calories){
           localStorage.foodedit = foodname;
           localStorage.mealType = mealType;
           
