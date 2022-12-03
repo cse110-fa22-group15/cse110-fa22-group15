@@ -37,7 +37,6 @@ header:first-of-type {
   margin-top: 20px;
   color: rgb(96 71 0);
   text-shadow:
-
     0 3px 0 #b2a98f,
     0 14px 10px rgba(0 0 0 15%),
     0 24px 2px rgba(0 0 0 10%),
@@ -136,11 +135,6 @@ h2[id="pick"] {
   color: #1b1b5c;
 }
 
-#column1 {
-  border-radius: 25px;
-  border-color: #000;
-}
-
 .column {
   border-radius: 25px;
   float: left;
@@ -149,7 +143,12 @@ h2[id="pick"] {
   color: rgb(0 0 0);
 }
 
-div[id="test"] {
+#column1 {
+  border-radius: 25px;
+  border-color: #000;
+}
+
+div[id="box"] {
   display: flex;
   align-items: stretch;
 }
@@ -200,23 +199,6 @@ div[id="test"] {
   color: #555;
   padding-top: 68px;
   padding-left: 63.5px;
-}
-
-circle {
-  fill: none;
-  stroke: url("#GradientColor");
-  stroke-width: 20px;
-  stroke-dasharray: 472;
-  stroke-dashoffset: 472;
-  animation: anim 2s linear forwards;
-  margin-left: 20px;
-}
-
-svg {
-  position: absolute;
-  margin-left: 150px;
-  top: 0;
-  left: 0;
 }
 
 @keyframes anim {
