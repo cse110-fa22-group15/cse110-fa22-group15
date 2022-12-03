@@ -1,7 +1,7 @@
-/* Style the header */
 header {
   text-align: center;
 }
+
 #logo {
 	height:200px;
 	width:200px;
@@ -22,28 +22,24 @@ article {
   border-style:groove;
 }
 
-  form{
-    padding: 10px;
-  }
+form {
+  padding: 10px;
+}
   
-  #weight1{
-    margin-bottom:10px;
-    width: 160px;
-    height: 20px;
-  }
+#weight1,
+#weight2 {
+  margin-bottom:10px;
+  width: 160px;
+  height: 20px;
+}
 
-  #weight2{
-    margin-bottom:10px;
-    width: 160px;
-    height: 20px;
-  }
+#save {
+  animation: wiggle 2s linear infinite;
+}
 
-  #save{
-    animation: wiggle 2s linear infinite;
-  }
-
-  @keyframes wiggle {
-  0%, 7% {
+@keyframes wiggle {
+  0%, 
+  7% {
     transform: rotateZ(0);
   }
   15% {
@@ -87,6 +83,7 @@ input[type=submit] {
 	cursor: pointer;
 	transition: .2s;
 }
+
 input[type=submit]:active,
 input[type=submit]:focus,
 input[type=submit]:hover {

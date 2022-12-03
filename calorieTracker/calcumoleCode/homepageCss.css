@@ -280,7 +280,7 @@ button[class="mode"]:focus-visible {
 }
 
 .dark-mode {
-  background-color: rgb(122, 131, 75);
+  background-color: rgb(122 131 75);
   color: white;
 }
 
@@ -308,7 +308,7 @@ button[class="mode"]:focus-visible {
 }
 
 .progress {
-  padding: 10px 10px 20px 10px;
+  padding: 10px 10px 20px;
   margin-right: 20px;
   position: relative;
   background: white;
@@ -317,7 +317,6 @@ button[class="mode"]:focus-visible {
   height: 10px;
   overflow: hidden;
 }
-
 
 .progress__bar {
   height: 20px;
@@ -405,35 +404,33 @@ input[type="name"]:focus {
   font-size: 20px;
 }
 
-
 @keyframes wiggle {
-	0%, 
+  0%, 
   7% {
-	transform: rotateZ(0);
+	  transform: rotateZ(0);
   }
-
 	15% {
-	transform: rotateZ(-15deg);
+	  transform: rotateZ(-15deg);
   }
 
 	20% {
-	transform: rotateZ(10deg);
+	  transform: rotateZ(10deg);
   }
 
 	25% {
-	transform: rotateZ(-10deg);
+	  transform: rotateZ(-10deg);
   }
 
 	30% {
-	transform: rotateZ(6deg);
+	  transform: rotateZ(6deg);
   }
 
 	35% {
-	transform: rotateZ(-4deg);
+	  transform: rotateZ(-4deg);
   }
 
-	40%, 
+  40%, 
   100% {
-	transform: rotateZ(0);
+	  transform: rotateZ(0);
   }
 }
