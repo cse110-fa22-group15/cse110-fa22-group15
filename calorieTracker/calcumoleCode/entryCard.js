@@ -32,7 +32,6 @@ class EntryCard extends HTMLElement {
       this.shadowRoot.append(articleElem);
     }
   
-   
     set data(data) {
       // If nothing was passed in, return
       if (!data) return;
@@ -47,11 +46,9 @@ class EntryCard extends HTMLElement {
       article_select.innerHTML = `
       <input type="checkbox" id="${data['id']}">
         <label for="${data['id']}">${data['foodName']}</label>
+        <label for="${data['id']}"> — ${data['calories']} cal</label>
         <button type="submit" id="edit-button" onclick = click_Pop_Edit(${data['foodName']},${data['mealType']})>Edit</button>`
     }
-    
   }
   
-  // A8. TODO - Define the Class as a customElement so that you can create
-  //           'recipe-card' elements
   customElements.define('entry-card', EntryCard)
