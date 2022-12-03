@@ -28,31 +28,30 @@
         <h2 class="text_shadows">Welcome to Calcumole!</h2>
       </div>
   </header>
+  <button class="tablink" onclick="openTab('Home', this, '#DFDCE5FF')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openTab('Profile', this, '#DFDCE5FF')" id="profileOpen">Profile</button>
+  <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
 
-    <button class="tablink" onclick="openTab('Home', this, '#DFDCE5FF')" id="defaultOpen">Home</button>
-    <button class="tablink" onclick="openTab('Profile', this, '#DFDCE5FF')" id="profileOpen">Profile</button>
-    <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
-
-    <div id="Home" class="tabcontent">
-      <div class="row" id="row" style="background-color: #d1dfcb;">
-        <button type="button" onclick="check_Pop_Food()" id="add_food">Add Food (+)</button>
+  <div id="Home" class="tabcontent">
+    <div class="row" id="row" style="background-color: #d1dfcb;">
+      <button type="button" onclick="check_Pop_Food()" id="add_food">Add Food (+)</button>
         <!-- The pop_up div integrated-->
-        <div class="pop_Up">
-          <form class="pop_Up_Text" id="food">
-            <label for="foodTyped1">Food Name</label><br>
-            <input type="search" id="foodTyped1" name="foodTyped1" placeholder='Enter Food'><br>
-            <label for="mealTyped1">Meal Type</label><br>
-            <select name="mealTyped1" id="mealTyped1">
-              <option value="breakfast">Breakfast</option>
-              <option value="lunch">Lunch</option>
-              <option value="dinner">Dinner</option>
-            </select><br>
-            <label for="calories1">Calories:</label><br>
-            <input type="number" id="calories1" name="calories1" value=""><br>
-            <input type="submit" value="Submit" onclick=reset_Check() id = "popButton1">
-            <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton2">
-          </form> 
-        </div>
+      <div class="pop_Up">
+        <form class="pop_Up_Text" id="food">
+          <label for="foodTyped1">Food Name</label><br>
+          <input type="search" id="foodTyped1" name="foodTyped1" placeholder='Enter Food'><br>
+          <label for="mealTyped1">Meal Type</label><br>
+          <select name="mealTyped1" id="mealTyped1">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+          </select><br>
+          <label for="calories1">Calories:</label><br>
+          <input type="number" id="calories1" name="calories1" value=""><br>
+          <input type="submit" value="Submit" onclick=reset_Check() id = "popButton1">
+          <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton2">
+        </form> 
+      </div>
         <button type="button" onclick="click_Pop_newDay()" id="newday">New Day</button>
         <!-- The pop_up div integrated-->
         <div class="pop_Up">
@@ -125,6 +124,7 @@
       <button class="mode" id="mode">Dark Mode</button>
       </div>
     </div>
+  </div>
 
     <script>
       // Dark Mode feature
