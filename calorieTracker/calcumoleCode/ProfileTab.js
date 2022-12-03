@@ -8,7 +8,7 @@ function inputValidation(input) {
 }
 
 function init() {
-    var saveButton = document.getElementById('popButton3');
+    var saveButton = document.getElementById('popButton7');
     saveButton.addEventListener('click', (event) => {
       // Updates localStorage to save new user info from the profile tab
       var input = document.getElementById("name").value;
