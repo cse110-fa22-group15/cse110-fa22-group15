@@ -340,7 +340,7 @@ button[class="mode"]:focus-visible {
 .progress__bar {
   height: 20px;
   border-radius: 4px;
-  background-color: red;
+  background-color: white;
   transition: 0.3s;
 }
 
