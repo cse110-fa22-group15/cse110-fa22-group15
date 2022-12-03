@@ -19,7 +19,7 @@ article {
   padding: 40px;
   text-align: center;
   border-radius: 10%;
-  border-style:groove;
+  border-style: groove;
 }
 
 form {
@@ -63,6 +63,7 @@ form {
   35% {
     transform: rotateZ(-4deg);
   }
+
   40%,
   100% {
     transform: rotateZ(0);
@@ -86,10 +87,11 @@ input[type=submit] {
 	align-items: center;
 	width: 50%;
 	color: #4c489d;
-	box-shadow: 0px 2px 2px #5c5696;
+	box-shadow: 0 2px 2px #5c5696;
 	cursor: pointer;
-	transition: .2s;
+	transition: 0.2s;
 }
+
 input[type=submit]:active,
 input[type=submit]:focus,
 input[type=submit]:hover {
