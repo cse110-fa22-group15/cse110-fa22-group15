@@ -2,12 +2,12 @@ header {
   text-align: center;
 }
 
-#logo{
-	height: 200px;
-	width: 200px;
+#logo {
+  height: 200px;
+  width: 200px;
   animation: wiggle 2s linear infinite;
 }
-  
+
 article {
   margin-top: -40px;
   background-color: #d5e2ed;
