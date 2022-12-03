@@ -1,6 +1,6 @@
 describe('Test Add/Delete Button on Home Page.', () => {
     // Change this constant value before testing!
-    const homeUrl = 'http://127.0.0.1:5501/calorieTracker/11272022-V1.61/Homepage.html';
+    const homeUrl = 'http://127.0.0.1:5500/calorieTracker/11272022-V1.6/Homepage.html';
     beforeAll(async () => {
       await page.goto(homeUrl)
     });
@@ -12,7 +12,7 @@ describe('Test Add/Delete Button on Home Page.', () => {
     });
 
     it('Add milk to breakfast', async() => {
-      await page.click('#add_food')
+      await page.click('#addFood')
       await page.focus('#foodType')
       await page.keyboard.type('milk')
       await page.select('#mealType', 'breakfast')
@@ -28,7 +28,7 @@ describe('Test Add/Delete Button on Home Page.', () => {
     })
     
     it('Add burger to lunch and steak to dinner', async() => {
-      await page.click('#add_food')
+      await page.click('#addFood')
       await page.focus('#foodType')
       await page.keyboard.type('burger')
       await page.select('#mealType', 'lunch')
@@ -39,7 +39,7 @@ describe('Test Add/Delete Button on Home Page.', () => {
         page.waitForNavigation(),
       ]);
 
-      await page.click('#add_food')
+      await page.click('#addFood')
       await page.focus('#foodType')
       await page.keyboard.type('steak')
       await page.select('#mealType', 'dinner')

@@ -1,6 +1,6 @@
 describe('Basic Pageflow Tests for Website', () => {
     // Change this constant value before testing!
-    const loginUrl = 'http://127.0.0.1:5501/calorieTracker/11272022-V1.61/LoginPage.html';
+    const loginUrl = 'http://127.0.0.1:5500/calorieTracker/11272022-V1.6/LoginPage.html';
     beforeAll(async () => {
       await page.goto(loginUrl)
     });

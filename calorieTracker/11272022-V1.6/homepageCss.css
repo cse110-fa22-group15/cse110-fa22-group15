@@ -9,6 +9,10 @@ html,body
     overflow-x: hidden; 
 }
 
+input:focus::placeholder {
+  color: transparent;
+}
+
 body {
   font-family: 'Montserrat';
   background-color: rgb(145, 173, 158);
