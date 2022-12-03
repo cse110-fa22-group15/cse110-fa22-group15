@@ -87,7 +87,7 @@ input[type=submit] {
 	color: #4C489D;
 	box-shadow: 0 2px 2px #5c5696;
 	cursor: pointer;
-	transition: 0.2s;
+	transition: .2s;
 }
 
 input[type=submit]:active,
