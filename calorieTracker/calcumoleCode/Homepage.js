@@ -144,7 +144,7 @@ function initFormHandler() {
     submitButton.addEventListener('click', (event) => {
         event.preventDefault();
 
-        // Create two variables that grab the values from the form
+        // Create variables that grab the values from the form
         var foodType = document.getElementById("foodTyped1").value;
         var mealType = document.getElementById("mealTyped1").value;
         var calories = document.getElementById("calories1").value;
@@ -183,10 +183,12 @@ function initFormHandler() {
         }
         
     });
+
     // edit feature
-    var editButton = document.getElementById('popButton3');
-    editButton.addEventListener('click', (event) => {
+    var submitButton = document.getElementById('popButton3');
+    submitButton.addEventListener('click', (event) => {
         event.preventDefault();
+
         // Create two variables that grab the values from the form
         var foodType = document.getElementById("foodTyped2").value;
         var calories = document.getElementById("calories2").value;
@@ -194,14 +196,13 @@ function initFormHandler() {
         // Create the foodEntry data which will be set to the entry card's data
         let mealType = window.localStorage.getItem('mealType');
         let foodname = window.localStorage.getItem('foodedit');
-        // TODO this doesn't work
-        if (foodType == "" || parseInt(calories) < 0)
+        if (foodType == "" || calories < 0)
         { 
           alert("You need to enter food or calories correctly");  	
           return; 
-        }
+        } 
         var foodEntry = {};
-        foodEntry['id'] = calories;
+        foodEntry['calories'] = calories;
         foodEntry['foodName'] = foodType;
         foodEntry['mealType'] = mealType;
         var foodEntryCard = document.createElement('entry-card');
@@ -210,9 +211,9 @@ function initFormHandler() {
         if (mealType == "breakfast") {
             var alreadyAddedToBreakfast = getFoodFromStorage()[0];
             for (var i = 0; i < alreadyAddedToBreakfast.length; i++) {
-                if (alreadyAddedToBreakfast[i].foodName == foodname){
-                    alreadyAddedToBreakfast[i].id = calories;
+                if (alreadyAddedToBreakfast[i].foodName == foodname){  
                     alreadyAddedToBreakfast[i].foodName = foodType;
+                    alreadyAddedToBreakfast[i].calories = calories;
                     localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast);
                 }
             }
@@ -223,7 +224,7 @@ function initFormHandler() {
             for (var i = 0; i < alreadyAddedToLunch.length; i++) {
                 if (alreadyAddedToLunch[i].foodName == foodname){
                     alreadyAddedToLunch[i].foodName = foodType;
-                    alreadyAddedToLunch[i].id = calories;
+                    alreadyAddedToLunch[i].calories = calories;
                     localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch);
                 }
             }   
@@ -234,7 +235,7 @@ function initFormHandler() {
 
                 if (alreadyAddedToDinner[i].foodName == foodname){
                     alreadyAddedToDinner[i].foodName = foodType;
-                    alreadyAddedToDinner[i].id = calories;
+                    alreadyAddedToDinner[i].calories = calories;
                     localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner);
                 }
             }
