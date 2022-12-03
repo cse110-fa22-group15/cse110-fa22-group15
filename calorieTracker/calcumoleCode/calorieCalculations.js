@@ -102,11 +102,11 @@ function displayProgress() {
         } else if (percentage < ONE_HUNDRED) {
             progressBar.style.backgroundColor = "#4EE44E";
         } else if (percentage == ONE_HUNDRED){
-            progressBar.style.backgroundColor = "green"
-        } else {
-            progressBar.style.width = ONE_HUNDRED + "%"
-            progressBar.style.backgroundColor = "red";
-        }
+            progressBar.style.backgroundColor = "green";
+        } 
+    } else {
+        progressBar.style.width = ONE_HUNDRED + "%";
+        progressBar.style.backgroundColor = "red";
     }
 }
 
