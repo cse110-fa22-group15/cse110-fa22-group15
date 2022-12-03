@@ -3,8 +3,8 @@ header {
 }
 
 #logo {
-	height:200px;
-	width:200px;
+	height: 200px;
+	width: 200px;
   animation: wiggle 2s linear infinite;
 }
   
@@ -19,7 +19,7 @@ article {
   padding: 40px;
   text-align: center;
   border-radius: 10%;
-  border-style:groove;
+  border-style: groove;
 }
 
 form {
@@ -38,26 +38,32 @@ form {
 }
 
 @keyframes wiggle {
-  0%, 
+  0%,
   7% {
     transform: rotateZ(0);
   }
+
   15% {
     transform: rotateZ(-15deg);
   }
+
   20% {
     transform: rotateZ(10deg);
   }
+
   25% {
     transform: rotateZ(-10deg);
   }
+
   30% {
     transform: rotateZ(6deg);
   }
+
   35% {
     transform: rotateZ(-4deg);
   }
-  40%, 100% {
+  40%,
+  100% {
     transform: rotateZ(0);
   }
 }
@@ -72,14 +78,14 @@ input[type=submit] {
   margin-left: auto;
   margin-right: auto;
 	border-radius: 26px;
-	border: 1px solid #D4D3E8;
+	border: 1px solid #d4d3e8;
 	text-transform: uppercase;
 	font-weight: 700;
 	display: flex;
 	align-items: center;
 	width: 50%;
 	color: #4C489D;
-	box-shadow: 0 2px 2px #5C5696;
+	box-shadow: 0 2px 2px #5c5696;
 	cursor: pointer;
 	transition: 0.2s;
 }
@@ -87,6 +93,6 @@ input[type=submit] {
 input[type=submit]:active,
 input[type=submit]:focus,
 input[type=submit]:hover {
-	border-color: #6A679E;
+	border-color: #6a679e;
 	outline: none;
 }

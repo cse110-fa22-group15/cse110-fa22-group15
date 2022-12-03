@@ -3,8 +3,8 @@ header {
 }
 
 #logo{
-	height:200px;
-	width:200px;
+	height: 200px;
+	width: 200px;
   animation: wiggle 2s linear infinite;
 }
   
