@@ -57,12 +57,21 @@ function saveFoodToDiary(breakfastDiary, lunchDiary, dinnerDiary) {
 }
 
 function initFormHandler() {
+    // These make the profile tab display the user's stored info by default
     var username = localStorage.getItem('username');
     document.getElementsByName("name")[0].placeholder = username;
 
-    // var sex = localStorage.getItem('sex');
-    // document.getElementsByID("sex")= sex;
-
+    var sex = localStorage.getItem("sex");
+    if (sex == "Male") {
+        document.getElementById("sex").innerHTML = `
+        <option value="Male" selected>Male</option>
+        <option value="Female">Female</option>`
+    } else {
+        document.getElementById("sex").innerHTML = `
+        <option value="Female" selected>Female</option>
+        <option value="Male">Male</option>`
+    }
+    
     var age = localStorage.getItem('age');
     document.getElementsByName("age")[0].placeholder = age;
 
@@ -71,19 +80,6 @@ function initFormHandler() {
 
     var goalWeight = localStorage.getItem('goalWeight');
     document.getElementsByName("weight2")[0].placeholder = goalWeight;
-
-    // Set default date to today
-    // var datePicker = document.getElementById('datepicker');
-    // var today = new Date();
-    // var dd = String(today.getDate()).padStart(2, '0');
-    // var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    // var yyyy = today.getFullYear();
-
-    // today = yyyy + '-' + mm + '-' + dd;
-    // console.log(today);
-    // datePicker.value = today;
-
-    
 
     // Deletion function relies on the delete button and checkmarks
     var deleteButton = document.getElementById('deletefood');
@@ -149,9 +145,9 @@ function initFormHandler() {
         event.preventDefault();
 
         // Create two variables that grab the values from the form
-        var foodType = JSON.stringify(document.getElementById("foodTyped1").value);
-        var mealType = JSON.stringify(document.getElementById("mealTyped1").value);
-        var calories = JSON.parse(document.getElementById("calories1").value);
+        var foodType = document.getElementById("foodTyped1").value;
+        var mealType = document.getElementById("mealTyped1").value;
+        var calories = document.getElementById("calories1").value;
         // check min value for calorie
         // if (foodType.length == 0 || calories < 0)
         // { 
@@ -168,43 +164,42 @@ function initFormHandler() {
         foodEntryCard.data = foodEntry;
 
         // Checks which meal to append the card to based on what the user chooses
-        if (mealType == JSON.stringify("breakfast")) {
+        if (mealType == "breakfast") {
             var alreadyAddedToBreakfast = getFoodFromStorage()[0];
             alreadyAddedToBreakfast.push(foodEntry);
             localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast);
         }
 
-        if (mealType == JSON.stringify("lunch")) {
+        if (mealType == "lunch") {
             var alreadyAddedToLunch = getFoodFromStorage()[1];
             alreadyAddedToLunch.push(foodEntry);
             localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch);
         }
         
-        if (mealType == JSON.stringify("dinner")) {
+        if (mealType == "dinner") {
             var alreadyAddedToDinner = getFoodFromStorage()[2];
             alreadyAddedToDinner.push(foodEntry);
             localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner);
         }
         
     });
-
     // edit feature
-    var submitButton = document.getElementById('popButton3');
-    submitButton.addEventListener('click', (event) => {
+    var editButton = document.getElementById('popButton3');
+    editButton.addEventListener('click', (event) => {
         event.preventDefault();
-
         // Create two variables that grab the values from the form
-        var foodType = JSON.stringify(document.getElementById("foodTyped2").value);
-        var calories = JSON.parse(document.getElementById("calories2").value);
+        var foodType = document.getElementById("foodTyped2").value;
+        var calories = document.getElementById("calories2").value;
         //document.thescript.getAttribute('foodname');
         // Create the foodEntry data which will be set to the entry card's data
         let mealType = window.localStorage.getItem('mealType');
         let foodname = window.localStorage.getItem('foodedit');
+        // TODO this doesn't work
         if (foodType == "" || parseInt(calories) < 0)
         { 
-          alert("You need to enter food or caloires correctly");  	
+          alert("You need to enter food or calories correctly");  	
           return; 
-        } 
+        }
         var foodEntry = {};
         foodEntry['id'] = calories;
         foodEntry['foodName'] = foodType;
@@ -212,7 +207,7 @@ function initFormHandler() {
         var foodEntryCard = document.createElement('entry-card');
         foodEntryCard.data = foodEntry;
         // Checks which meal to append the card to based on what the user chooses
-        if (mealType == JSON.stringify("breakfast")) {
+        if (mealType == "breakfast") {
             var alreadyAddedToBreakfast = getFoodFromStorage()[0];
             for (var i = 0; i < alreadyAddedToBreakfast.length; i++) {
                 if (alreadyAddedToBreakfast[i].foodName == foodname){
@@ -223,7 +218,7 @@ function initFormHandler() {
             }
         }
 
-        if (mealType == JSON.stringify("lunch")) {
+        if (mealType == "lunch") {
             var alreadyAddedToLunch = getFoodFromStorage()[1];
             for (var i = 0; i < alreadyAddedToLunch.length; i++) {
                 if (alreadyAddedToLunch[i].foodName == foodname){
@@ -233,7 +228,7 @@ function initFormHandler() {
                 }
             }   
         }
-        if (mealType == JSON.stringify("dinner")) {
+        if (mealType == "dinner") {
             var alreadyAddedToDinner = getFoodFromStorage()[2];
             for (var i = 0; i < alreadyAddedToDinner.length; i++) {
 
