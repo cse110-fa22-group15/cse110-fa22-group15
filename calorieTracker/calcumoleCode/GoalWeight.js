@@ -26,10 +26,12 @@ function init() {
         localStorage.setItem("goalWeight", input2);
       }
 
-      if (inputValidation(input1) && inputValidation(input2)) {
+      if (inputValidation(input1) && inputValidation(input2) && input1 > 0 && input2 > 0) {
         NewUser();
-      } else {
+      } else if (!inputValidation(input1) || !inputValidation(input2)){
         alert("Please fill out all fields");
+      } else {
+        alert("Weights must be > 0");
       }
     });
 } 
