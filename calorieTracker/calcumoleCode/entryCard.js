@@ -51,7 +51,7 @@ class EntryCard extends HTMLElement {
       <input type="checkbox" id="${data['id']}">
       <label for="${data['id']}">${data['foodName']}</label>
       <label for="${data['id']}"> — ${data['calories']} cal</label>
-      <button type="submit" id="edit-button" onclick = click_Pop_Edit(${foodName},${mealType},${calories})>Edit</button>`
+      <button type="submit" id="edit-button" onclick = click_Pop_Edit(${foodName},${mealType},${calories})><img src="./editButton.png" width="27" height="28" alt="edit"/></button>`
   }
 }
 

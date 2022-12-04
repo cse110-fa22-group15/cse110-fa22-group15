@@ -28,31 +28,30 @@
         <h2 class="text_shadows">Welcome to Calcumole!</h2>
       </div>
   </header>
+  <button class="tablink" onclick="openTab('Home', this, '#DFDCE5FF')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openTab('Profile', this, '#DFDCE5FF')" id="profileOpen">Profile</button>
+  <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
 
-    <button class="tablink" onclick="openTab('Home', this, '#DFDCE5FF')" id="defaultOpen">Home</button>
-    <button class="tablink" onclick="openTab('Profile', this, '#DFDCE5FF')" id="profileOpen">Profile</button>
-    <button class="tablink" onclick="openTab('Settings', this, '#DFDCE5FF')">Settings</button>
-
-    <div id="Home" class="tabcontent">
-      <div class="row" id="row" style="background-color: #d1dfcb;">
-        <button type="button" onclick="check_Pop_Food()" id="add_food">Add Food (+)</button>
+  <div id="Home" class="tabcontent">
+    <div class="row" id="row" style="background-color: #d1dfcb;">
+      <button type="button" onclick="check_Pop_Food()" id="add_food">Add Food (+)</button>
         <!-- The pop_up div integrated-->
-        <div class="pop_Up">
-          <form class="pop_Up_Text" id="food">
-            <label for="foodTyped1">Food Name</label><br>
-            <input type="search" id="foodTyped1" name="foodTyped1" placeholder='Enter Food'><br>
-            <label for="mealTyped1">Meal Type</label><br>
-            <select name="mealTyped1" id="mealTyped1">
-              <option value="breakfast">Breakfast</option>
-              <option value="lunch">Lunch</option>
-              <option value="dinner">Dinner</option>
-            </select><br>
-            <label for="calories1">Calories:</label><br>
-            <input type="number" id="calories1" name="calories1" value=""><br>
-            <input type="submit" value="Submit" onclick=reset_Check() id = "popButton1">
-            <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton2">
-          </form> 
-        </div>
+      <div class="pop_Up">
+        <form class="pop_Up_Text" id="food">
+          <label for="foodTyped1">Food Name</label><br>
+          <input type="search" id="foodTyped1" name="foodTyped1" placeholder="Enter Food"><br>
+          <label for="mealTyped1">Meal Type</label><br>
+          <select name="mealTyped1" id="mealTyped1">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+          </select><br>
+          <label for="calories1">Calories:</label><br>
+          <input type="number" id="calories1" name="calories1" value=""><br>
+          <input type="submit" value="Submit" onclick="reset_Check()" id = "popButton1">
+          <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton2">
+        </form> 
+      </div>
         <button type="button" onclick="click_Pop_newDay()" id="newday">New Day</button>
         <!-- The pop_up div integrated-->
         <div class="pop_Up">
@@ -66,14 +65,15 @@
         <div class="pop_Up">
           <form class="pop_Up_Text" id="edit">
             <label for="foodTyped2">Food Name</label><br>
-            <input type="search" id="foodTyped2" name="foodTyped2" placeholder='Enter food'><br>
+            <input type="search" id="foodTyped2" name="foodTyped2" placeholder="Enter food"><br>
             <label for="calories2">Calories:</label><br>
             <input type="number" id="calories2" name="calories2" value=""><br>
-            <input type="submit" value="Submit" onclick=reset_Check() id = "popButton3">
+            <input type="submit" value="Submit" onclick="reset_Check()" id = "popButton3">
             <input type="button" value="Cancel" onclick="reset_Check()" id = "popButton4">
           </form> 
         </div>
 
+        <div id="box">
           <div class="column" id = "column1" style="background-color:#D8E0BB;">
             <h3 id = "bf">BREAKFAST</h3>
             <table id="breakfastTable">
@@ -89,7 +89,8 @@
           <div class="column" id = "column2" style="background-color:#B6CEC7;">
             <div id="dailyGoal">Daily Goal:<br>
               <div class="progress"> 
-                <div id="download" class="progress__bar"></div>
+                <div id="download" class="progress__bar">
+                </div>
               </div>
             </div>
           </div>
@@ -108,7 +109,7 @@
         <option value="Male">Male</option>
       </select><br>
       <label for="age">Age</label><br>
-      <input type="number" id="age" name="age" placeholder=27><br>
+      <input type="number" id="age" name="age" placeholder="27"><br>
       <label for="weight1">Current Weight</label><br>
       <input type="number" id="weight1" name="weight1" placeholder="190 lb"><br>
       <label for="weight2">Goal Weight</label><br>
@@ -124,6 +125,7 @@
       <button class="mode" id="mode">Dark Mode</button>
       </div>
     </div>
+  </body>
 
     <script>
       // Dark Mode feature
