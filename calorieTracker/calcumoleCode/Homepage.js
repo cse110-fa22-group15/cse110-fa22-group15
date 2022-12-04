@@ -198,14 +198,14 @@ function initFormHandler() {
         // Create two variables that grab the values from the form
         var foodType = document.getElementById("foodTyped2").value;
         var calories = document.getElementById("calories2").value;
+        
         //document.thescript.getAttribute('foodname');
         // Create the foodEntry data which will be set to the entry card's data
         let mealType = window.localStorage.getItem('mealType');
         let foodname = window.localStorage.getItem('foodedit');
 
-        if (foodType == "" || calories < 0)
-        { 
-          alert("You need to enter food or calories correctly");  	
+        if (!inputValidation(foodType) || !inputValidation(calories)) {
+          alert("Please fill out all fields");  	
           return; 
         } 
         var foodEntry = {};

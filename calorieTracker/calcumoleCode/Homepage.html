@@ -258,9 +258,9 @@
           localStorage.foodedit = foodname;
           localStorage.mealType = mealType;
 
-          // Displays selected food entry info as placeholder in edit pop-up
-          document.getElementsByName("foodTyped2")[0].placeholder = foodname;
-          document.getElementsByName("calories2")[0].placeholder = calories;
+          // Displays selected food entry info as values in edit pop-up
+          document.getElementsByName("foodTyped2")[0].value = foodname;
+          document.getElementsByName("calories2")[0].value = calories;
           
           if (check == false){
             var pop_Up = document.getElementById("edit");
