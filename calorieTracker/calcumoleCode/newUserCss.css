@@ -41,27 +41,27 @@ form {
 @keyframes wiggle {
   0%,
   7% {
-	transform: rotateZ(0);
+    transform: rotateZ(0);
   }
 
-	15% {
-	transform: rotateZ(-15deg);
+  15% {
+    transform: rotateZ(-15deg);
   }
 
-	20% {
-	transform: rotateZ(10deg);
+  20% {
+    transform: rotateZ(10deg);
   }
 
-	25% {
-	transform: rotateZ(-10deg);
+  25% {
+    transform: rotateZ(-10deg);
   }
 
-	30% {
-	transform: rotateZ(6deg);
+  30% {
+    transform: rotateZ(6deg);
   }
 
-	35% {
-	transform: rotateZ(-4deg);
+  35% {
+    transform: rotateZ(-4deg);
   }
 
   40%, 
@@ -72,24 +72,24 @@ form {
   
 input[type="submit"] {
   text-align: center;
-	background: #fff;
-	font-size: 14px;
-	margin-top: 30px;
-	padding: 16px 20px;
+  background: #fff;
+  font-size: 14px;
+  margin-top: 30px;
+  padding: 16px 20px;
   padding-left: 12%;
   margin-left: auto;
   margin-right: auto;
-	border-radius: 26px;
-	border: 1px solid #d4d3e8;
-	text-transform: uppercase;
-	font-weight: 700;
-	display: flex;
-	align-items: center;
-	width: 50%;
-	color: #4c489d;
-	box-shadow: 0 2px 2px #5c5696;
-	cursor: pointer;
-	transition: 0.2s;
+  border-radius: 26px;
+  border: 1px solid #d4d3e8;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  color: #4c489d;
+  box-shadow: 0 2px 2px #5c5696;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 input[type="submit"]:active,
