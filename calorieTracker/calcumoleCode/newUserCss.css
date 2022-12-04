@@ -25,11 +25,11 @@ article {
 form {
   padding: 10px;
 }
-  
+
 #sex,
-#age, 
+#age,
 #name {
-  margin-bottom:10px;
+  margin-bottom: 10px;
   width: 160px;
   height: 20px;
 }
@@ -64,12 +64,12 @@ form {
     transform: rotateZ(-4deg);
   }
 
-  40%, 
+  40%,
   100% {
-  transform: rotateZ(0);
+    transform: rotateZ(0);
   }
 }
-  
+ 
 input[type="submit"] {
   text-align: center;
   background: #fff;
