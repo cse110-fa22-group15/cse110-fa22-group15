@@ -46,7 +46,6 @@ class EntryCard extends HTMLElement {
     var foodName = JSON.stringify(data['foodName'])
     var mealType = JSON.stringify(data['mealType'])
     var calories = parseInt(data['calories'])
-    //alert(foodname);
     article_select.innerHTML = `
       <input type="checkbox" id="${data['id']}">
       <label for="${data['id']}">${data['foodName']}</label>
