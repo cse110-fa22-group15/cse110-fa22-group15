@@ -21,20 +21,23 @@ function init () {
       localStorage.setItem('username', input1)
     }
 
-    const input2 = document.getElementById('sex').value
-    if (inputValidation(input2)) {
-      localStorage.setItem('sex', input2)
-    }
 
-    const input3 = document.getElementById('age').value
-    if (inputValidation(input3)) {
-      localStorage.setItem('age', input3)
-    }
+      var input2 = document.getElementById("sex").value;
+      if (inputValidation(input2)) {
+        localStorage.setItem("sex", input2);
+      }
+      
+      var input3 = document.getElementById("age").value;
+      if (inputValidation(input3) && input3 > 0) {
+        localStorage.setItem("age", input3);
+      }
 
-    if (inputValidation(input1) && inputValidation(input2) && inputValidation(input3)) {
-      NewUser()
-    } else {
-      alert('Please fill out all fields')
-    }
-  })
-}
+      if (inputValidation(input1) && inputValidation(input2) && inputValidation(input3) && input3 > 0) {
+        NewUser();
+      } else if (!inputValidation(input1) || !inputValidation(input2)|| !inputValidation(input3)){
+        alert("Please fill out all fields");
+      } else {
+        alert("Age must be > 0");
+      }
+    });
+} 
