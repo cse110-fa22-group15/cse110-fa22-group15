@@ -1,3 +1,5 @@
+/* global localStorage, alert */
+/* eslint no-undef: "error" */
 window.addEventListener('DOMContentLoaded', init)
 
 const FEMALE_AVG_DAILY_CALS = 2000
