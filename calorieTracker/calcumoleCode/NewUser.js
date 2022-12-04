@@ -27,14 +27,16 @@ function init() {
       }
       
       var input3 = document.getElementById("age").value;
-      if (inputValidation(input3)) {
+      if (inputValidation(input3) && input3 > 0) {
         localStorage.setItem("age", input3);
       }
 
-      if (inputValidation(input1) && inputValidation(input2) && inputValidation(input3)) {
+      if (inputValidation(input1) && inputValidation(input2) && inputValidation(input3) && input3 > 0) {
         NewUser();
-      } else {
+      } else if (!inputValidation(input1) || !inputValidation(input2)|| !inputValidation(input3)){
         alert("Please fill out all fields");
+      } else {
+        alert("Age must be > 0");
       }
     });
 } 
