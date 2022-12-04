@@ -63,7 +63,7 @@ form {
     transform: rotateZ(-4deg);
   }
 
-  40%, 
+  40%,
   100% {
     transform: rotateZ(0);
   }
