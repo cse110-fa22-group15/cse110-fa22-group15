@@ -3,6 +3,14 @@
 
 window.addEventListener('DOMContentLoaded', init)
 
+function inputValidation(input) {
+    if (input == "" || input == undefined || input == null) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
 function init() {
     let breakfastDiary = getFoodFromStorage()[0]
     let lunchDiary = getFoodFromStorage()[1]
@@ -143,66 +151,65 @@ function initFormHandler() {
        
     })
 
-    var submitButton = document.getElementById('popButton1')
+    // Add Food (+) button functionality 
+    var submitButton = document.getElementById('popButton1');
     submitButton.addEventListener('click', (event) => {
         event.preventDefault()
 
         // Create variables that grab the values from the form
-        var foodType = document.getElementById("foodTyped1").value
-        var mealType = document.getElementById("mealTyped1").value
-        var calories = document.getElementById("calories1").value
-        // check min value for calorie
-        // if (foodType.length == 0 || calories < 0)
-        // { 
-        //   alert("You need to enter food or caloires correctly")  	
-        //   return 
-        // }  	 
-
-        // Create the foodEntry data which will be set to the entry card's data
-        var foodEntry = {}
-        foodEntry['foodName'] = foodType
-        foodEntry['mealType'] = mealType
-        foodEntry['calories'] = calories
-        var foodEntryCard = document.createElement('entry-card')
-        foodEntryCard.data = foodEntry
-
-        // Checks which meal to append the card to based on what the user chooses
-        if (mealType == "breakfast") {
-            var alreadyAddedToBreakfast = getFoodFromStorage()[0]
-            alreadyAddedToBreakfast.push(foodEntry)
-            localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast)
-        }
-
-        if (mealType == "lunch") {
-            var alreadyAddedToLunch = getFoodFromStorage()[1]
-            alreadyAddedToLunch.push(foodEntry)
-            localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch)
-        }
+        var foodType = document.getElementById("foodTyped1").value;
+        var mealType = document.getElementById("mealTyped1").value;
+        var calories = document.getElementById("calories1").value;
         
-        if (mealType == "dinner") {
-            var alreadyAddedToDinner = getFoodFromStorage()[2]
-            alreadyAddedToDinner.push(foodEntry)
-            localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner)
-        }
-        
-    })
+        if (!inputValidation(foodType) || !inputValidation(mealType) || !inputValidation(calories)) {
+            alert("Please fill out all fields");
+        } else {
+            // Create the foodEntry data which will be set to the entry card's data
+            var foodEntry = {};
+            foodEntry['foodName'] = foodType;
+            foodEntry['mealType'] = mealType;
+            foodEntry['calories'] = calories;
+            var foodEntryCard = document.createElement('entry-card');
+            foodEntryCard.data = foodEntry;
 
-    // edit feature
-    var submitButton = document.getElementById('popButton3')
+            // Checks which meal to append the card to based on what the user chooses
+            if (mealType == "breakfast") {
+                var alreadyAddedToBreakfast = getFoodFromStorage()[0];
+                alreadyAddedToBreakfast.push(foodEntry);
+                localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast);
+            }
+
+            if (mealType == "lunch") {
+                var alreadyAddedToLunch = getFoodFromStorage()[1];
+                alreadyAddedToLunch.push(foodEntry);
+                localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch);
+            }
+            
+            if (mealType == "dinner") {
+                var alreadyAddedToDinner = getFoodFromStorage()[2];
+                alreadyAddedToDinner.push(foodEntry);
+                localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner);
+            }
+        }
+    });
+
+    // Edit feature
+    var submitButton = document.getElementById('popButton3');
     submitButton.addEventListener('click', (event) => {
-        event.preventDefault()
-
+        event.preventDefault();
+        
         // Create two variables that grab the values from the form
-        var foodType = document.getElementById("foodTyped2").value
-        var calories = document.getElementById("calories2").value
-        //document.thescript.getAttribute('foodname')
+        var foodType = document.getElementById("foodTyped2").value;
+        var calories = document.getElementById("calories2").value;
+        
+        //document.thescript.getAttribute('foodname');
         // Create the foodEntry data which will be set to the entry card's data
-        let mealType = window.localStorage.getItem('mealType')
-        let foodname = window.localStorage.getItem('foodedit')
-        if (foodType == "" || calories < 0)
-        { 
-          alert("You need to enter food or calories correctly")  	
-          return 
+        let mealType = window.localStorage.getItem('mealType');
+        let foodname = window.localStorage.getItem('foodedit');
+
+        if (!inputValidation(foodType) || !inputValidation(calories)) {
+          alert("Please fill out all fields");  	
+          return; 
         } 
         var foodEntry = {}
         foodEntry['calories'] = calories
