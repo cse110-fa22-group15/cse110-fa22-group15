@@ -4,6 +4,14 @@
 
 window.addEventListener('DOMContentLoaded', init)
 
+function inputValidation(input) {
+    if (input == "" || input == undefined || input == null) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
 function init() {
     const breakfastDiary = getFoodFromStorage()[0]
     const lunchDiary = getFoodFromStorage()[1]
@@ -142,70 +150,71 @@ function initFormHandler() {
         location.reload()
     })
 
-    var submitButton = document.getElementById('popButton1')
+    // Add Food (+) button functionality 
+    var submitButton = document.getElementById('popButton1');
     submitButton.addEventListener('click', (event) => {
         event.preventDefault()
 
         // Create variables that grab the values from the form
-        const foodType = document.getElementById('foodTyped1').value
-        const mealType = document.getElementById('mealTyped1').value
-        const calories = document.getElementById('calories1').value
-        // check min value for calorie
-        // if (foodType.length === 0 || calories < 0)
-        // {
-        //   alert("You need to enter food or caloires correctly")
-        //   return
-        // }
+        var foodType = document.getElementById("foodTyped1").value;
+        var mealType = document.getElementById("mealTyped1").value;
+        var calories = document.getElementById("calories1").value;
+        
+        if (!inputValidation(foodType) || !inputValidation(mealType) || !inputValidation(calories)) {
+            alert("Please fill out all fields");
+        } else {
+            // Create the foodEntry data which will be set to the entry card's data
+            var foodEntry = {};
+            foodEntry['foodName'] = foodType;
+            foodEntry['mealType'] = mealType;
+            foodEntry['calories'] = calories;
+            var foodEntryCard = document.createElement('entry-card');
+            foodEntryCard.data = foodEntry;
 
-        // Create the foodEntry data which will be set to the entry card's data
-        const foodEntry = {}
-        foodEntry.foodName = foodType
-        foodEntry.mealType = mealType
-        foodEntry.calories = calories
-        const foodEntryCard = document.createElement('entry-card')
-        foodEntryCard.data = foodEntry
+            // Checks which meal to append the card to based on what the user chooses
+            if (mealType == "breakfast") {
+                var alreadyAddedToBreakfast = getFoodFromStorage()[0];
+                alreadyAddedToBreakfast.push(foodEntry);
+                localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast);
+            }
 
-        // Checks which meal to append the card to based on what the user chooses
-        if (mealType === 'breakfast') {
-            const alreadyAddedToBreakfast = getFoodFromStorage()[0]
-            alreadyAddedToBreakfast.push(foodEntry)
-            localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast)
+            if (mealType == "lunch") {
+                var alreadyAddedToLunch = getFoodFromStorage()[1];
+                alreadyAddedToLunch.push(foodEntry);
+                localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch);
+            }
+            
+            if (mealType == "dinner") {
+                var alreadyAddedToDinner = getFoodFromStorage()[2];
+                alreadyAddedToDinner.push(foodEntry);
+                localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner);
+            }
         }
+    });
 
-        if (mealType === 'lunch') {
-            const alreadyAddedToLunch = getFoodFromStorage()[1]
-            alreadyAddedToLunch.push(foodEntry)
-            localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch)
-        }
-
-        if (mealType === 'dinner') {
-            const alreadyAddedToDinner = getFoodFromStorage()[2]
-            alreadyAddedToDinner.push(foodEntry)
-            localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner)
-        }
-    })
-
-    // edit feature
-    var submitButton = document.getElementById('popButton3')
+    // Edit feature
+    var submitButton = document.getElementById('popButton3');
     submitButton.addEventListener('click', (event) => {
-        event.preventDefault()
-
+        event.preventDefault();
+        
         // Create two variables that grab the values from the form
-        const foodType = document.getElementById('foodTyped2').value
-        const calories = document.getElementById('calories2').value
-        // document.thescript.getAttribute('foodname')
+        var foodType = document.getElementById("foodTyped2").value;
+        var calories = document.getElementById("calories2").value;
+        
+        //document.thescript.getAttribute('foodname');
         // Create the foodEntry data which will be set to the entry card's data
-        const mealType = window.localStorage.getItem('mealType')
-        const foodname = window.localStorage.getItem('foodedit')
-        if (foodType === '' || calories < 0) {
-            alert('You need to enter food or calories correctly')
-            return
-        }
-        const foodEntry = {}
-        foodEntry.calories = calories
-        foodEntry.foodName = foodType
-        foodEntry.mealType = mealType
-        const foodEntryCard = document.createElement('entry-card')
+        let mealType = window.localStorage.getItem('mealType');
+        let foodname = window.localStorage.getItem('foodedit');
+
+        if (!inputValidation(foodType) || !inputValidation(calories)) {
+          alert("Please fill out all fields");  	
+          return; 
+        } 
+        var foodEntry = {}
+        foodEntry['calories'] = calories
+        foodEntry['foodName'] = foodType
+        foodEntry['mealType'] = mealType
+        var foodEntryCard = document.createElement('entry-card')
         foodEntryCard.data = foodEntry
         // Checks which meal to append the card to based on what the user chooses
         if (mealType === 'breakfast') {
