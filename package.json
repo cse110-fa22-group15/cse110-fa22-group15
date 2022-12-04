@@ -17,5 +17,9 @@
     "puppeteer": "^19.3.0"
   },
   "dependencies": {
+  },
+  "rules": {
+    "selector-id-pattern": null,
+    "selector-class-pattern": null
   }
 }

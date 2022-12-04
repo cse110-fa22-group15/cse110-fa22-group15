@@ -411,7 +411,7 @@ input[type="name"]:focus {
   15% {
     transform: rotateZ(-15deg);
   }
-  
+
   20% {
     transform: rotateZ(10deg);
   }
