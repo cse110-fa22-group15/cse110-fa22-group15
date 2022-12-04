@@ -1,8 +1,8 @@
 {
   "rules": {
     "accessor-pairs": "off",
-    "selector-class-pattern": 0,
-    "selector-id-pattern": 0
+    "selector-class-pattern": "off",
+    "selector-id-pattern": "off"
 
   },
   "parserOptions": {
