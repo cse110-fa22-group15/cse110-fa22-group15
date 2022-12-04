@@ -1,4 +1,4 @@
-/* eslint global localStorage */
+/* eslint global localStorage, alert */
 /* eslint camelcase: "error" */
 /*eslint no-undef: "error"*/
 
@@ -159,7 +159,7 @@ function initFormHandler() {
         var foodType = document.getElementById("foodTyped1").value;
         var mealType = document.getElementById("mealTyped1").value;
         var calories = document.getElementById("calories1").value;
-        
+
         if (!inputValidation(foodType) || !inputValidation(mealType) || !inputValidation(calories)) {
             alert("Please fill out all fields");
         } else {
@@ -183,7 +183,7 @@ function initFormHandler() {
                 alreadyAddedToLunch.push(foodEntry);
                 localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch);
             }
-            
+
             if (mealType == "dinner") {
                 var alreadyAddedToDinner = getFoodFromStorage()[2];
                 alreadyAddedToDinner.push(foodEntry);
@@ -196,20 +196,20 @@ function initFormHandler() {
     var submitButton = document.getElementById('popButton3');
     submitButton.addEventListener('click', (event) => {
         event.preventDefault();
-        
+
         // Create two variables that grab the values from the form
-        var foodType = document.getElementById("foodTyped2").value;
-        var calories = document.getElementById("calories2").value;
-        
+        var foodType = document.getElementById('foodTyped2').value;
+        var calories = document.getElementById('calories2').value;
+
         //document.thescript.getAttribute('foodname');
         // Create the foodEntry data which will be set to the entry card's data
         let mealType = window.localStorage.getItem('mealType');
         let foodname = window.localStorage.getItem('foodedit');
 
         if (!inputValidation(foodType) || !inputValidation(calories)) {
-          alert("Please fill out all fields");  	
-          return; 
-        } 
+            alert("Please fill out all fields");
+            return;
+        }
         var foodEntry = {}
         foodEntry['calories'] = calories
         foodEntry['foodName'] = foodType
