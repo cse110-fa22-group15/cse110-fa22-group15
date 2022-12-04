@@ -1,11 +1,12 @@
+/* eslint-disable camelcase */
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 html,body
 {
     width: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden; 
 }
 
@@ -19,38 +20,38 @@ body {
 }
 
 header:first-of-type{
-  margin-top:100px;
-  font-size: 30px;
+  margin-top:100;
+  font-size: 30;
 }
 
 .content {
   display: flex;
   justify-content: center;
-  margin-left: 300px;
+  margin-left: 300;
 }
 
 .text_shadows {
   font-family: bungee, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 50;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 20;
   color: black;
   letter-spacing: 0.4rem;
 }
 
 #pc{
-  margin-top: -90px;
-  margin-right: -150px;
-  height:300px;
-  width:600px;
+  margin-top: -90;
+  margin-right: -150;
+  height:300;
+  width:600;
   float:right;
 }
 
 button[type="button"]{
-margin-top: 10px;
-margin-left: 10px;
+margin-top: 10;
+margin-left: 10;
 outline: 0;
 grid-gap: 8px;
 align-items: center;
@@ -69,8 +70,8 @@ overflow: hidden;
 padding: 12px 16px;
 text-decoration: none;
 text-overflow: ellipsis;
-transition: all .14s ease-out;
-white-space: nowrap
+transition: all0.14s ease-out;
+white-space: nowrap;
 }
 button[type="button"]:hover {
 box-shadow: 4px 4px 0 #000;
@@ -80,8 +81,8 @@ button[type="button"]:focus-visible{
 outline-offset: 1px;
 }
 #deletefood{
-margin-top: 10px;
-margin-left: 10px;
+margin-top: 10;
+margin-left: 10;
 outline: 0;
 grid-gap: 8px;
 align-items: center;
@@ -100,8 +101,8 @@ overflow: hidden;
 padding: 12px 16px;
 text-decoration: none;
 text-overflow: ellipsis;
-transition: all .14s ease-out;
-white-space: nowrap
+transition: all0.14s ease-out;
+white-space: nowrap;
 }
 #deletefood:hover {
 box-shadow: 4px 4px 0 #000;
@@ -131,8 +132,8 @@ overflow: hidden;
 padding: 12px 16px;
 text-decoration: none;
 text-overflow: ellipsis;
-transition: all .14s ease-out;
-white-space: nowrap
+transition: all0.14s ease-out;
+white-space: nowrap;
 }
 button[onclick="move()"]:hover {
 box-shadow: 4px 4px 0 #000;
@@ -142,7 +143,7 @@ button[onclick="move()"]:focus-visible{
 outline-offset: 1px;
 }
 h2[id="pick"]{
-margin-left: 10px;
+margin-left: 10;
 font-weight: bold;
 color:black;
 }
@@ -167,7 +168,7 @@ overflow: hidden;
 padding: 12px 16px;
 text-decoration: none;
 text-overflow: ellipsis;
-transition: all .14s ease-out;
+transition: all0.14s ease-out;
 white-space: nowrap;
 }
 
@@ -181,7 +182,7 @@ white-space: nowrap;
 /* Style the tab content */
 .tabcontent {
   border: 2px solid;
-  padding: 10px;
+  padding: 10;
   box-shadow: 6px 4px 8px 4px;
   display: inline-block;
   width: 100%;
@@ -189,16 +190,16 @@ white-space: nowrap;
   text-align: left;
 }
 #bf{
-  padding: 20px;
+  padding: 20;
   color:#1f1f4c;
 }
 
 #lnh{
-  padding: 20px;
+  padding: 20;
   color:#1f1f4c;
 }
 #din{
-  padding: 20px;
+  padding: 20;
   color:#1b1b5c;
 }
 
@@ -229,7 +230,7 @@ align-items: stretch;
 }
 
 .row{
-  padding-left:150px;
+  padding-left:150;
   margin-right:26px;
   height:100%;
 }
@@ -254,28 +255,28 @@ align-items: stretch;
 }
 
 #myBar {
-  height: 30px;
-  width: 30px;
+  height: 30;
+  width: 30;
   background-color: #04AA6D;
 }  */
 
 .myProgress{
-  width: 160px;
-  height: 160px;
+  width: 160;
+  height: 160;
   position: relative;
 }
 
 .outer{
-  height: 160px;
-  width: 160px;
+  height: 160;
+  width: 160;
   border-radius: 50%;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), 
-              -6px -6px 10px -1px rgba(70, 163, 58, 0.7);
-  margin-left: 150px;
+  box-shadow: 6px 6px 10 -1px rgba(0, 0, 0, 0.15), 
+              -6px -6px 10 -1px rgba(70, 163, 58, 0.7);
+  margin-left: 150;
 }
 
 #number{
-  font-weight: 600px;
+  font-weight: 600;
   color: #555; 
   padding-top: 68px;
   padding-left: 63.5px;
@@ -284,18 +285,18 @@ align-items: stretch;
 circle{
   fill:none;
   stroke: url(#GradientColor);
-  stroke-width: 20px;
+  stroke-width: 20;
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
   animation: anim 2s linear forwards;
-  margin-left: 20px; 
+  margin-left: 20; 
 }
 
 svg{
   position:absolute; 
-  margin-left: 150px;
-  top: 0px; 
-  left: 0px; 
+  margin-left: 150;
+  top: 0; 
+  left: 0; 
 }
 
 @keyframes anim{
@@ -305,9 +306,9 @@ svg{
 }
 
 #dailyGoal{
-  font-size: 20px;
-  margin-top: 40px;
-  margin-left: 10px;
+  font-size: 20;
+  margin-top: 40;
+  margin-left: 10;
 }
 
 .pop_Up .pop_Up_Text {
@@ -348,23 +349,23 @@ svg{
 
 #foodType{
   margin-bottom: 10%;
-  width:170px;
-  height:20px;
+  width:170;
+  height:20;
 }
 #mealType{
   margin-bottom: 10%;
-  width:170px;
-  height:20px;
+  width:170;
+  height:20;
 }
 #calories{
   margin-bottom: 10%;
-  width:170px;
-  height:20px;
+  width:170;
+  height:20;
 }
 
 #popButton1{
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 10;
+  margin-left: 10;
   outline: 0;
   grid-gap: 8px;
   align-items: center;
@@ -383,8 +384,8 @@ svg{
   padding: 12px 16px;
   text-decoration: none;
   text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap
+  transition: all0.14s ease-out;
+  white-space: nowrap;
   }
   #popButton1:hover {
   box-shadow: 4px 4px 0 #000;
@@ -394,8 +395,8 @@ svg{
   outline-offset: 1px;
   }
   #popButton2{
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 10;
+    margin-left: 10;
     outline: 0;
     grid-gap: 8px;
     align-items: center;
@@ -414,8 +415,8 @@ svg{
     padding: 12px 16px;
     text-decoration: none;
     text-overflow: ellipsis;
-    transition: all .14s ease-out;
-    white-space: nowrap
+    transition: all0.14s ease-out;
+    white-space: nowrap;
     }
     #popButton2:hover {
     box-shadow: 4px 4px 0 #000;
@@ -437,32 +438,32 @@ svg{
 
     .info{
       background-color: aqua;
-      padding: 20px;
+      padding: 20;
       width: 50%;
       margin-left: auto;
       margin-right: auto;
     }
 
     .name {
-      font-size: 20px;
+      font-size: 20;
     }
 
     .progress {
-      padding: 10px;
-      margin-top: 10px;
-      margin-left: 10px;
-      margin-bottom: 20px;
+      padding: 10;
+      margin-top: 10;
+      margin-left: 10;
+      margin-bottom: 20;
       width: 100%;
-      max-width: 500px;
+      max-width: 500;
       background: white;
       border: 1px solid #000;
       border-radius: 5px;
-      height: 10px;
+      height: 10;
       overflow: hidden;
     }
     
     .progress .progress__bar {
-      height: 10px;
+      height: 10;
       width: 0;
       border-radius: 4px;
       background-image: linear-gradient(45deg, red, green);
@@ -471,13 +472,13 @@ svg{
     
     #dailyCal {
       color: rgb(0, 0, 0);
-      margin-left: 10px;
+      margin-left: 10;
       font-size: 16px;
     }
 
     #input {
       box-sizing: border-box;
-      width: 80px;
+      width: 80;
       border-radius: 5px;
       height: 25px;
       margin-right: 5px;
@@ -485,15 +486,15 @@ svg{
 
     #submit {
       box-sizing: border-box;
-      width: 80px;
+      width: 80;
       border-radius: 5px;
       height: 25px;
       margin-right: 5px;
     }
 
     button[class="mode"]{
-      margin-top: 10px;
-      margin-left: 10px;
+      margin-top: 10;
+      margin-left: 10;
       outline: 0;
       grid-gap: 8px;
       align-items: center;
@@ -512,8 +513,8 @@ svg{
       padding: 12px 16px;
       text-decoration: none;
       text-overflow: ellipsis;
-      transition: all .14s ease-out;
-      white-space: nowrap
+      transition: all0.14s ease-out;
+      white-space: nowrap;
       }
       button[class="mode"]:hover {
       box-shadow: 4px 4px 0 #000;
@@ -531,7 +532,7 @@ svg{
     width: 50%;
     height: 50%;
     border-radius: 3%;
-    padding-top: 50px;
+    padding-top: 50;
   }
   #SettingBox{
     text-align: center;
@@ -540,5 +541,5 @@ svg{
     width: 50%;
     height: 30%;
     border-radius: 3%;
-    padding-top: 50px;
+    padding-top: 50;
   }

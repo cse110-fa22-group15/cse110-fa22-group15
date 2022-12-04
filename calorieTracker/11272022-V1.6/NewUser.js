@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
