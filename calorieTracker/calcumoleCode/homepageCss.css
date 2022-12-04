@@ -1,4 +1,4 @@
-/*eslint camelcase: "error"*/
+/* eslint camelcase: ["error", {properties: "never"}] */
 html {
   width: 100%;
   height: 100%;
