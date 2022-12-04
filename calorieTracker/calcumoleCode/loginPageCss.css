@@ -27,7 +27,8 @@ article {
   animation: wiggle 2s linear infinite;
 }
 
-.yes,.no {
+.yes,
+.no {
   text-align: center;
   background: #fff;
   font-size: 14px;
