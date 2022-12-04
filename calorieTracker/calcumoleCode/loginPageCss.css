@@ -87,11 +87,11 @@ form {
   }
 
   25% {
-	transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
   }
 
   30% {
-	transform: rotateZ(6deg);
+    transform: rotateZ(6deg);
   }
 
   35% {
@@ -100,7 +100,7 @@ form {
 
   40%,
   100% {
-	transform: rotateZ(0);
+    transform: rotateZ(0);
   }
 }
 
