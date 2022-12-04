@@ -43,16 +43,9 @@ class EntryCard extends HTMLElement {
     //           cardTemplate.html and the data passed in (You should only have one <article>,
     //           do not nest an <article> inside another <article>). You should use Template
     //           literals (template strings) and element.innerHTML for this.
-<<<<<<< HEAD
-    const foodName = JSON.stringify(data.foodName)
-    const mealType = JSON.stringify(data.mealType)
-    const calories = parseInt(data.calories)
-    // alert(foodname);
-=======
     var foodName = JSON.stringify(data['foodName'])
     var mealType = JSON.stringify(data['mealType'])
     var calories = parseInt(data['calories'])
->>>>>>> 7165b3d2e60090f0a551a93ef07c6bf1beda4531
     article_select.innerHTML = `
       <input type="checkbox" id="${data.id}">
       <label for="${data.id}">${data.foodName}</label>
