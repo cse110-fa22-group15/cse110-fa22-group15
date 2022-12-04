@@ -1,3 +1,7 @@
+/*eslint camelcase: "error"*/
+
+import { no_camelcased } from "external-module"
+
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
