@@ -1,8 +1,8 @@
 {
   "rules": {
     "accessor-pairs": "off",
-    "selector-class-pattern": "^[a-z][a-zA-Z0-9_-]+$",
-    "selector-id-pattern": "^[a-z][a-zA-Z0-9_-]+$"
+    "selector-class-pattern": 0,
+    "selector-id-pattern": 0
 
   },
   "parserOptions": {
