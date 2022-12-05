@@ -1,4 +1,4 @@
-/* global HTMLElement */
+/* global HTMLElement, document, customElements */
 /* eslint no-undef: "error" */
 /* eslint-disable camelcase */
 /* eslint-disable dot-notation */
@@ -45,15 +45,17 @@ class EntryCard extends HTMLElement {
     //           cardTemplate.html and the data passed in (You should only have one <article>,
     //           do not nest an <article> inside another <article>). You should use Template
     //           literals (template strings) and element.innerHTML for this.
-    var foodName = JSON.stringify(data['foodName'])
-    var mealType = JSON.stringify(data['mealType'])
-    var calories = parseInt(data['calories'])
+    const foodName = JSON.stringify(data['foodName'])
+    const mealType = JSON.stringify(data['mealType'])
+    const calories = parseInt(data['calories'])
     article_select.innerHTML = `
       <input type="checkbox" id="${data.id}">
       <label for="${data.id}">${data.foodName}</label>
       <label for="${data.id}"> — ${data.calories} cal</label>
       <button type="submit" id="edit-button" onclick = click_Pop_Edit(${foodName},${mealType},${calories})><img src="./editButton.png" width="27" height="28" alt="edit"/></button>`
   }
+
+  get data () {};
 }
 
 customElements.define('entry-card', EntryCard)
