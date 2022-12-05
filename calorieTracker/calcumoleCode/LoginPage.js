@@ -1,8 +1,10 @@
-window.addEventListener('DOMContentLoaded', init);
+/* global localStorage, document, window */
+/* eslint no-undef: "error" */
+window.addEventListener('DOMContentLoaded', init)
 
-function init() {
-    var yesButton = document.getElementById("yes");
-    yesButton.addEventListener('click', (event) => {
-      localStorage.clear();
-    });
-} 
+function init () {
+  const yesButton = document.getElementById('yes')
+  yesButton.addEventListener('click', (event) => {
+    localStorage.clear()
+  })
+}

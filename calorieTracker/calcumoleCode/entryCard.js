@@ -1,16 +1,18 @@
-// RecipeCard.js
-
+/* global HTMLElement, document, customElements */
+/* eslint no-undef: "error" */
+/* eslint-disable camelcase */
+/* eslint-disable dot-notation */
 class EntryCard extends HTMLElement {
   // Called once when document.createElement('recipe-card') is called, or
   // the element is written into the DOM directly as <recipe-card>
-  constructor() {
-    super(); 
-    this.attachShadow({mode:'open'});
-    
-    var articleElem = document.createElement("article");
-    
-    var styleElem = document.createElement("style");
-   
+  constructor () {
+    super()
+    this.attachShadow({ mode: 'open' })
+
+    const articleElem = document.createElement('article')
+
+    const styleElem = document.createElement('style')
+
     styleElem.textContent = `* {
       font-family: sans-serif;
       margin: 0;
@@ -26,32 +28,34 @@ class EntryCard extends HTMLElement {
       font-size: 18px;
       padding: 10px;
       width: 250px;
-    }`;
-   
-    this.shadowRoot.append(styleElem);
-    this.shadowRoot.append(articleElem);
+    }`
+
+    this.shadowRoot.append(styleElem)
+    this.shadowRoot.append(articleElem)
   }
 
-  set data(data) {
+  set data (data) {
     // If nothing was passed in, return
-    if (!data) return;
+    if (!data) return
 
     // Select the <article> we added to the Shadow DOM in the constructor
-    var article_select = this.shadowRoot.querySelector('article');
-    
+    const article_select = this.shadowRoot.querySelector('article')
+
     //           Set the contents of the <article> with the <article> template given in
     //           cardTemplate.html and the data passed in (You should only have one <article>,
     //           do not nest an <article> inside another <article>). You should use Template
     //           literals (template strings) and element.innerHTML for this.
-    var foodName = JSON.stringify(data['foodName'])
-    var mealType = JSON.stringify(data['mealType'])
-    var calories = parseInt(data['calories'])
+    const foodName = JSON.stringify(data['foodName'])
+    const mealType = JSON.stringify(data['mealType'])
+    const calories = parseInt(data['calories'])
     article_select.innerHTML = `
-      <input type="checkbox" id="${data['id']}">
-      <label for="${data['id']}">${data['foodName']}</label>
-      <label for="${data['id']}"> — ${data['calories']} cal</label>
+      <input type="checkbox" id="${data.id}">
+      <label for="${data.id}">${data.foodName}</label>
+      <label for="${data.id}"> — ${data.calories} cal</label>
       <button type="submit" id="edit-button" onclick = click_Pop_Edit(${foodName},${mealType},${calories})><img src="./editButton.png" width="27" height="28" alt="edit"/></button>`
   }
+
+  get data () {};
 }
 
 customElements.define('entry-card', EntryCard)
