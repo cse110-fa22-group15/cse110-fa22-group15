@@ -6,7 +6,7 @@ describe('Basic Pageflow Tests for Website', () => {
     });
 
     it('Go to create user page if a new user', async () => {
-      const yesBtn = await page.$('.yes')
+      const yesBtn = await page.$('#yes')
       await yesBtn.click()
       await page.waitForNavigation()
       let currUrl = page.url()
@@ -15,7 +15,11 @@ describe('Basic Pageflow Tests for Website', () => {
     });
 
     it('Go to goal weight page by clicking continue', async () => {
-      const ctnBtn = await page.$("[value='Continue']")
+      await page.focus('#name')
+      await page.keyboard.type('bruz')
+      await page.focus('#age')
+      await page.keyboard.type('134')
+      const ctnBtn = await page.$("#continue")
       await ctnBtn.click()
       await page.waitForNavigation()
       let currUrl = page.url()
@@ -24,7 +28,11 @@ describe('Basic Pageflow Tests for Website', () => {
     });
 
     it('Go to homepage after saving weight', async () => {
-      const svBtn = await page.$("[value='Save']")
+      await page.focus('#weight1')
+      await page.keyboard.type('100')
+      await page.focus('#weight2')
+      await page.keyboard.type('200')
+      const svBtn = await page.$("#save")
       await svBtn.click()
       await page.waitForNavigation()
       let currUrl = page.url()
