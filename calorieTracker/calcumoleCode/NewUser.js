@@ -1,5 +1,6 @@
 /* global localStorage, alert, window, document */
 /* eslint no-undef: "error" */
+/* eslint-disable camelcase */
 window.addEventListener('DOMContentLoaded', init)
 
 function inputValidation (input) {

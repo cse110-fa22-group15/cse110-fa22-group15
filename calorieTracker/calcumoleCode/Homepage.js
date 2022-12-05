@@ -1,6 +1,6 @@
 /* global localStorage, alert, window, document, location */
 /* eslint no-undef: "error" */
-/* eslint camelcase: ["error", {properties: "never"}] */
+/* eslint-disable camelcase */
 
 window.addEventListener('DOMContentLoaded', init)
 
@@ -172,19 +172,19 @@ function initFormHandler () {
       foodEntryCard.data = foodEntry
 
       // Checks which meal to append the card to based on what the user chooses
-      if (mealType == 'breakfast') {
+      if (mealType === 'breakfast') {
         const alreadyAddedToBreakfast = getFoodFromStorage()[0]
         alreadyAddedToBreakfast.push(foodEntry)
         localStorage.breakfastDiary = JSON.stringify(alreadyAddedToBreakfast)
       }
 
-      if (mealType == 'lunch') {
+      if (mealType === 'lunch') {
         const alreadyAddedToLunch = getFoodFromStorage()[1]
         alreadyAddedToLunch.push(foodEntry)
         localStorage.lunchDiary = JSON.stringify(alreadyAddedToLunch)
       }
 
-      if (mealType == 'dinner') {
+      if (mealType === 'dinner') {
         const alreadyAddedToDinner = getFoodFromStorage()[2]
         alreadyAddedToDinner.push(foodEntry)
         localStorage.dinnerDiary = JSON.stringify(alreadyAddedToDinner)
