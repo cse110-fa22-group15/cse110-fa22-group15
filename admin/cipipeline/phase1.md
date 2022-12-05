@@ -31,7 +31,7 @@ In our project, we have the following workflows currently functional:
   
 * Pages-Build-Deployment
 
-  The default action by GitHub page. This action will be performed whenever the repository's content is changed and deploy the website accordingly.
+  The default action by GitHub page. This action will be performed whenever the repository's content is changed and deploy the site accordingly.
 
 * Unit Tests via Automation
 
