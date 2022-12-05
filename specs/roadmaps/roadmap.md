@@ -32,13 +32,13 @@
      <h3>Version 1.3: </h3>
     <ul>
         <li>Pop-Up Box: Done </li>
-        <li>Reading User's Body Information: Input done, Using stored input done </li>
+        <li>Reading User's Body Information: Done </li>
         <li>Local Storage: Done </li> 
         <li>CI/CD Pipeline: Done </li> 
         <li>CSS: Done </li> 
     </ul>
     <h2>Milestones (3/3 Finished): </h2>
-    <h3>*Create ADRs(6/6 Finished):</h3>
+    <h3>*Create ADRs (6/6 Finished):</h3>
     <ul>
         <li>Create: Done</li>
         <li>Read: Done</li>
