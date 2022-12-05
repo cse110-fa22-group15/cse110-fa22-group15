@@ -207,7 +207,6 @@ function initFormHandler () {
     const foodname = window.localStorage.getItem('foodedit')
 
     if (!inputValidation(foodType) || !inputValidation(calories)) {
-      alert
       alert('Please fill out all fields')
       return
     }
