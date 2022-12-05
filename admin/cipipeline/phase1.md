@@ -41,6 +41,6 @@ In our project, we have the following workflows currently functional:
   * Print ```running tests``` on screen
   * Run ```npm test```
   
-  Therefore, it will run all the test files found in our repo and report the results. Currently, we have a lot failed tasks, and we are trying to fix them manually until all the tasks can be passed.
+  Therefore, it will run all the test files found in our repo and report the results. Currently, we have a lot failed tasks, and we are trying to fix them manually until all the tasks can be passed. Update: we have passed all formatting tests, but we still need a lot of unit tests
   
   
