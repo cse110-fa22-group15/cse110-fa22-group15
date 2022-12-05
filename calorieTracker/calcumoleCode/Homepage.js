@@ -1,6 +1,6 @@
 /* global localStorage, alert, window, document, location */
 /* eslint no-undef: "error" */
-/* eslint camelcase: ["error", {properties: "never"}] */
+/* eslint camelcase: ["error", c{properties: "never"}] */
 
 window.addEventListener('DOMContentLoaded', init)
 
