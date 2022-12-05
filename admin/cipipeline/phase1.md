@@ -4,7 +4,7 @@ In our project, we have the following workflows currently functional:
 
 * Linting and Code Style Enforcement (Super-Linter)
 
-  Every time new commits are pushed, the super-linter workflow will be triggered and lint the codebase. It will analysis the codebase and detect any underlying bugs of it. Moreover, it will check the style of the codebase for ensuring consistent code style. The super-linter supports several languages, and all languages we use in our project (HTML, CSS, Javascript, Markdown) are supported by it and thus can be linted. Examples of errors that lint can detect include the following:
+  Every time new commits are pushed, the super-linter workflow will be triggered and lint the codebase. It will analysis the codebase and detect any underlying bugs of it. Moreover, it will check the style of the codebase for ensuring consistent code style. The super-linter supports several languages, and all languages we use in our project (HTML, CSS, JavaScript, Markdown) are supported by it and thus can be linted. Examples of errors that lint can detect include the following:
 
   - Indexing beyond arrays
   - (Potentially) dangerous data type combinations
@@ -21,7 +21,7 @@ In our project, we have the following workflows currently functional:
   * Post Initialize CodeQL
   * Post Initialize CodeQL
 
-  The basic idea of CodeQL is that it will generate a database to repositoryresent the codebase, and then run queries on the generated database to identify problems in the codebase. It supports several languages. We use javascript for our purpose.
+  The basic idea of CodeQL is that it will generate a database to repositoryresent the codebase, and then run queries on the generated database to identify problems in the codebase. It supports several languages. We use JavaScript for our purpose.
 
   Currently, we can pass the CodeQL scanning for most of the times.
 
