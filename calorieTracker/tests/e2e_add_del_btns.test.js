@@ -38,7 +38,7 @@ describe('Test Add/Delete Button on Home Page.', () => {
         page.click('#popButton1'),
         page.waitForNavigation(),
       ]);
-
+      await page.waitForTimeout(500)
       await page.click('#add_food')
       await page.focus('#foodTyped1')
       await page.keyboard.type('steak')
