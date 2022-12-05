@@ -151,8 +151,7 @@ function initFormHandler () {
   })
 
   // Add Food (+) button functionality
-  let submitButton = document.getElementById('popButton3')
-  submitButton = document.getElementById('popButton1')
+  let submitButton = document.getElementById('popButton1')
   submitButton.addEventListener('click', (event) => {
     event.preventDefault()
 
@@ -194,7 +193,8 @@ function initFormHandler () {
   })
 
   // Edit feature
-  submitButton.addEventListener('click', (event) => {
+  let editButton = document.getElementById('popButton3')
+  editButton.addEventListener('click', (event) => {
     event.preventDefault()
 
     // Create two letiables that grab the values from the form
@@ -207,6 +207,7 @@ function initFormHandler () {
     const foodname = window.localStorage.getItem('foodedit')
 
     if (!inputValidation(foodType) || !inputValidation(calories)) {
+      alert
       alert('Please fill out all fields')
       return
     }
