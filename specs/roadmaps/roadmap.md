@@ -4,7 +4,7 @@
     <h2>Description: </h2>
     <p>This app will be used to track the input of calories. Its features includes adding food entries, updating food entries, deleting food entries, and updating profile/user information. The basic runthrough of the website is as follows: the user enters their information, a personalized daily calorie goal is generated, the user can add foods they ate, their progress will be shown via a progress bar.
     </p>
-    <h2>Status History(current version: 1.2):</h2>
+    <h2>Status History (current version: 1.3):</h2>
     <h3>Version 1.0: </h3>
     <ul>
         <li>Pop-Up Box: Rough Draft In Progress </li>
@@ -37,7 +37,7 @@
         <li>CI/CD Pipeline: Done </li> 
         <li>CSS: Done </li> 
     </ul>
-    <h2>Milestones(3/3 Finished): </h2>
+    <h2>Milestones (3/3 Finished): </h2>
     <h3>*Create ADRs(6/6 Finished):</h3>
     <ul>
         <li>Create: Done</li>
@@ -47,12 +47,12 @@
         <li>Coding Style: Done</li>
         <li>CI/CD Pipeline: Done</li>
     </ul>
-    <h3>*Design(2/2 Finished):</h3>
+    <h3>*Design (2/2 Finished):</h3>
     <ul>
         <li>task 1: Create high-fidelity wireframe: Done</li>
         <li>task 2: Work with developers to figure out how to implement wireframe: Done</li>
     </ul>
-    <h3>*Coding/Functionality(6/6 Finished):</h3>
+    <h3>*Coding/Functionality (6/6 Finished):</h3>
     <ul>
         <li>task 1: Adding food entry: Done</li>
         <li>task 2: Deleting food entry: Done</li>
