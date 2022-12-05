@@ -1,6 +1,6 @@
 describe('Test Add/Delete Button on Home Page.', () => {
     // Change this constant value before testing!
-    const homeUrl = 'http://127.0.0.1:5501/calorieTracker/11272022-V1.61/Homepage.html';
+    const homeUrl = 'https://cse110-fa22-group15.github.io/cse110-fa22-group15/calorieTracker/calcumoleCode/Homepage.html';
     beforeAll(async () => {
       await page.goto(homeUrl)
     });
