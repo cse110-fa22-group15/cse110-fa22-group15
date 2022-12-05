@@ -1,4 +1,4 @@
-/* global localStorage, alert, window, document */
+/* global localStorage, window, document */
 /* eslint no-undef: "error" */
 window.addEventListener('DOMContentLoaded', init)
 
@@ -31,19 +31,19 @@ function addUpDailyCals () {
   // Adds up the calories from each entry
   const breakfastDiary = getFoodFromStorage()[0]
   let breakfastCals = 0
-  for (var i = 0; i < breakfastDiary.length; i++) {
+  for (let i = 0; i < breakfastDiary.length; i++) {
     breakfastCals += parseInt(breakfastDiary[i].calories)
   }
 
   const lunchDiary = getFoodFromStorage()[1]
   let lunchCals = 0
-  for (var i = 0; i < lunchDiary.length; i++) {
+  for (let i = 0; i < lunchDiary.length; i++) {
     lunchCals += parseInt(lunchDiary[i].calories)
   }
 
   const dinnerDiary = getFoodFromStorage()[2]
   let dinnerCals = 0
-  for (var i = 0; i < dinnerDiary.length; i++) {
+  for (let i = 0; i < dinnerDiary.length; i++) {
     dinnerCals += parseInt(dinnerDiary[i].calories)
   }
 
