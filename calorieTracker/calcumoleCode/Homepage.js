@@ -42,20 +42,20 @@ function addFoodsToDocument (breakfastDiary, lunchDiary, dinnerDiary) {
   const lunchTable = document.getElementById('lunchTable')
   const dinnerTable = document.getElementById('dinnerTable')
 
-  for (var i = 0; i < breakfastDiary.length; i++) {
-    var ec = document.createElement('entry-card')
+  for (let i = 0; i < breakfastDiary.length; i++) {
+    let ec = document.createElement('entry-card')
     ec.data = breakfastDiary[i]
     breakfastTable.append(ec)
   }
 
-  for (var i = 0; i < lunchDiary.length; i++) {
-    var ec = document.createElement('entry-card')
+  for (let i = 0; i < lunchDiary.length; i++) {
+    let ec = document.createElement('entry-card')
     ec.data = lunchDiary[i]
     lunchTable.append(ec)
   }
 
-  for (var i = 0; i < dinnerDiary.length; i++) {
-    var ec = document.createElement('entry-card')
+  for (let i = 0; i < dinnerDiary.length; i++) {
+    let ec = document.createElement('entry-card')
     ec.data = dinnerDiary[i]
     dinnerTable.append(ec)
   }
@@ -110,38 +110,38 @@ function initFormHandler () {
     // Adds all the indices into an array and goes back and deletes entries from the diaries
     let toDelete = []
     const breakfastDiary = getFoodFromStorage()[0]
-    for (var i = 0; i < bt_entries.length; i++) {
+    for (let i = 0; i < bt_entries.length; i++) {
       if (bt_entries[i].shadowRoot.querySelectorAll('input')[0].checked === true) {
         toDelete.push(i)
       }
     }
 
-    for (var i = toDelete.length - 1; i >= 0; i--) {
+    for (let i = toDelete.length - 1; i >= 0; i--) {
       breakfastDiary.splice(toDelete[i], 1)
     }
 
     // Does the same thing as above but for lunch
     toDelete = []
     const lunchDiary = getFoodFromStorage()[1]
-    for (var i = 0; i < lt_entries.length; i++) {
+    for (let i = 0; i < lt_entries.length; i++) {
       if (lt_entries[i].shadowRoot.querySelectorAll('input')[0].checked === true) {
         toDelete.push(i)
       }
     }
-    for (var i = toDelete.length - 1; i >= 0; i--) {
+    for (let i = toDelete.length - 1; i >= 0; i--) {
       lunchDiary.splice(toDelete[i], 1)
     }
 
     // Does the same thing as above but for dinner
     toDelete = []
     const dinnerDiary = getFoodFromStorage()[2]
-    for (var i = 0; i < dt_entries.length; i++) {
+    for (let i = 0; i < dt_entries.length; i++) {
       if (dt_entries[i].shadowRoot.querySelectorAll('input')[0].checked === true) {
         toDelete.push(i)
       }
     }
 
-    for (var i = toDelete.length - 1; i >= 0; i--) {
+    for (let i = toDelete.length - 1; i >= 0; i--) {
       dinnerDiary.splice(toDelete[i], 1)
     }
 
@@ -151,11 +151,11 @@ function initFormHandler () {
   })
 
   // Add Food (+) button functionality
-  var submitButton = document.getElementById('popButton1')
+  submitButton = document.getElementById('popButton1')
   submitButton.addEventListener('click', (event) => {
     event.preventDefault()
 
-    // Create variables that grab the values from the form
+    // Create letiables that grab the values from the form
     const foodType = document.getElementById('foodTyped1').value
     const mealType = document.getElementById('mealTyped1').value
     const calories = document.getElementById('calories1').value
@@ -193,11 +193,11 @@ function initFormHandler () {
   })
 
   // Edit feature
-  var submitButton = document.getElementById('popButton3')
+  let submitButton = document.getElementById('popButton3')
   submitButton.addEventListener('click', (event) => {
     event.preventDefault()
 
-    // Create two variables that grab the values from the form
+    // Create two letiables that grab the values from the form
     const foodType = document.getElementById('foodTyped2').value
     const calories = document.getElementById('calories2').value
 
@@ -219,7 +219,7 @@ function initFormHandler () {
     // Checks which meal to append the card to based on what the user chooses
     if (mealType === 'breakfast') {
       const alreadyAddedToBreakfast = getFoodFromStorage()[0]
-      for (var i = 0; i < alreadyAddedToBreakfast.length; i++) {
+      for (let i = 0; i < alreadyAddedToBreakfast.length; i++) {
         if (alreadyAddedToBreakfast[i].foodName === foodname) {
           alreadyAddedToBreakfast[i].foodName = foodType
           alreadyAddedToBreakfast[i].calories = calories
@@ -230,7 +230,7 @@ function initFormHandler () {
 
     if (mealType === 'lunch') {
       const alreadyAddedToLunch = getFoodFromStorage()[1]
-      for (var i = 0; i < alreadyAddedToLunch.length; i++) {
+      for (let i = 0; i < alreadyAddedToLunch.length; i++) {
         if (alreadyAddedToLunch[i].foodName === foodname) {
           alreadyAddedToLunch[i].foodName = foodType
           alreadyAddedToLunch[i].calories = calories
@@ -240,7 +240,7 @@ function initFormHandler () {
     }
     if (mealType === 'dinner') {
       const alreadyAddedToDinner = getFoodFromStorage()[2]
-      for (var i = 0; i < alreadyAddedToDinner.length; i++) {
+      for (let i = 0; i < alreadyAddedToDinner.length; i++) {
         if (alreadyAddedToDinner[i].foodName === foodname) {
           alreadyAddedToDinner[i].foodName = foodType
           alreadyAddedToDinner[i].calories = calories
