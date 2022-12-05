@@ -1,5 +1,7 @@
-// RecipeCard.js
-
+/* global HTMLElement */
+/* eslint no-undef: "error" */
+/* eslint-disable camelcase */
+/* eslint-disable dot-notation */
 class EntryCard extends HTMLElement {
   // Called once when document.createElement('recipe-card') is called, or
   // the element is written into the DOM directly as <recipe-card>
