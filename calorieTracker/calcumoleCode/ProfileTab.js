@@ -1,4 +1,4 @@
-/* global localStorage */
+/* global localStorage, window, document */
 /* eslint no-undef: "error" */
 window.addEventListener('DOMContentLoaded', init)
 function inputValidation (input) {

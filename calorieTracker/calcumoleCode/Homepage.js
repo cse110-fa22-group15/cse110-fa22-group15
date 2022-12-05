@@ -49,13 +49,13 @@ function addFoodsToDocument (breakfastDiary, lunchDiary, dinnerDiary) {
   }
 
   for (let i = 0; i < lunchDiary.length; i++) {
-    let ec = document.createElement('entry-card')
+    ec = document.createElement('entry-card')
     ec.data = lunchDiary[i]
     lunchTable.append(ec)
   }
 
   for (let i = 0; i < dinnerDiary.length; i++) {
-    let ec = document.createElement('entry-card')
+    ec = document.createElement('entry-card')
     ec.data = dinnerDiary[i]
     dinnerTable.append(ec)
   }
@@ -151,6 +151,7 @@ function initFormHandler () {
   })
 
   // Add Food (+) button functionality
+  let submitButton = document.getElementById('popButton3')
   submitButton = document.getElementById('popButton1')
   submitButton.addEventListener('click', (event) => {
     event.preventDefault()
@@ -193,7 +194,7 @@ function initFormHandler () {
   })
 
   // Edit feature
-  let submitButton = document.getElementById('popButton3')
+  
   submitButton.addEventListener('click', (event) => {
     event.preventDefault()
 
