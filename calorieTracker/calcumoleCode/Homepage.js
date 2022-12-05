@@ -49,13 +49,13 @@ function addFoodsToDocument (breakfastDiary, lunchDiary, dinnerDiary) {
   }
 
   for (let i = 0; i < lunchDiary.length; i++) {
-    ec = document.createElement('entry-card')
+    let ec = document.createElement('entry-card')
     ec.data = lunchDiary[i]
     lunchTable.append(ec)
   }
 
   for (let i = 0; i < dinnerDiary.length; i++) {
-    ec = document.createElement('entry-card')
+    let ec = document.createElement('entry-card')
     ec.data = dinnerDiary[i]
     dinnerTable.append(ec)
   }
@@ -194,7 +194,6 @@ function initFormHandler () {
   })
 
   // Edit feature
-  
   submitButton.addEventListener('click', (event) => {
     event.preventDefault()
 

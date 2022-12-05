@@ -15,13 +15,13 @@ function getFoodFromStorage () {
   let lunchDiary = JSON.parse(window.localStorage.getItem('lunchDiary'))
   let dinnerDiary = JSON.parse(window.localStorage.getItem('dinnerDiary'))
 
-  if (breakfastDiary == null) {
+  if (breakfastDiary === null) {
     breakfastDiary = []
   }
-  if (lunchDiary == null) {
+  if (lunchDiary === null) {
     lunchDiary = []
   }
-  if (dinnerDiary == null) {
+  if (dinnerDiary === null) {
     dinnerDiary = []
   }
   return [breakfastDiary, lunchDiary, dinnerDiary]
@@ -66,7 +66,7 @@ function calculateDailyGoal () {
   }
 
   // Increase dailyGoal by 500 cals if male
-  if (sex == 'Male') {
+  if (sex === 'Male') {
     dailyGoal += FEMALE_TO_MALE
   }
 
@@ -102,7 +102,7 @@ function displayProgress () {
       progressBar.style.backgroundColor = '#F6BE00'
     } else if (percentage < ONE_HUNDRED) {
       progressBar.style.backgroundColor = '#4EE44E'
-    } else if (percentage == ONE_HUNDRED) {
+    } else if (percentage === ONE_HUNDRED) {
       progressBar.style.backgroundColor = 'green'
     }
   } else {
