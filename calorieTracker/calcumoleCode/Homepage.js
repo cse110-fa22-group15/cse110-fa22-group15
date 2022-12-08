@@ -2,6 +2,8 @@
 /* eslint no-undef: "error" */
 /* eslint-disable camelcase */
 
+module.exports = { inputValidation, init, getFoodFromStorage, addFoodsToDocument, saveFoodToDiary, initFormHandler };
+
 window.addEventListener('DOMContentLoaded', init)
 
 function inputValidation (input) {
