@@ -14,4 +14,3 @@ test('input validation does not allow empty string', () => {
 test('input validation does not allow undefined', () => {
     expect(functions.inputValidation(undefined)).toBe(false);
 });
-
