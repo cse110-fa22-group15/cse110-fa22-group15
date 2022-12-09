@@ -6,3 +6,5 @@
 Checks for any unused variables, makes things consts unless necessarily var/let, makes sure globals are assigned.
 
 3. CodeQL: Checks for bugs, security leaks, and vulnerabilities.
+
+If everything is passed, then you can merge the pull request.
