@@ -46,5 +46,3 @@ test('display food from storage', () => {
 //   functions.addFoodsToDocument(breakfastDiary, lunchDiary, dinnerDiary);
 //   expect(functions.getFoodFromStorage()).toStrictEqual([breakfastDiary, lunchDiary, dinnerDiary]);
 // });
-
-

@@ -2,7 +2,7 @@
 /* eslint no-undef: "error" */
 /* eslint-disable camelcase */
 
-module.exports = { inputValidation, init, NewUser};
+module.exports = { inputValidation, init, NewUser }
 
 window.addEventListener('DOMContentLoaded', init)
 
