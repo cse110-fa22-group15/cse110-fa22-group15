@@ -1,4 +1,4 @@
-// unit.test.js
+/* eslint-disable semi */
 
 const functions = require('../calcumoleCode/Homepage.js');
 
