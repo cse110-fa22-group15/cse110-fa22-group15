@@ -43,7 +43,8 @@ test('display food from storage', () => {
   const lunchDiary = [{ foodName: 'steak', mealType: 'lunch', calories: '150' }];
   const dinnerDiary = [{ foodName: 'casserole', mealType: 'dinner', calories: '100' }];
 
-  functions.addFoodsToDocument();
-  functions.saveFoodToDiary(breakfastDiary, lunchDiary, dinnerDiary);
+  functions.addFoodsToDocument(breakfastDiary, lunchDiary, dinnerDiary);
   expect(functions.getFoodFromStorage()).toStrictEqual([breakfastDiary, lunchDiary, dinnerDiary]);
 });
+
+

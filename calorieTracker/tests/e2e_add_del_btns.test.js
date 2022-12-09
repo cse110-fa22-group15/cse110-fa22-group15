@@ -1,3 +1,7 @@
+/* global localStorage, page, describe, it, expect */
+/* eslint no-undef: "error" */
+/* eslint-disable semi */
+
 describe('Test Add/Delete Button on Home Page.', () => {
   // Change this constant value before testing!
   const homeUrl = 'https://cse110-fa22-group15.github.io/cse110-fa22-group15/calorieTracker/calcumoleCode/Homepage.html'
