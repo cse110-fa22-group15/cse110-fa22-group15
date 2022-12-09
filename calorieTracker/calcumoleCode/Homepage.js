@@ -1,12 +1,12 @@
 /* global localStorage, alert, window, document, location, module */
 /* eslint no-undef: "error" */
-/* eslint-disable camelcase */
+/* eslint-disable camelcase, semi */
 
 module.exports = { inputValidation, init, getFoodFromStorage, addFoodsToDocument, saveFoodToDiary, initFormHandler };
 
 window.addEventListener('DOMContentLoaded', init)
 
-function inputValidation (input) {
+function inputValidation(input) {
   if (input === '' || input === undefined || input === null) {
     return false
   } else {
@@ -14,7 +14,7 @@ function inputValidation (input) {
   }
 }
 
-function init () {
+function init() {
   const breakfastDiary = getFoodFromStorage()[0]
   const lunchDiary = getFoodFromStorage()[1]
   const dinnerDiary = getFoodFromStorage()[2]
@@ -22,7 +22,7 @@ function init () {
   initFormHandler()
 }
 
-function getFoodFromStorage () {
+function getFoodFromStorage() {
   let breakfastDiary = JSON.parse(window.localStorage.getItem('breakfastDiary'))
   let lunchDiary = JSON.parse(window.localStorage.getItem('lunchDiary'))
   let dinnerDiary = JSON.parse(window.localStorage.getItem('dinnerDiary'))
@@ -39,7 +39,7 @@ function getFoodFromStorage () {
   return [breakfastDiary, lunchDiary, dinnerDiary]
 }
 
-function addFoodsToDocument (breakfastDiary, lunchDiary, dinnerDiary) {
+function addFoodsToDocument(breakfastDiary, lunchDiary, dinnerDiary) {
   const breakfastTable = document.getElementById('breakfastTable')
   const lunchTable = document.getElementById('lunchTable')
   const dinnerTable = document.getElementById('dinnerTable')
@@ -63,13 +63,13 @@ function addFoodsToDocument (breakfastDiary, lunchDiary, dinnerDiary) {
   }
 }
 
-function saveFoodToDiary (breakfastDiary, lunchDiary, dinnerDiary) {
+function saveFoodToDiary(breakfastDiary, lunchDiary, dinnerDiary) {
   localStorage.breakfastDiary = JSON.stringify(breakfastDiary)
   localStorage.lunchDiary = JSON.stringify(lunchDiary)
   localStorage.dinnerDiary = JSON.stringify(dinnerDiary)
 }
 
-function initFormHandler () {
+function initFormHandler() {
   // These make the profile tab display the user's stored info by default
   const username = localStorage.getItem('username')
   document.getElementsByName('name')[0].placeholder = username
@@ -153,7 +153,7 @@ function initFormHandler () {
   })
 
   // Add Food (+) button functionality
-  let submitButton = document.getElementById('popButton1')
+  const submitButton = document.getElementById('popButton1')
   submitButton.addEventListener('click', (event) => {
     event.preventDefault()
 
@@ -195,7 +195,7 @@ function initFormHandler () {
   })
 
   // Edit feature
-  let editButton = document.getElementById('popButton3')
+  const editButton = document.getElementById('popButton3')
   editButton.addEventListener('click', (event) => {
     event.preventDefault()
 
