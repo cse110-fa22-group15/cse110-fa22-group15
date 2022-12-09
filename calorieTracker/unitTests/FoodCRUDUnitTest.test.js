@@ -1,4 +1,4 @@
-/* global localStorage, test */
+/* global localStorage, test, expect */
 /* eslint no-undef: "error" */
 /* eslint-disable semi */
 
