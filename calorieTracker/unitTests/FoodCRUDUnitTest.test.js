@@ -1,3 +1,5 @@
+/* global localStorage, test */
+/* eslint no-undef: "error" */
 /* eslint-disable semi */
 
 const functions = require('../calcumoleCode/Homepage.js');
