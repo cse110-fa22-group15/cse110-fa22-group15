@@ -14,5 +14,5 @@
   "env": {
     "es6": true
   },
-  "ignorePatterns": ["**/*.json", "node_modules/", "**/*.test.js", "out/"]
+  "ignorePatterns": ["**/*.json", "node_modules/", "**/*.test.js", "out/", "**/*.Homepage.html"]
 }
