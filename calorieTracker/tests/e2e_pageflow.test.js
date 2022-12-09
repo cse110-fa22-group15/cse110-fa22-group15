@@ -1,4 +1,4 @@
-/* global localStorage, page, describe, it, expect */
+/* global page, describe, it, expect, beforeAll */
 /* eslint-disable semi */
 describe('Basic Pageflow Tests for Website', () => {
   // Change this constant value before testing!

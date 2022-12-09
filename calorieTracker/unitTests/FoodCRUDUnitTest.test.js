@@ -38,13 +38,13 @@ test('display food from storage', () => {
   expect(functions.getFoodFromStorage()).toStrictEqual([breakfastDiary, lunchDiary, dinnerDiary]);
 });
 
-test('display food from storage', () => {
-  const breakfastDiary = [{ foodName: 'orange', mealType: 'breakfast', calories: '50' }];
-  const lunchDiary = [{ foodName: 'steak', mealType: 'lunch', calories: '150' }];
-  const dinnerDiary = [{ foodName: 'casserole', mealType: 'dinner', calories: '100' }];
+// test('display food from storage', () => {
+//   const breakfastDiary = [{ foodName: 'orange', mealType: 'breakfast', calories: '50' }];
+//   const lunchDiary = [{ foodName: 'steak', mealType: 'lunch', calories: '150' }];
+//   const dinnerDiary = [{ foodName: 'casserole', mealType: 'dinner', calories: '100' }];
 
-  functions.addFoodsToDocument(breakfastDiary, lunchDiary, dinnerDiary);
-  expect(functions.getFoodFromStorage()).toStrictEqual([breakfastDiary, lunchDiary, dinnerDiary]);
-});
+//   functions.addFoodsToDocument(breakfastDiary, lunchDiary, dinnerDiary);
+//   expect(functions.getFoodFromStorage()).toStrictEqual([breakfastDiary, lunchDiary, dinnerDiary]);
+// });
 
 
