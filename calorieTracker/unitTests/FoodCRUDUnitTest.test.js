@@ -37,3 +37,13 @@ test('display food from storage', () => {
     
     expect(functions.getFoodFromStorage()).toStrictEqual([breakfastDiary, lunchDiary, dinnerDiary]);
 });
+
+test('display food from storage', () => {
+    var breakfastDiary = [{"foodName":"orange","mealType":"breakfast","calories":"50"}];
+    var lunchDiary = [{"foodName":"steak","mealType":"lunch","calories":"150"}];
+    var dinnerDiary = [{"foodName":"casserole","mealType":"dinner","calories":"100"}];
+
+    functions.addFoodsToDocument();
+    functions.saveFoodToDiary(breakfastDiary, lunchDiary, dinnerDiary);
+    expect(functions.getFoodFromStorage()).toStrictEqual([breakfastDiary, lunchDiary, dinnerDiary]);
+});
