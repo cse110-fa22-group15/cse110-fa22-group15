@@ -1,5 +1,4 @@
 /* global localStorage, page, describe, it, expect */
-/* eslint no-undef: "error" */
 /* eslint-disable semi */
 
 describe('Test Add/Delete Button on Home Page.', () => {

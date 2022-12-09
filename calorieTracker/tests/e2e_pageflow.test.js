@@ -1,3 +1,5 @@
+/* global localStorage, page, describe, it, expect */
+/* eslint-disable semi */
 describe('Basic Pageflow Tests for Website', () => {
   // Change this constant value before testing!
   const loginUrl = 'https://cse110-fa22-group15.github.io/cse110-fa22-group15/calorieTracker/calcumoleCode/LoginPage.html'
