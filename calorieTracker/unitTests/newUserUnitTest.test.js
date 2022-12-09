@@ -1,3 +1,4 @@
+/* global require, test, expect */
 const functions = require('../calcumoleCode/NewUser.js')
 
 test('expect inputValidation to return false on blank', () => {

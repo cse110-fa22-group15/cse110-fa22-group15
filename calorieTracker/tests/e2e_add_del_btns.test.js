@@ -1,4 +1,4 @@
-/* global localStorage, page, describe, it, expect */
+/* global page, describe, it, expect, beforeAll */
 /* eslint-disable semi */
 
 describe('Test Add/Delete Button on Home Page.', () => {

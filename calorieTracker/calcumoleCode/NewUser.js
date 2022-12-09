@@ -1,4 +1,4 @@
-/* global localStorage, alert, window, document */
+/* global localStorage, alert, window, document, module */
 /* eslint no-undef: "error" */
 /* eslint-disable camelcase */
 
