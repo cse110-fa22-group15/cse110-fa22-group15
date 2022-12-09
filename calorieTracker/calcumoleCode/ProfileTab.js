@@ -1,5 +1,8 @@
-/* global localStorage, window, document */
+/* global localStorage, window, document, module */
 /* eslint no-undef: "error" */
+
+module.exports = { inputValidation, init }
+
 window.addEventListener('DOMContentLoaded', init)
 function inputValidation (input) {
   if (input === '' || input === undefined || input === null) {

@@ -1,6 +1,8 @@
-/* global localStorage, alert, window, document, location */
+/* global localStorage, alert, window, document, location, module */
 /* eslint no-undef: "error" */
-/* eslint-disable camelcase */
+/* eslint-disable camelcase, semi */
+
+module.exports = { inputValidation, init, getFoodFromStorage, addFoodsToDocument, saveFoodToDiary, initFormHandler };
 
 window.addEventListener('DOMContentLoaded', init)
 
@@ -151,7 +153,7 @@ function initFormHandler () {
   })
 
   // Add Food (+) button functionality
-  let submitButton = document.getElementById('popButton1')
+  const submitButton = document.getElementById('popButton1')
   submitButton.addEventListener('click', (event) => {
     event.preventDefault()
 
@@ -193,7 +195,7 @@ function initFormHandler () {
   })
 
   // Edit feature
-  let editButton = document.getElementById('popButton3')
+  const editButton = document.getElementById('popButton3')
   editButton.addEventListener('click', (event) => {
     event.preventDefault()
 

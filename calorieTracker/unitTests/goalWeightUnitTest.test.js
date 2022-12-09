@@ -1,18 +1,18 @@
-const functions = require('../calcumoleCode/GoalWeight.js');
+/* global require, test, expect */
+const functions = require('../calcumoleCode/GoalWeight.js')
 
 test('expect inputValidation to return false on blank', () => {
-    expect(inputValidation('')).toBe(false);
-});
+  expect(functions.inputValidation('')).toBe(false)
+})
 
 test('expect inputValidation to return false on undefined', () => {
-    expect(inputValidation(undefined)).toBe(false);
-});
+  expect(functions.inputValidation(undefined)).toBe(false)
+})
 
 test('expect inputValidation to return false on null', () => {
-    expect(inputValidation(null)).toBe(false);
-});
-
+  expect(functions.inputValidation(null)).toBe(false)
+})
 
 test('expect inputValidation to return true on burger', () => {
-    expect(inputValidation('burger')).toBe(false);
-});
+  expect(functions.inputValidation('burger')).toBe(true)
+})
